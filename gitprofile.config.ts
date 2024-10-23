@@ -222,7 +222,7 @@ const CONFIG = {
       imageUrl1:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/nasa2.jpg',
       imageUrl2:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/nasa3.webp',
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/nasa3.jpg',
     },
     {
       title: 'Winner : BASIS National ICT Award 2020',
