@@ -28,10 +28,9 @@ const CONFIG = {
         projects: [
           'fabihatasneem/the-great-ink-society',
           'fabihatasneem/Jigsaw-Puzzle-Solver-Using-Machine-Learning',
-          'fabihatasneem/BrightMate-Library-L2T2-1',
           'fabihatasneem/Smart-Garage',
-          'fabihatasneem/Bubble-Shooter',
-          'fabihatasneem/HocusPocusHomeAssistant'], 
+          'fabihatasneem/Bubble-Shooter'
+        ], 
       },
     },
     external: {
@@ -41,11 +40,19 @@ const CONFIG = {
         {
           title: 'CommuniCreate-Creative-Production-Management',
           description:
-            'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users.',
+            'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users. This was our term project for BUET Level 4 Term 1',
           imageUrl:
             'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
           link: 'https://github.com/CPM-Creative-Production-Management',
-        }
+        },
+        {
+          title: 'BrightMate-A Library Management System',
+          description:
+            'This is a library management system comprising a client app and an admin app. This was our term project for BUET Level 2 Term 2 of Database Course (CSE 216).',
+          imageUrl:
+            'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
+          link: 'https://github.com/anupbhowmik/BrightMate-Library-Database-Project',
+        },
       ],
     },
   },
