@@ -205,6 +205,15 @@ const CONFIG = {
   ],
   awards: [
     {
+      title: 'Global Honorable Mention Award : NASA Space Apps Challenge 2020',
+      year: 2020,
+      description:
+        'Our team BUET Zenith won this award for our satellite viewing platform named "Satellight : Putting Light On Satellites" which aims at connecting people with satellites in a socially engaging way by representing satellites in a very visual, social, and organic way. Our project comprises Web and Android apps and an Arduino module. Using our apps, users can observe satellites in Map View, Night Sky View, 3D Model View, VR, and First Person View live in real-time or at any time in the past or future. They can also comment on their favorite satellites and see others\' comments and the number of views for a particular satellite. And, our Arduino module is a physical 3D pointing device that upon selection of a satellite, will physically point to the sky where the satellite is currently at.',
+      link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/teams/buet-zenith/project',
+      imageUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/nasa.png',
+    },
+    {
       title: 'Winner : BASIS National ICT Award 2020',
       year: 2020,
       description:
@@ -214,13 +223,13 @@ const CONFIG = {
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/basis.png',
     },
     {
-      title: 'Global Honorable Mention Award : NASA Space Apps Challenge 2020',
-      year: 2020,
+      title: 'Top 10 Finalist : Therap JavaFest 2022',
+      year: 2022,
       description:
-        'Our team BUET Zenith won this award for our satellite viewing platform named "Satellight : Putting Light On Satellites" which aims at connecting people with satellites in a socially engaging way by representing satellites in a very visual, social, and organic way. Our project comprises Web and Android apps and an Arduino module. Using our apps, users can observe satellites in Map View, Night Sky View, 3D Model View, VR, and First Person View live in real-time or at any time in the past or future. They can also comment on their favorite satellites and see others\' comments and the number of views for a particular satellite. And, our Arduino module is a physical 3D pointing device that upon selection of a satellite, will physically point to the sky where the satellite is currently at.',
-      link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/teams/buet-zenith/project',
+        'The Great Ink Society is a platform for all the storytellers out there. It will consist of stories in written versions or voiceovers. The purpose of this platform is to build a community with a bunch of people who will be sharing their imaginary world with one another. Here, they will be able to write a short story, a poem, or even a book that consists of multiple chapters. They will also be able to upload podcasts. A podcast is an episodic series of spoken words in digital audio files that a user can download or stream directly from any app and listen to. In this platform, a user will be able to upload their podcasts, standalone, and series in mp3 format and the listeners will be able to stream them directly from the web app. As a part of the community, others will be able to comment on these stories, like them and can even follow their preferred authors.',
+      link: 'https://www.facebook.com/photo/?fbid=170385585546837&set=pcb.170386192213443',
       imageUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/nasa.png',
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/javafest.png',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
