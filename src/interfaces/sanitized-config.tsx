@@ -111,7 +111,6 @@ export interface SanitizedHotjar {
 
 export interface SanitizedBlog {
   display: boolean;
-  header: string;
   source: string;
   username: string;
   limit: number;
