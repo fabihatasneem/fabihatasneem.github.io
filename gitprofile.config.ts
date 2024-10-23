@@ -37,25 +37,17 @@ const CONFIG = {
       },
     },
     external: {
-      header: 'My Projects',
+      header: 'Other Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
         {
-          title: 'Project Name',
+          title: 'CommuniCreate-Creative-Production-Management',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
-        {
-          title: 'Project Name',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
-          imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
-        },
+            '',
+          link: 'https://github.com/CPM-Creative-Production-Management',
+        }
       ],
     },
   },
@@ -108,19 +100,26 @@ const CONFIG = {
   ],
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Synesis IT PLC',
+      position: 'Software Engineer',
+      from: 'June 2024',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: 'https://synesisit.com.bd/',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'MySoft Ltd.',
+      position: 'Intern',
+      from: 'June 2022',
+      to: 'July 2022',
+      companyLink: 'https://www.mysoftltd.com/',
     },
+    {
+      company: 'OpenRefactory, Inc.',
+      position: 'Apprentice',
+      from: 'November 2023',
+      to: 'December 2023',
+      companyLink: 'https://www.openrefactory.com/',
+    }
   ],
   certifications: [
     {
