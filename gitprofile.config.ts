@@ -197,18 +197,18 @@ const CONFIG = {
       description:
         'Abstract: Emotion modeling has always been intriguing to researchers, where detecting emotion is highly focused and generating emotion is much less focused to date. Therefore, in this paper, we aim to exploring emotion generation, particularly for general-purpose conversations. Based on the Cognitive Appraisal Theory and focusing on audio and textual inputs, we propose a novel method to calculate informative variables to evaluate a particular emotion-generating event and six primary emotions. Incorporating such a method of artificial emotion generation, we implement an emotional chatbot, namely EmoBot. Accordingly, EmoBot analyzes continuous audio and textual inputs, calculates the informative variables to evaluate the current situation, generates appropriate emotions, and responds accordingly. An objective evaluation indicates that EmoBot could generate more accurate emotional and semantic responses than a traditional chatbot that does not consider emotion. Additionally, a subjective evaluation of EmoBot demonstrates the appreciation of users for EmoBot over a traditional chatbot that does not consider emotion.',
     },
-    {
-      title:
-        'Risk Morphological Study of Assessment of Hip Fracture by Using Machine Learning',
-      conferenceName:
-        'Submitted to 23rd IEEE International Conference on Machine Learning and Applications',
-      journalName: '',
-      authors:
-        'Sanjana Binte Siraj, Fabiha Tasneem, Dr. Tanvir R. Faisal, Dr. Mahmuda Naznin',
-      link: '',
-      description:
-        'Abstract: Hip fractures pose a significant risk to the aging population, particularly among individuals with osteoarthritis or osteoporosis. This study proposes a novel approach to predicting hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Later we modify the MedViT architecture to enhance prediction accuracy. Our methodology involves further preprocessing a preprocessed CSV dataset generated from QCT image data, determining stress and strain values at various nodes, generating image datasets from these values, and predicting femur fracture risk based on the images. We evaluated several models, including Neural Network, PointNet, and MedViT through extensive feature extraction, data optimization, and hyperparameter tuning. MedViT initially achieved a 79% accuracy, but with further modifications in the internal architecture, we reached a 95% accuracy in predicting bone fracture risk and identifying potential fracture locations. This high predictive accuracy holds significant promise for early intervention, enabling healthcare professionals to identify and address fracture risks before they lead to debilitating injuries. Our findings highlight the potential of advanced machine learning frameworks to improve healthcare outcomes for aging individuals and those at high risk for fractures, contributing to enhanced quality of life and reduced healthcare costs.',
-    },
+    // {
+    //   title:
+    //     'Risk Morphological Study of Assessment of Hip Fracture by Using Machine Learning',
+    //   conferenceName:
+    //     'Submitted to 23rd IEEE International Conference on Machine Learning and Applications',
+    //   journalName: '',
+    //   authors:
+    //     'Sanjana Binte Siraj, Fabiha Tasneem, Dr. Tanvir R. Faisal, Dr. Mahmuda Naznin',
+    //   link: '',
+    //   description:
+    //     'Abstract: Hip fractures pose a significant risk to the aging population, particularly among individuals with osteoarthritis or osteoporosis. This study proposes a novel approach to predicting hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Later we modify the MedViT architecture to enhance prediction accuracy. Our methodology involves further preprocessing a preprocessed CSV dataset generated from QCT image data, determining stress and strain values at various nodes, generating image datasets from these values, and predicting femur fracture risk based on the images. We evaluated several models, including Neural Network, PointNet, and MedViT through extensive feature extraction, data optimization, and hyperparameter tuning. MedViT initially achieved a 79% accuracy, but with further modifications in the internal architecture, we reached a 95% accuracy in predicting bone fracture risk and identifying potential fracture locations. This high predictive accuracy holds significant promise for early intervention, enabling healthcare professionals to identify and address fracture risks before they lead to debilitating injuries. Our findings highlight the potential of advanced machine learning frameworks to improve healthcare outcomes for aging individuals and those at high risk for fractures, contributing to enhanced quality of life and reduced healthcare costs.',
+    // },
   ],
   awards: [
     {
