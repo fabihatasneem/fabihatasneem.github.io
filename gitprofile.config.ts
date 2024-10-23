@@ -151,12 +151,12 @@ const CONFIG = {
   certifications: [
     {
       name: 'Apprentice Program with OpenRefactory Bangladesh Ltd.',
-      body: 'Certified by OpenRefactory',
+      body: 'Certified by OpenRefactory Bangladesh Ltd.',
       year: 'December 2023',
     },
     {
       name: 'Virtual Training on Health Data Analytics',
-      body: 'Certified by MySoft',
+      body: 'Certified by MySoft Ltd.',
       year: 'June 2023',
     },
     {
