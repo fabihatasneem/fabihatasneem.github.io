@@ -247,20 +247,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    {sanitizedConfig.awards.length !== 0 && (
-                      <AwardCard
-                        header="Awards"
-                        loading={loading}
-                        awards={sanitizedConfig.awards}
-                      />
-                    )}
-                    {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
-                        loading={loading}
-                        publications={sanitizedConfig.publications}
-                      />
-                    )}
-                    {sanitizedConfig.projects.external.projects.length !==
+                  {sanitizedConfig.projects.external.projects.length !==
                       0 && (
                       <ExternalProjectCard
                         loading={loading}
@@ -279,6 +266,19 @@ const GitProfile = ({ config }: { config: Config }) => {
                         loading={loading}
                         username={sanitizedConfig.github.username}
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                      />
+                    )}
+                    {sanitizedConfig.awards.length !== 0 && (
+                      <AwardCard
+                        header="Awards"
+                        loading={loading}
+                        awards={sanitizedConfig.awards}
+                      />
+                    )}
+                    {sanitizedConfig.publications.length !== 0 && (
+                      <PublicationCard
+                        loading={loading}
+                        publications={sanitizedConfig.publications}
                       />
                     )}
                     {sanitizedConfig.blog.display && (

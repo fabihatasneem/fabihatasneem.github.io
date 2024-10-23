@@ -133,6 +133,13 @@ const CONFIG = {
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
     },
+    {
+      company: 'BYDO',
+      position: 'Trainee Software Developer',
+      from: 'September 2020',
+      to: 'September 2021',
+      companyLink: 'https://bydoacademy.com/',
+    },
   ],
   certifications: [
     {
