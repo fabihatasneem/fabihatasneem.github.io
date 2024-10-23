@@ -218,28 +218,28 @@ const GitProfile = ({ config }: { config: Config }) => {
                       github={sanitizedConfig.github}
                       social={sanitizedConfig.social}
                     />
-                    {sanitizedConfig.skills.length !== 0 && (
-                      <SkillCard
-                        loading={loading}
-                        skills={sanitizedConfig.skills}
-                      />
-                    )}
                     {sanitizedConfig.experiences.length !== 0 && (
                       <ExperienceCard
                         loading={loading}
                         experiences={sanitizedConfig.experiences}
                       />
                     )}
-                    {sanitizedConfig.certifications.length !== 0 && (
-                      <CertificationCard
+                    {sanitizedConfig.skills.length !== 0 && (
+                      <SkillCard
                         loading={loading}
-                        certifications={sanitizedConfig.certifications}
+                        skills={sanitizedConfig.skills}
                       />
                     )}
                     {sanitizedConfig.educations.length !== 0 && (
                       <EducationCard
                         loading={loading}
                         educations={sanitizedConfig.educations}
+                      />
+                    )}
+                    {sanitizedConfig.certifications.length !== 0 && (
+                      <CertificationCard
+                        loading={loading}
+                        certifications={sanitizedConfig.certifications}
                       />
                     )}
                   </div>
