@@ -206,10 +206,10 @@ const CONFIG = {
   awards: [
     {
       title:
-        'Winner of BASIS National ICT Award 2020 in Student (HC-S) Tertiary Student Category for Project E-Waste Management System',
+        'Winner of BASIS National ICT Award 2020 for Project E-Waste Management System',
       year: 2020,
       description:
-        'Our team BUET Eunoia won this award for our web-based platform that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste.',
+        'Our team BUET EUNOIA won this award in Student (HC-S) Tertiary Student Category for our web-based platform that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste.',
       link: 'https://bnia.basis.org.bd/win/winner-2020',
       imageUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/basis.png',
