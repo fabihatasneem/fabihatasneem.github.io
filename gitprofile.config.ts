@@ -26,7 +26,7 @@ const CONFIG = {
       manual: {
         // Properties for manually specifying projects
         projects: [
-          'iftekharzeeon/the-great-ink-society',
+          'fabihatasneem/the-great-ink-society',
           'fabihatasneem/Jigsaw-Puzzle-Solver-Using-ML',
           'fabihatasneem/Hall-Management-System',
           'fabihatasneem/Smart-Garage',
