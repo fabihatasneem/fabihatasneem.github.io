@@ -20,7 +20,7 @@ const CONFIG = {
         limit: 8, // How many projects to display.
         exclude: {
           forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: [], // These projects will not be displayed. example: ['fabihatasneem/my-project1', 'fabihatasneem/my-project2']
         },
       },
       manual: {
@@ -33,7 +33,7 @@ const CONFIG = {
           'fabihatasneem/Bubble-Shooter',
           'fabihatasneem/HocusPocusHomeAssistant',
           'fabihatasneem/CSE406---Computer-Security-Sessional',
-          'fabihatasneem/HocusPocusHomeAssistant'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          'fabihatasneem/HocusPocusHomeAssistant'], 
       },
     },
     external: {
@@ -83,20 +83,28 @@ const CONFIG = {
       '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'PHP',
-    'Laravel',
+    'Java',
+    'Python',
+    'C++',
+    'C',
     'JavaScript',
+    'Spring Boot',
     'React.js',
     'Node.js',
-    'Nest.js',
+    'Next.js',
+    'Express.js',
     'MySQL',
     'PostgreSQL',
+    'Oracle',
+    'Sequlize',
     'Git',
     'Docker',
-    'PHPUnit',
+    'Tensorflow',
+    'Keras',
+    'PyTorch',
+    'HTML',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'Tailwind'
   ],
   experiences: [
     {
@@ -131,17 +139,23 @@ const CONFIG = {
   ],
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Computer Science and Engineering, Bangladesh University of Engineering and Technology',
+      degree: 'B.Sc',
+      from: '2019',
+      to: '2024',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'Holy Cross College',
+      degree: 'HSC',
+      from: '2016',
+      to: '2018',
     },
+    {
+      institution: 'Faizur Rahman Ideal Institute',
+      degree: 'HSC',
+      from: '2006',
+      to: '2015',
+    }
   ],
   publications: [
     {
