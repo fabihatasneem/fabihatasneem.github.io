@@ -120,8 +120,10 @@ export interface SanitizedAward {
   title: string;
   year: number;
   description: string;
-  imageUrl?: string;
+  logoUrl?: string;
   link?: string;
+  imageUrl1?: string;
+  imageUrl2?: string;
 }
 
 export interface SanitizedCustomTheme {

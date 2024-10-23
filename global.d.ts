@@ -250,7 +250,9 @@ interface Award {
   title: string;
   year?: string;
   link?: string;
-  imageUrl?: string;
+  logoUrl?: string;
+  imageUrl1?: string;
+  imageUrl2?: string;
   description: string;
 }
 

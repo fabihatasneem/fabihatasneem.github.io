@@ -67,42 +67,64 @@ const AwardCard = ({
   const renderAwards = () => {
     return awards.map((item, index) => (
       <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
+        className="card shadow-lg compact bg-base-100 cursor-pointer w-full"
         key={index}
         href={item.link}
         target="_blank"
         rel="noreferrer"
       >
         <div className="p-8 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
-                    {item.title}
-                  </h2>
-                  {item.imageUrl && (
-                    <div className="opacity-90">
-                      <div className="w-24 h-24 mx-auto">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={'thumbnail'}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
-                    {item.description}
-                  </p>
+          <div className="flex items-center">
+            {item.logoUrl && (
+              <div className="mr-6">
+                <div className="w-24 h-24">
+                  <LazyImage
+                    src={item.logoUrl}
+                    alt={'thumbnail'}
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-full',
+                      shape: '',
+                    })}
+                  />
                 </div>
               </div>
+            )}
+            <div className="flex-1">
+              <h2 className="font-medium opacity-60 mb-2">{item.title}</h2>
+              <p className="text-base-content text-opacity-60 text-sm">{item.description}</p>
             </div>
           </div>
+          {(item.imageUrl1 || item.imageUrl2) && (
+            <div className="flex justify-start mt-4 space-x-4">
+              {item.imageUrl1 && (
+                <div className="w-32 h-32">
+                  <LazyImage
+                    src={item.imageUrl1}
+                    alt={'Award image 1'}
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-full',
+                      shape: '',
+                    })}
+                  />
+                </div>
+              )}
+              {item.imageUrl2 && (
+                <div className="w-32 h-32">
+                  <LazyImage
+                    src={item.imageUrl2}
+                    alt={'Award image 2'}
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-full',
+                      shape: '',
+                    })}
+                  />
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </a>
     ));

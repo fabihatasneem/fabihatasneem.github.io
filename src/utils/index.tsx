@@ -114,7 +114,9 @@ export const getSanitizedConfig = (
             year: award.year
               ? parseInt(award.year, 10)
               : new Date().getFullYear(),
-            imageUrl: award.imageUrl || '',
+            logoUrl: award.logoUrl || '',
+            imageUrl1: award.imageUrl1 || '',
+            imageUrl2: award.imageUrl2 || '',
           })) || [],
       googleAnalytics: {
         id: config?.googleAnalytics?.id,
