@@ -13,7 +13,7 @@ const CONFIG = {
   projects: {
     github: {
       display: true, // Display GitHub projects?
-      header: 'My Projects',
+      header: 'GitHub Projects',
       mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
@@ -26,7 +26,6 @@ const CONFIG = {
       manual: {
         // Properties for manually specifying projects
         projects: [
-          'fabihatasneem/the-great-ink-society',
           'fabihatasneem/Jigsaw-Puzzle-Solver-Using-ML',
           'fabihatasneem/Hall-Management-System',
           'fabihatasneem/Smart-Garage',
@@ -39,6 +38,14 @@ const CONFIG = {
       header: 'Other Projects',
       // To hide the `External Projects` section, keep it empty.
       projects: [
+        {
+          title: 'The Great Ink Society',
+          description:
+            'This is my favorite project, and it was created genuinely following my passion. It is an online platform for creative minds who have a story to tell. Here they can share their stories and podcasts freely with proper copyright and enjoy others’ content. They can also communicate with each other and build one true Great Ink Society. We submitted this project to Therap JavaFest 2022 and became one of the top 10 Finalists.',
+          imageUrl:
+            'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+          link: 'https://github.com/iftekharzeeon/the-great-ink-society',
+        },
         {
           title: 'CommuniCreate-Creative-Production-Management',
           description:
