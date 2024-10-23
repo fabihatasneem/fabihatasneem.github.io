@@ -246,6 +246,13 @@ interface Publication {
   description?: string;
 }
 
+interface Award {
+  title: string;
+  year?: string;
+  imageUrl?: string;
+  description: string;
+}
+
 interface GoogleAnalytics {
   /**
    * GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -403,6 +410,11 @@ interface Config {
    * Publication list
    */
   publications?: Array<Publication>;
+
+  /**
+   * Awards list
+   */
+  awards?: Array<Award>;
 
   /**
    * Resume

@@ -117,7 +117,6 @@ export interface SanitizedBlog {
 }
 
 export interface SanitizedAward {
-  display: boolean;
   title: string;
   year: number;
   description: string;

@@ -104,6 +104,17 @@ export const getSanitizedConfig = (
           (item) => item.institution || item.degree || item.from || item.to,
         ) || [],
       publications: config?.publications?.filter((item) => item.title) || [],
+      awards:
+        config?.awards
+          ?.filter((item) => item.title && item.description)
+          .map((award) => ({
+            title: award.title,
+            description: award.description,
+            year: award.year
+              ? parseInt(award.year, 10)
+              : new Date().getFullYear(),
+            imageUrl: award.imageUrl || '',
+          })) || [],
       googleAnalytics: {
         id: config?.googleAnalytics?.id,
       },
