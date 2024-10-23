@@ -13,7 +13,7 @@ const CONFIG = {
   projects: {
     github: {
       display: true, // Display GitHub projects?
-      header: 'Github Projects',
+      header: 'My Projects',
       mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
@@ -47,14 +47,6 @@ const CONFIG = {
             'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
           link: 'https://github.com/CPM-Creative-Production-Management',
         },
-        // {
-        //   title: 'BrightMate-A Library Management System',
-        //   description:
-        //     'This is a library management system comprising a client app and an admin app. This was our term project for BUET Level 2 Term 2 of Database Course (CSE 216).',
-        //   imageUrl:
-        //     'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
-        //   link: 'https://github.com/anupbhowmik/BrightMate-Library-Database-Project',
-        // },
       ],
     },
   },
@@ -171,20 +163,20 @@ const CONFIG = {
   ],
   educations: [
     {
-      institution: 'Computer Science and Engineering, Bangladesh University of Engineering and Technology',
-      degree: 'B.Sc',
+      institution: 'Bangladesh University of Engineering and Technology',
+      degree: 'B.Sc in Computer Science and Engineering (CSE)',
       from: '2019',
       to: '2024',
     },
     {
       institution: 'Holy Cross College',
-      degree: 'HSC',
+      degree: 'Higher Secondary Certificate (HSC)',
       from: '2016',
       to: '2018',
     },
     {
       institution: 'Faizur Rahman Ideal Institute',
-      degree: 'HSC',
+      degree: 'Secondary School Certificate (SSC)',
       from: '2006',
       to: '2015',
     }
