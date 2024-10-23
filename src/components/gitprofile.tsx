@@ -247,14 +247,17 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
-                    {sanitizedConfig.projects.github.display && (
-                      <GithubProjectCard
-                        header={sanitizedConfig.projects.github.header}
-                        limit={sanitizedConfig.projects.github.automatic.limit}
-                        githubProjects={githubProjects}
+                    {sanitizedConfig.awards.length !== 0 && (
+                      <AwardCard
+                        header="Awards"
                         loading={loading}
-                        username={sanitizedConfig.github.username}
-                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
+                        awards={sanitizedConfig.awards}
+                      />
+                    )}
+                    {sanitizedConfig.publications.length !== 0 && (
+                      <PublicationCard
+                        loading={loading}
+                        publications={sanitizedConfig.publications}
                       />
                     )}
                     {sanitizedConfig.projects.external.projects.length !==
@@ -268,17 +271,14 @@ const GitProfile = ({ config }: { config: Config }) => {
                         googleAnalyticId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
-                    {sanitizedConfig.awards.length !== 0 && (
-                      <AwardCard
-                        header="Awards"
+                    {sanitizedConfig.projects.github.display && (
+                      <GithubProjectCard
+                        header={sanitizedConfig.projects.github.header}
+                        limit={sanitizedConfig.projects.github.automatic.limit}
+                        githubProjects={githubProjects}
                         loading={loading}
-                        awards={sanitizedConfig.awards}
-                      />
-                    )}
-                    {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
-                        loading={loading}
-                        publications={sanitizedConfig.publications}
+                        username={sanitizedConfig.github.username}
+                        googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
                     {sanitizedConfig.blog.display && (
