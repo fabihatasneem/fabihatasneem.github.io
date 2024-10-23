@@ -27,7 +27,8 @@ const CONFIG = {
         // Properties for manually specifying projects
         projects: [
           'iftekharzeeon/the-great-ink-society',
-          'fabihatasneem/Jigsaw-Puzzle-Solver-Using-Machine-Learning',
+          'fabihatasneem/Jigsaw-Puzzle-Solver-Using-ML',
+          'fabihatasneem/Hall-Management-System',
           'fabihatasneem/Smart-Garage',
           'anupbhowmik/BrightMate-Library-Database-Project',
           'fabihatasneem/Bubble-Shooter',
