@@ -43,7 +43,7 @@ const CONFIG = {
           description:
             'This is my favorite project, and it was created genuinely following my passion. It is an online platform for creative minds who have a story to tell. Here they can share their stories and podcasts freely with proper copyright and enjoy others’ content. They can also communicate with each other and build one true Great Ink Society. We submitted this project to Therap JavaFest 2022 and became one of the top 10 Finalists.',
           imageUrl:
-            'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+            'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/tgis.png',
           link: 'https://github.com/iftekharzeeon/the-great-ink-society',
         },
         {
