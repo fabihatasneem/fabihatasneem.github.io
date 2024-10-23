@@ -44,7 +44,7 @@ const CONFIG = {
           description:
             'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users. This was our term project for BUET Level 4 Term 1',
           imageUrl:
-            'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
+            'https://github.com/fabihatasneem/fabihatasneem.github.io/blob/main/public/BUET_LOGO.svg',
           link: 'https://github.com/CPM-Creative-Production-Management',
         },
       ],
@@ -75,7 +75,7 @@ const CONFIG = {
     telegram: '',
     website: 'https://fabihatasneem.github.io',
     phone: '',
-    email: 'fabihatsnm.00@gmail.com',
+    email: '',
   },
   resume: {
     fileUrl:
