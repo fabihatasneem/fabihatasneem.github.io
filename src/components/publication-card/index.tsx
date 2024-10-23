@@ -87,7 +87,7 @@ const PublicationCard = ({
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h4 className="font-medium opacity-60 mb-2 text-xl">{item.title}</h4>
+                  <h6 className="font-medium opacity-60 mb-2 text-xl">{item.title}</h6>
                   {item.conferenceName && (
                     <p className="text-base-content opacity-50 text-sm font-bold">
                       {item.conferenceName}
@@ -99,7 +99,7 @@ const PublicationCard = ({
                     </p>
                   )}
                   {item.authors && (
-                    <p className="text-base-content opacity-50 text-sm">
+                    <p className="text-base-content opacity-50 text-sm font-bold">
                       Authors: {item.authors}
                     </p>
                   )}
