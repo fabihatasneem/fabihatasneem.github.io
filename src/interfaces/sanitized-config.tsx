@@ -111,9 +111,18 @@ export interface SanitizedHotjar {
 
 export interface SanitizedBlog {
   display: boolean;
+  header: string;
   source: string;
   username: string;
   limit: number;
+}
+
+export interface SanitizedAward {
+  display: boolean;
+  title: string;
+  year: number;
+  description: string;
+  imageUrl: string;
 }
 
 export interface SanitizedCustomTheme {
@@ -148,6 +157,7 @@ export interface SanitizedConfig {
   publications: Array<SanitizedPublication>;
   googleAnalytics: SanitizedGoogleAnalytics;
   hotjar: SanitizedHotjar;
+  awards: Array<SanitizedAward>;
   blog: SanitizedBlog;
   themeConfig: SanitizedThemeConfig;
   footer?: string;

@@ -31,7 +31,7 @@ const CONFIG = {
           'fabihatasneem/Smart-Garage',
           'anupbhowmik/BrightMate-Library-Database-Project',
           'fabihatasneem/Bubble-Shooter',
-        ], 
+        ],
       },
     },
     external: {
@@ -85,8 +85,7 @@ const CONFIG = {
     email: '',
   },
   resume: {
-    fileUrl:
-      '', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'Java',
@@ -110,7 +109,7 @@ const CONFIG = {
     'PyTorch',
     'HTML',
     'CSS',
-    'Tailwind'
+    'Tailwind',
   ],
   experiences: [
     {
@@ -133,7 +132,7 @@ const CONFIG = {
       from: 'November 2023',
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
-    }
+    },
   ],
   certifications: [
     {
@@ -186,27 +185,52 @@ const CONFIG = {
       degree: 'Secondary School Certificate (SSC)',
       from: '2006',
       to: '2015',
-    }
+    },
   ],
   publications: [
     {
-      title: 'EmoBot: Artificial emotion generation through an emotional chatbot during general-purpose conversations',
+      title:
+        'EmoBot: Artificial emotion generation through an emotional chatbot during general-purpose conversations',
       conferenceName: '',
-      journalName: 'Cognitive Systems Research, Volume 83, 2024, 101168, ISSN 1389-0417',
-      authors: 'Md Ehtesham-Ul-Haque, Jacob D\' Rozario, Rudaiba Adnin, Farhan Tanvir Utshaw, Fabiha Tasneem, Israt Jahan Shefa, A.B.M. Alim Al Islam',
+      journalName:
+        'Cognitive Systems Research, Volume 83, 2024, 101168, ISSN 1389-0417',
+      authors:
+        "Md Ehtesham-Ul-Haque, Jacob D' Rozario, Rudaiba Adnin, Farhan Tanvir Utshaw, Fabiha Tasneem, Israt Jahan Shefa, A.B.M. Alim Al Islam",
       link: 'https://doi.org/10.1016/j.cogsys.2023.101168',
       description:
         'Emotion modeling has always been intriguing to researchers, where detecting emotion is highly focused and generating emotion is much less focused to date. Therefore, in this paper, we aim to exploring emotion generation, particularly for general-purpose conversations. Based on the Cognitive Appraisal Theory and focusing on audio and textual inputs, we propose a novel method to calculate informative variables to evaluate a particular emotion-generating event and six primary emotions. Incorporating such a method of artificial emotion generation, we implement an emotional chatbot, namely EmoBot. Accordingly, EmoBot analyzes continuous audio and textual inputs, calculates the informative variables to evaluate the current situation, generates appropriate emotions, and responds accordingly. An objective evaluation indicates that EmoBot could generate more accurate emotional and semantic responses than a traditional chatbot that does not consider emotion. Additionally, a subjective evaluation of EmoBot demonstrates the appreciation of users for EmoBot over a traditional chatbot that does not consider emotion.',
     },
     {
-      title: 'Risk Morphological Study of Assessment of Hip Fracture by Using Machine Learning',
-      conferenceName: 'Submitted to 23rd IEEE International Conference on Machine Learning and Applications',
+      title:
+        'Risk Morphological Study of Assessment of Hip Fracture by Using Machine Learning',
+      conferenceName:
+        'Submitted to 23rd IEEE International Conference on Machine Learning and Applications',
       journalName: '',
-      authors: 'Sanjana Binte Siraj, Fabiha Tasneem, Dr. Tanvir R. Faisal, Dr. Mahmuda Naznin',
+      authors:
+        'Sanjana Binte Siraj, Fabiha Tasneem, Dr. Tanvir R. Faisal, Dr. Mahmuda Naznin',
       link: '',
       description:
-        'Hip fractures pose a significant risk to the aging population, particularly among individuals with osteoarthritis or osteoporosis. This study proposes a novel approach to predicting hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Later we modify the MedViT architecture to enhance prediction accuracy. Our methodology involves further preprocessing a preprocessed CSV dataset generated from QCT image data, determining stress and strain values at various nodes, generating image datasets from these values, and predicting femur fracture risk based on the images. We evaluated several models, including Neural Network, PointNet, and MedViT through extensive feature extraction, data optimization, and hyperparameter tuning. MedViT initially achieved a 79\% accuracy, but with further modifications in the internal architecture, we reached a 95\% accuracy in predicting bone fracture risk and identifying potential fracture locations. This high predictive accuracy holds significant promise for early intervention, enabling healthcare professionals to identify and address fracture risks before they lead to debilitating injuries. Our findings highlight the potential of advanced machine learning frameworks to improve healthcare outcomes for aging individuals and those at high risk for fractures, contributing to enhanced quality of life and reduced healthcare costs.',
-    }
+        'Hip fractures pose a significant risk to the aging population, particularly among individuals with osteoarthritis or osteoporosis. This study proposes a novel approach to predicting hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Later we modify the MedViT architecture to enhance prediction accuracy. Our methodology involves further preprocessing a preprocessed CSV dataset generated from QCT image data, determining stress and strain values at various nodes, generating image datasets from these values, and predicting femur fracture risk based on the images. We evaluated several models, including Neural Network, PointNet, and MedViT through extensive feature extraction, data optimization, and hyperparameter tuning. MedViT initially achieved a 79% accuracy, but with further modifications in the internal architecture, we reached a 95% accuracy in predicting bone fracture risk and identifying potential fracture locations. This high predictive accuracy holds significant promise for early intervention, enabling healthcare professionals to identify and address fracture risks before they lead to debilitating injuries. Our findings highlight the potential of advanced machine learning frameworks to improve healthcare outcomes for aging individuals and those at high risk for fractures, contributing to enhanced quality of life and reduced healthcare costs.',
+    },
+  ],
+  awards: [
+    {
+      title:
+        'Winner of BASIS National ICT Award 2020 in Student (HC-S) Tertiary Student Category for Project E-Waste Management System',
+      year: 2020,
+      description:
+        'The project was about a web-based platform that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste. The project was submitted to the BASIS National ICT Award 2020 and became the winner in the Tertiary Student Category.',
+      imageUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+    },
+    {
+      title: 'Global Honorable Mention Award in NASA Space Apps Challenge 2020',
+      year: 2020,
+      description:
+        'The project was about a satelite viewing platform that allows the users to view the live locations and satelite images throughout the world. The project was submitted to the NASA Space Apps Challenge 2020 and won the Global Winner Honorable Mention Award.',
+      imageUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+    },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {

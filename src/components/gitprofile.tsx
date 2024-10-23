@@ -28,6 +28,7 @@ import { GithubProject } from '../interfaces/github-project';
 import GithubProjectCard from './github-project-card';
 import ExternalProjectCard from './external-project-card';
 import BlogCard from './blog-card';
+import AwardCard from './award-card';
 import Footer from './footer';
 import PublicationCard from './publication-card';
 
@@ -271,6 +272,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                       <PublicationCard
                         loading={loading}
                         publications={sanitizedConfig.publications}
+                      />
+                    )}
+                    {sanitizedConfig.awards.length !== 0 && (
+                      <AwardCard
+                        header="Awards"
+                        loading={loading}
+                        awards={sanitizedConfig.awards}
                       />
                     )}
                     {sanitizedConfig.blog.display && (
