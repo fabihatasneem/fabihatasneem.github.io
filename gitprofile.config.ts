@@ -219,7 +219,8 @@ const CONFIG = {
         'Winner of BASIS National ICT Award 2020 in Student (HC-S) Tertiary Student Category for Project E-Waste Management System',
       year: 2020,
       description:
-        'The project was about a web-based platform that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste. The project was submitted to the BASIS National ICT Award 2020 and became the winner in the Tertiary Student Category.',
+        'Our team BUET Eunoia won this award for our web-based platform that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste.',
+      link: 'https://bnia.basis.org.bd/win/winner-2020',
       imageUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
     },
@@ -227,7 +228,8 @@ const CONFIG = {
       title: 'Global Honorable Mention Award in NASA Space Apps Challenge 2020',
       year: 2020,
       description:
-        'The project was about a satelite viewing platform that allows the users to view the live locations and satelite images throughout the world. The project was submitted to the NASA Space Apps Challenge 2020 and won the Global Winner Honorable Mention Award.',
+        'Our team BUET Zenith won this award for a satelite viewing platform that allows the users to view the live locations, detailed information about orbit, and satelite images all over the space.',
+      link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/details',
       imageUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
     },
