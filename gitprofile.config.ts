@@ -148,9 +148,19 @@ const CONFIG = {
       year: 'June 2023',
     },
     {
-      name: 'NASA Space Apps Challenge Galactic Problem Solver',
+      name: 'Certificate of Ambassador for the IEEEXtreme 15.0',
+      body: 'Certified by IEEE',
+      year: 'October 2021',
+    },
+    {
+      name: 'Winner of BASIS National ICT Award in Student (HC-S) Tertiary Student Category for Project E-Waste Management System',
+      body: 'Certified by BASIS',
+      year: 'June 2021',
+    },
+    {
+      name: 'NASA Space Apps Challenge Galactic Problem Solver (Global Honorable Mention Award)',
       body: 'Certified by NASA',
-      year: 'June 2020',
+      year: 'February 2021',
     },
     {
       name: 'Introduction to Data Science',
