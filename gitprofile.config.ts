@@ -27,7 +27,7 @@ const CONFIG = {
         // Properties for manually specifying projects
         projects: [
           'fabihatasneem/Jigsaw-Puzzle-Solver-Using-ML',
-          'fabihatasneem/Hall-Management-System',
+          // 'fabihatasneem/Hall-Management-System',
           'fabihatasneem/Smart-Garage',
           'anupbhowmik/BrightMate-Library-Database-Project',
           'fabihatasneem/Bubble-Shooter',
