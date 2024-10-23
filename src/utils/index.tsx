@@ -110,6 +110,7 @@ export const getSanitizedConfig = (
           .map((award) => ({
             title: award.title,
             description: award.description,
+            link: award.link || '',
             year: award.year
               ? parseInt(award.year, 10)
               : new Date().getFullYear(),

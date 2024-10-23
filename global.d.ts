@@ -249,6 +249,7 @@ interface Publication {
 interface Award {
   title: string;
   year?: string;
+  link?: string;
   imageUrl?: string;
   description: string;
 }
