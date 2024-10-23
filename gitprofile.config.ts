@@ -31,8 +31,6 @@ const CONFIG = {
           'fabihatasneem/BrightMate-Library-L2T2-1',
           'fabihatasneem/Smart-Garage',
           'fabihatasneem/Bubble-Shooter',
-          'fabihatasneem/HocusPocusHomeAssistant',
-          'fabihatasneem/CSE406---Computer-Security-Sessional',
           'fabihatasneem/HocusPocusHomeAssistant'], 
       },
     },
