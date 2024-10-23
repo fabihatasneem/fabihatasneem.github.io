@@ -94,6 +94,13 @@ export const getSanitizedConfig = (
             experience.from ||
             experience.to,
         ) || [],
+      extraCurricularActivities:
+        config?.extraCurricularActivities?.filter(
+          (extraCurricularActivity) =>
+            extraCurricularActivity.company ||
+            extraCurricularActivity.position ||
+            extraCurricularActivity.year,
+        ) || [],
       certifications:
         config?.certifications?.filter(
           (certification) =>

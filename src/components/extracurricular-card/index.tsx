@@ -3,12 +3,12 @@ import { SanitizedExtraCurricularActivity } from '../../interfaces/sanitized-con
 import { skeleton } from '../../utils';
 
 const ListItem = ({
-  time,
+  year,
   position,
   company,
   companyLink,
 }: {
-  time: React.ReactNode;
+  year: React.ReactNode;
   position?: React.ReactNode;
   company?: React.ReactNode;
   companyLink?: string;
@@ -18,7 +18,7 @@ const ListItem = ({
       className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
       style={{ left: '-4.5px' }}
     ></div>
-    <div className="my-0.5 text-xs">{time}</div>
+    <div className="my-0.5 text-xs">{year}</div>
     <h3 className="font-semibold">{position}</h3>
     <div className="mb-4 font-normal">
       <a href={companyLink} target="_blank" rel="noreferrer">
@@ -41,7 +41,7 @@ const ExtraCurricularCard = ({
       array.push(
         <ListItem
           key={index}
-          time={skeleton({
+          year={skeleton({
             widthCls: 'w-5/12',
             heightCls: 'h-4',
           })}
@@ -78,7 +78,7 @@ const ExtraCurricularCard = ({
                 {extraCurricularActivities.map((experience, index) => (
                   <ListItem
                     key={index}
-                    time={experience.year}
+                    year={experience.year}
                     position={experience.position}
                     company={experience.company}
                     companyLink={
