@@ -19,17 +19,18 @@ const CONFIG = {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 8, // How many projects to display.
         exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
+          forks: true, // Forked projects will not be displayed if set to true.
           projects: [], // These projects will not be displayed. example: ['fabihatasneem/my-project1', 'fabihatasneem/my-project2']
         },
       },
       manual: {
         // Properties for manually specifying projects
         projects: [
-          'fabihatasneem/the-great-ink-society',
+          'iftekharzeeon/the-great-ink-society',
           'fabihatasneem/Jigsaw-Puzzle-Solver-Using-Machine-Learning',
           'fabihatasneem/Smart-Garage',
-          'fabihatasneem/Bubble-Shooter'
+          'anupbhowmik/BrightMate-Library-Database-Project',
+          'fabihatasneem/Bubble-Shooter',
         ], 
       },
     },
@@ -45,14 +46,14 @@ const CONFIG = {
             'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
           link: 'https://github.com/CPM-Creative-Production-Management',
         },
-        {
-          title: 'BrightMate-A Library Management System',
-          description:
-            'This is a library management system comprising a client app and an admin app. This was our term project for BUET Level 2 Term 2 of Database Course (CSE 216).',
-          imageUrl:
-            'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
-          link: 'https://github.com/anupbhowmik/BrightMate-Library-Database-Project',
-        },
+        // {
+        //   title: 'BrightMate-A Library Management System',
+        //   description:
+        //     'This is a library management system comprising a client app and an admin app. This was our term project for BUET Level 2 Term 2 of Database Course (CSE 216).',
+        //   imageUrl:
+        //     'https://github.com/fabihatasneem/fabihatasneem.github.io/tree/main/public/BUET_LOGO.svg',
+        //   link: 'https://github.com/anupbhowmik/BrightMate-Library-Database-Project',
+        // },
       ],
     },
   },
