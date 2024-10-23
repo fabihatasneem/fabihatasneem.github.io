@@ -98,26 +98,26 @@ const AwardCard = ({
           {(item.imageUrl1 || item.imageUrl2) && (
             <div className="flex justify-start mt-4 space-x-4">
               {item.imageUrl1 && (
-                <div className="w-32 h-32">
+                <div className="w-full max-w-xs h-auto">
                   <LazyImage
                     src={item.imageUrl1}
                     alt={'Award image 1'}
                     placeholder={skeleton({
                       widthCls: 'w-full',
-                      heightCls: 'h-full',
+                      heightCls: 'h-48',
                       shape: '',
                     })}
                   />
                 </div>
               )}
               {item.imageUrl2 && (
-                <div className="w-32 h-32">
+                <div className="w-full max-w-xs h-auto">
                   <LazyImage
                     src={item.imageUrl2}
                     alt={'Award image 2'}
                     placeholder={skeleton({
                       widthCls: 'w-full',
-                      heightCls: 'h-full',
+                      heightCls: 'h-48',
                       shape: '',
                     })}
                   />
@@ -133,8 +133,8 @@ const AwardCard = ({
   return (
     <Fragment>
       <div className="col-span-1 lg:col-span-2">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 gap-6">
+          <div className="col-span-1">
             <div className="card compact bg-base-100 shadow bg-opacity-40">
               <div className="card-body">
                 <div className="mx-3 flex items-center justify-between mb-2">
@@ -148,8 +148,8 @@ const AwardCard = ({
                     )}
                   </h5>
                 </div>
-                <div className="col-span-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="col-span-1">
+                  <div className="grid grid-cols-1 gap-6">
                     {loading ? renderSkeleton() : renderAwards()}
                   </div>
                 </div>
