@@ -216,7 +216,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'cupcake',
+    defaultTheme: 'retro',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -231,9 +231,8 @@ const CONFIG = {
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
-      'dim',
       'luxury',
-      'retro',
+      'cupcake',
       'fantasy'
     ],
 
