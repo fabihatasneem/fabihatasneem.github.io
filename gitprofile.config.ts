@@ -231,6 +231,14 @@ const CONFIG = {
       imageUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/javafest.png',
     },
+    {
+      title: 'First Runner Up : BUET CSE Fest 2022 Hackathon',
+      year: 2022,
+      description: 'A project built in the 24 hour span of BUET CSE Fest 2022 Hackathon that ended up winning the First Runner Up position in API & Cloud Category',
+      link: 'https://www.facebook.com/photo/?fbid=170385585546837&set=pcb.170386192213443',
+      imageUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/javafest.png',
+    },
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
