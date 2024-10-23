@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { SanitizedExperience } from '../../interfaces/sanitized-config';
+import { SanitizedExtraCurricularActivity } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
 const ListItem = ({
@@ -28,11 +28,11 @@ const ListItem = ({
   </li>
 );
 
-const ExperienceCard = ({
-  experiences,
+const ExtraCurricularCard = ({
+  extraCurricularActivities,
   loading,
 }: {
-  experiences: SanitizedExperience[];
+  extraCurricularActivities: SanitizedExtraCurricularActivity[];
   loading: boolean;
 }) => {
   const renderSkeleton = () => {
@@ -65,7 +65,7 @@ const ExperienceCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">Work Experience</span>
+              <span className="text-base-content opacity-70">Extra Curricular Activities</span>
             )}
           </h5>
         </div>
@@ -75,10 +75,10 @@ const ExperienceCard = ({
               renderSkeleton()
             ) : (
               <Fragment>
-                {experiences.map((experience, index) => (
+                {extraCurricularActivities.map((experience, index) => (
                   <ListItem
                     key={index}
-                    time={`${experience.from} - ${experience.to}`}
+                    time={experience.year}
                     position={experience.position}
                     company={experience.company}
                     companyLink={
@@ -97,4 +97,4 @@ const ExperienceCard = ({
   );
 };
 
-export default ExperienceCard;
+export default ExtraCurricularCard;

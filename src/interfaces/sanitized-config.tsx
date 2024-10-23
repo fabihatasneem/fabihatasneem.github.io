@@ -77,6 +77,13 @@ export interface SanitizedExperience {
   companyLink?: string;
 }
 
+export interface SanitizedExtraCurricularActivity {
+  company?: string;
+  position?: string;
+  year: string;
+  companyLink?: string;
+}
+
 export interface SanitizedCertification {
   body?: string;
   name?: string;
@@ -153,6 +160,7 @@ export interface SanitizedConfig {
   resume: SanitizedResume;
   skills: Array<string>;
   experiences: Array<SanitizedExperience>;
+  extraCurricularActivities: Array<SanitizedExtraCurricularActivity>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;
   publications: Array<SanitizedPublication>;

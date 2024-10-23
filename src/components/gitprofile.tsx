@@ -22,6 +22,7 @@ import { Profile } from '../interfaces/profile';
 import DetailsCard from './details-card';
 import SkillCard from './skill-card';
 import ExperienceCard from './experience-card';
+import ExtraCurricularCard from './extracurricular-card';
 import EducationCard from './education-card';
 import CertificationCard from './certification-card';
 import { GithubProject } from '../interfaces/github-project';
@@ -235,6 +236,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                       <EducationCard
                         loading={loading}
                         educations={sanitizedConfig.educations}
+                      />
+                    )}
+                    {sanitizedConfig.extraCurricularActivities.length !== 0 && (
+                      <ExtraCurricularCard
+                        loading={loading}
+                        extraCurricularActivities={sanitizedConfig.extraCurricularActivities}
                       />
                     )}
                     {sanitizedConfig.certifications.length !== 0 && (

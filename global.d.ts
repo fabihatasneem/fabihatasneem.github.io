@@ -223,6 +223,13 @@ interface Experience {
   companyLink?: string;
 }
 
+interface ExtraCurricularActivity {
+  company?: string;
+  year: string;
+  position?: string;
+  companyLink?: string;
+}
+
 interface Certification {
   body?: string;
   name?: string;
@@ -398,6 +405,11 @@ interface Config {
    * Experience list
    */
   experiences?: Array<Experience>;
+
+  /**
+   * Extra Curricular Activities list
+   */
+  extraCurricularActivities?: Array<ExtraCurricularActivity>;
 
   /**
    * Certifications list

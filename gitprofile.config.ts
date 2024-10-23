@@ -191,6 +191,18 @@ const CONFIG = {
       to: '2015',
     },
   ],
+  extraCurricularActivities: [
+    {
+      company: 'IEEE Computer Society BUET Student Branch Chapter',
+      position: 'Chairperson',
+      year: '2023',
+    },
+    {
+      company: 'IEEEXtreme 15.0',
+      position: 'Ambassador',
+      year: '2021',
+    },
+  ],
   publications: [
     {
       title:
