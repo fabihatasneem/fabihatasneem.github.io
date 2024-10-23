@@ -221,7 +221,7 @@ const CONFIG = {
         'Our team BUET Zenith won this award for a satelite viewing platform that allows the users to view the live locations, detailed information about orbit, and satelite images all over the space.',
       link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/details',
       imageUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/nasa.svg',
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/nasa.png',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
