@@ -212,7 +212,7 @@ const CONFIG = {
         'Our team BUET Eunoia won this award for our web-based platform that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste.',
       link: 'https://bnia.basis.org.bd/win/winner-2020',
       imageUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/basis.png',
     },
     {
       title: 'Global Honorable Mention Award in NASA Space Apps Challenge 2020',
@@ -221,7 +221,7 @@ const CONFIG = {
         'Our team BUET Zenith won this award for a satelite viewing platform that allows the users to view the live locations, detailed information about orbit, and satelite images all over the space.',
       link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/details',
       imageUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/nasa.svg',
     },
   ],
   // Display articles from your medium or dev account. (Optional)
