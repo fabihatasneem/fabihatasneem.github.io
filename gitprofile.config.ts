@@ -209,7 +209,7 @@ const CONFIG = {
         'Winner : BASIS National ICT Award 2020',
       year: 2020,
       description:
-        'Our team BUET EUNOIA won this award in Student (HC-S) Tertiary Student Category for our web-based platform named E-Waste Management System that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste.',
+        'Our team BUET EUNOIA won this award in the Student (HC-S) Tertiary Student Category for our web-based platform named "E-Waste Management System" that connects the e-waste producers with the e-waste recyclers. The platform was designed to ensure the proper management of e-waste and to reduce the environmental pollution caused by e-waste.',
       link: 'https://bnia.basis.org.bd/win/winner-2020',
       imageUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/basis.png',
@@ -218,8 +218,8 @@ const CONFIG = {
       title: 'Global Honorable Mention Award : NASA Space Apps Challenge 2020',
       year: 2020,
       description:
-        'Our team BUET Zenith won this award for a satelite viewing platform named Satellight that allows the users to view the live locations, detailed information about orbit, and satelite images all over the space.',
-      link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/details',
+        'Our team BUET Zenith won this award for our satellite viewing platform named "Satellight : Putting Light On Satellites" which aims at connecting people with satellites in a socially engaging way by representing satellites in a very visual, social, and organic way. Our project comprises Web and Android apps and an Arduino module. Using our apps, users can observe satellites in Map View, Night Sky View, 3D Model View, VR, and First Person View live in real-time or at any time in the past or future. They can also comment on their favorite satellites and see others\' comments and the number of views for a particular satellite. And, our Arduino module is a physical 3D pointing device that upon selection of a satellite, will physically point to the sky where the satellite is currently at.',
+      link: 'https://2020.spaceappschallenge.org/challenges/connect/orbital-sky/teams/buet-zenith/project',
       imageUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/nasa.png',
     },
