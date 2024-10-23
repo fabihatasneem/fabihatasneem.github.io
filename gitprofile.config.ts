@@ -43,7 +43,7 @@ const CONFIG = {
           description:
             'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users.',
           imageUrl:
-            '',
+            'https://en.wikipedia.org/wiki/Bangladesh_University_of_Engineering_and_Technology#/media/File:BUET_LOGO.svg',
           link: 'https://github.com/CPM-Creative-Production-Management',
         }
       ],
@@ -129,10 +129,25 @@ const CONFIG = {
   ],
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'Apprentice Program with OpenRefactory Bangladesh Ltd.',
+      body: 'Certified by OpenRefactory',
+      year: 'December 2023',
+    },
+    {
+      name: 'Virtual Training on Health Data Analytics',
+      body: 'Certified by MySoft',
+      year: 'June 2023',
+    },
+    {
+      name: 'NASA Space Apps Challenge Galactic Problem Solver',
+      body: 'Certified by NASA',
+      year: 'June 2020',
+    },
+    {
+      name: 'Introduction to Data Science',
+      body: 'Certified by IBM',
+      year: 'June 2020',
+      link: 'https://courses.edx.org/certificates/917b4ec8eeaa445daef713a42efdd578',
     },
   ],
   educations: [
@@ -157,23 +172,23 @@ const CONFIG = {
   ],
   publications: [
     {
-      title: 'Publication Title',
+      title: 'EmoBot: Artificial emotion generation through an emotional chatbot during general-purpose conversations',
       conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
+      journalName: 'Cognitive Systems Research, Volume 83, 2024, 101168, ISSN 1389-0417',
+      authors: 'Md Ehtesham-Ul-Haque, Jacob D\' Rozario, Rudaiba Adnin, Farhan Tanvir Utshaw, Fabiha Tasneem, Israt Jahan Shefa, A.B.M. Alim Al Islam',
+      link: 'https://doi.org/10.1016/j.cogsys.2023.101168',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Emotion modeling has always been intriguing to researchers, where detecting emotion is highly focused and generating emotion is much less focused to date. Therefore, in this paper, we aim to exploring emotion generation, particularly for general-purpose conversations. Based on the Cognitive Appraisal Theory and focusing on audio and textual inputs, we propose a novel method to calculate informative variables to evaluate a particular emotion-generating event and six primary emotions. Incorporating such a method of artificial emotion generation, we implement an emotional chatbot, namely EmoBot. Accordingly, EmoBot analyzes continuous audio and textual inputs, calculates the informative variables to evaluate the current situation, generates appropriate emotions, and responds accordingly. An objective evaluation indicates that EmoBot could generate more accurate emotional and semantic responses than a traditional chatbot that does not consider emotion. Additionally, a subjective evaluation of EmoBot demonstrates the appreciation of users for EmoBot over a traditional chatbot that does not consider emotion.',
     },
     {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
+      title: 'Risk Morphological Study of Assessment of Hip Fracture by Using Machine Learning',
+      conferenceName: '[Submitted to:] 23rd IEEE International Conference on Machine Learning and Applications',
       journalName: '',
-      authors: 'John Doe, Jane Smith',
+      authors: 'Sanjana Binte Siraj, Fabiha Tasneem, Dr. Tanvir R. Faisal, Dr. Mahmuda Naznin',
       link: 'https://example.com',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
+        'Hip fractures pose a significant risk to the aging population, particularly among individuals with osteoarthritis or osteoporosis. This study proposes a novel approach to predicting hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Later we modify the MedViT architecture to enhance prediction accuracy. Our methodology involves further preprocessing a preprocessed CSV dataset generated from QCT image data, determining stress and strain values at various nodes, generating image datasets from these values, and predicting femur fracture risk based on the images. We evaluated several models, including Neural Network, PointNet, and MedViT through extensive feature extraction, data optimization, and hyperparameter tuning. MedViT initially achieved a 79\% accuracy, but with further modifications in the internal architecture, we reached a 95\% accuracy in predicting bone fracture risk and identifying potential fracture locations. This high predictive accuracy holds significant promise for early intervention, enabling healthcare professionals to identify and address fracture risks before they lead to debilitating injuries. Our findings highlight the potential of advanced machine learning frameworks to improve healthcare outcomes for aging individuals and those at high risk for fractures, contributing to enhanced quality of life and reduced healthcare costs.',
+    }
   ],
   // Display articles from your medium or dev account. (Optional)
   blog: {
@@ -190,7 +205,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'lofi',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -205,7 +220,6 @@ const CONFIG = {
 
     // Available themes. To remove any theme, exclude from here.
     themes: [
-      'light',
       'dark',
       'retro',
       'fantasy'
