@@ -6,20 +6,20 @@ import {
   RiFileTextLine,
   RiMessage2Line,
 } from 'react-icons/ri';
+import { SanitizedContact } from '../../interfaces/sanitized-config';
 
-type ContactFormData = {
-  senderName: string;
-  senderEmail: string;
-  subject: string;
-  message: string;
-};
+interface ContactCardProps {
+  contact: SanitizedContact;
+}
 
-const ContactCard: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
-    senderName: '',
-    senderEmail: '',
-    subject: '',
-    message: '',
+const ContactCard: React.FC<ContactCardProps> = ({
+  contact: sanitizedContact,
+}) => {
+  const [formData, setFormData] = useState<SanitizedContact>({
+    senderName: sanitizedContact.senderName || '',
+    senderEmail: sanitizedContact.senderEmail || '',
+    subject: sanitizedContact.subject || '',
+    message: sanitizedContact.message || '',
   });
 
   const handleInputChange = (
@@ -31,7 +31,7 @@ const ContactCard: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement the logic to send the email to your Gmail account
+    // TODO: Implement the logic to send the email using the SanitizedContact data
     console.log('Form submitted:', formData);
     // Reset form after submission
     setFormData({ senderName: '', senderEmail: '', subject: '', message: '' });
@@ -44,7 +44,7 @@ const ContactCard: React.FC = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text">Your Name</span>
             </label>
             <div className="input-group">
               <span>
@@ -52,7 +52,7 @@ const ContactCard: React.FC = () => {
               </span>
               <input
                 type="text"
-                name="senderName"
+                name="name"
                 value={formData.senderName}
                 onChange={handleInputChange}
                 placeholder="Your Name"
@@ -63,7 +63,7 @@ const ContactCard: React.FC = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Email</span>
+              <span className="label-text">Your Email</span>
             </label>
             <div className="input-group">
               <span>
@@ -71,7 +71,7 @@ const ContactCard: React.FC = () => {
               </span>
               <input
                 type="email"
-                name="senderEmail"
+                name="email"
                 value={formData.senderEmail}
                 onChange={handleInputChange}
                 placeholder="your.email@example.com"

@@ -20,6 +20,7 @@ import { BG_COLOR } from '../constants';
 import AvatarCard from './avatar-card';
 import { Profile } from '../interfaces/profile';
 import DetailsCard from './details-card';
+import ContactCard from './contact-card';
 import SkillCard from './skill-card';
 import ExperienceCard from './experience-card';
 import ExtraCurricularCard from './extracurricular-card';
@@ -252,6 +253,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                         certifications={sanitizedConfig.certifications}
                       />
                     )}
+                    <ContactCard contact={sanitizedConfig.contact} />
                   </div>
                 </div>
                 <div className="lg:col-span-2 col-span-1">
