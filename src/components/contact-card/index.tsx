@@ -31,10 +31,33 @@ const ContactCard: React.FC<ContactCardProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement the logic to send the email using the SanitizedContact data
-    console.log('Form submitted:', formData);
-    // Reset form after submission
-    setFormData({ senderName: '', senderEmail: '', subject: '', message: '' });
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          recipientEmail: 'fabihatsnm.00@gmail.com',
+        }),
+      });
+
+      if (response.ok) {
+        alert('Email sent successfully!');
+        setFormData({
+          senderName: '',
+          senderEmail: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send email. Please try again later.');
+    }
   };
 
   return (
@@ -52,7 +75,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
               </span>
               <input
                 type="text"
-                name="name"
+                name="senderName"
                 value={formData.senderName}
                 onChange={handleInputChange}
                 placeholder="Your Name"
@@ -71,7 +94,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
               </span>
               <input
                 type="email"
-                name="email"
+                name="senderEmail"
                 value={formData.senderEmail}
                 onChange={handleInputChange}
                 placeholder="your.email@example.com"
@@ -112,7 +135,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
                 value={formData.message}
                 onChange={handleInputChange}
                 placeholder="Your message here..."
-                className="textarea textarea-bordered w-full h-24"
+                className="textarea textarea-bordered w-full h-32"
                 required
               ></textarea>
             </div>
