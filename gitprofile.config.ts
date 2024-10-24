@@ -170,6 +170,12 @@ const CONFIG = {
       year: 'June 2020',
       link: 'https://courses.edx.org/certificates/917b4ec8eeaa445daef713a42efdd578',
     },
+    {
+      name: "The Duke of Edinburgh's Award (Bronze Medal)",
+      body: "Certified by The Duke of Edinburgh's Award Foundation Bangladesh associated by The Regional Secretariat in Australia & The International Secretariat in the UK",
+      year: 'March 2020',
+      link: '',
+    },
   ],
   educations: [
     {
