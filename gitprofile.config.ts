@@ -41,7 +41,7 @@ const CONFIG = {
         {
           title: 'The Great Ink Society',
           description:
-            'This is a project that is the closest to my heart, and it was created genuinely following my passion. It is an online platform for creative minds who have a story to tell. Here they can share stories written by them and podcasts recorded by them freely with proper copyright and enjoy others\’ content. They can also communicate with each other through chatting and build one true Great Ink Society. We submitted this project to Therap JavaFest 2022 and became one of the top 10 Finalists.',
+            'This is a project that is the closest to my heart, and it was created genuinely following my passion. It is an online platform for creative minds who have a story to tell. Here they can share stories written by them and podcasts recorded by them freely with proper copyright and enjoy others’ content. They can also communicate with each other through chatting and build one true Great Ink Society. We submitted this project to Therap JavaFest 2022 and became one of the top 10 Finalists.',
           imageUrl:
             'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/tgis.png',
           link: 'https://github.com/iftekharzeeon/the-great-ink-society',
@@ -272,7 +272,8 @@ const CONFIG = {
     {
       title: 'First Runner Up : BUET CSE Fest 2022 Hackathon',
       year: 2022,
-      description: 'Our team BUET Bleh developed a sophisticated digital home assistant app during the intense 24-hour challenge of the BUET CSE Fest 2022 Inter-University Hackathon. Our hard work and innovation paid off, as we proudly secured the First Runner-Up position in the API & Cloud Category.',
+      description:
+        'Our team BUET Bleh developed a sophisticated digital home assistant app during the intense 24-hour challenge of the BUET CSE Fest 2022 Inter-University Hackathon. Our hard work and innovation paid off, as we proudly secured the First Runner-Up position in the API & Cloud Category.',
       link: 'https://www.facebook.com/photo/?fbid=170385585546837&set=pcb.170386192213443',
       logoUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/csefest22.jpg',

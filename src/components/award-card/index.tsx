@@ -96,30 +96,32 @@ const AwardCard = ({
             </div>
           </div>
           {(item.imageUrl1 || item.imageUrl2) && (
-            <div className="flex justify-start mt-4 space-x-4">
+            <div className="flex flex-wrap justify-start mt-4 -mx-2">
               {item.imageUrl1 && (
-                <div className="w-full max-w-xs h-auto">
+                <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0">
                   <LazyImage
                     src={item.imageUrl1}
                     alt={'Award image 1'}
                     placeholder={skeleton({
                       widthCls: 'w-full',
                       heightCls: 'h-48',
-                      shape: '',
+                      shape: 'rounded-lg',
                     })}
+                    className="w-full h-auto object-cover rounded-lg"
                   />
                 </div>
               )}
               {item.imageUrl2 && (
-                <div className="w-full max-w-xs h-auto">
+                <div className="w-full sm:w-1/2 px-2">
                   <LazyImage
                     src={item.imageUrl2}
                     alt={'Award image 2'}
                     placeholder={skeleton({
                       widthCls: 'w-full',
                       heightCls: 'h-48',
-                      shape: '',
+                      shape: 'rounded-lg',
                     })}
+                    className="w-full h-auto object-cover rounded-lg"
                   />
                 </div>
               )}
