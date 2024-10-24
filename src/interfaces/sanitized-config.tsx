@@ -65,6 +65,13 @@ export interface SanitizedSocial {
   email?: string;
 }
 
+export interface SanitizedContact {
+  senderName?: string;
+  senderEmail?: string;
+  subject?: string;
+  message?: string;
+}
+
 export interface SanitizedResume {
   fileUrl?: string;
 }
@@ -157,6 +164,7 @@ export interface SanitizedConfig {
   projects: SanitizedProjects;
   seo: SanitizedSEO;
   social: SanitizedSocial;
+  contact: SanitizedContact;
   resume: SanitizedResume;
   skills: Array<string>;
   experiences: Array<SanitizedExperience>;

@@ -82,6 +82,12 @@ export const getSanitizedConfig = (
         telegram: config?.social?.telegram,
         researchGate: config?.social?.researchGate,
       },
+      contact: {
+        senderName: config?.contact?.senderName || '',
+        senderEmail: config?.contact?.senderEmail || '',
+        subject: config?.contact?.subject || '',
+        message: config?.contact?.message || '',
+      },
       resume: {
         fileUrl: config?.resume?.fileUrl || '',
       },

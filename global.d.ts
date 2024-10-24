@@ -208,6 +208,13 @@ interface Social {
   email?: string;
 }
 
+interface Contact {
+  senderName?: string;
+  senderEmail?: string;
+  subject?: string;
+  message?: string;
+}
+
 interface Resume {
   /**
    * Resume file url
@@ -395,6 +402,11 @@ interface Config {
    * Social links
    */
   social?: Social;
+
+  /**
+   * Contact form
+   */
+  contact?: Contact;
 
   /**
    * Skill list
