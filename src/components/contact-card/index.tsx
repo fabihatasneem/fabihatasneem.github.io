@@ -67,78 +67,70 @@ const ContactCard: React.FC<ContactCardProps> = ({
         <form onSubmit={handleSubmit}>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Your Name</span>
-            </label>
-            <div className="input-group">
-              <span>
-                <RiUser3Line />
+              <span className="label-text flex items-center">
+                <RiUser3Line className="mr-2" />
+                Your Name
               </span>
-              <input
-                type="text"
-                name="senderName"
-                value={formData.senderName}
-                onChange={handleInputChange}
-                placeholder="Your Name"
-                className="input input-bordered w-full"
-                required
-              />
-            </div>
+            </label>
+            <input
+              type="text"
+              name="senderName"
+              value={formData.senderName}
+              onChange={handleInputChange}
+              placeholder="Your Name"
+              className="input input-bordered w-full"
+              required
+            />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Your Email</span>
-            </label>
-            <div className="input-group">
-              <span>
-                <RiMailLine />
+              <span className="label-text flex items-center">
+                <RiMailLine className="mr-2" />
+                Your Email
               </span>
-              <input
-                type="email"
-                name="senderEmail"
-                value={formData.senderEmail}
-                onChange={handleInputChange}
-                placeholder="your.email@example.com"
-                className="input input-bordered w-full"
-                required
-              />
-            </div>
+            </label>
+            <input
+              type="email"
+              name="senderEmail"
+              value={formData.senderEmail}
+              onChange={handleInputChange}
+              placeholder="your.email@example.com"
+              className="input input-bordered w-full"
+              required
+            />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Subject</span>
-            </label>
-            <div className="input-group">
-              <span>
-                <RiFileTextLine />
+              <span className="label-text flex items-center">
+                <RiFileTextLine className="mr-2" />
+                Subject
               </span>
-              <input
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                placeholder="Email Subject"
-                className="input input-bordered w-full"
-                required
-              />
-            </div>
+            </label>
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              placeholder="Email Subject"
+              className="input input-bordered w-full"
+              required
+            />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Message</span>
-            </label>
-            <div className="input-group">
-              <span>
-                <RiMessage2Line />
+              <span className="label-text flex items-center">
+                <RiMessage2Line className="mr-2" />
+                Message
               </span>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                placeholder="Your message here..."
-                className="textarea textarea-bordered w-full h-32"
-                required
-              ></textarea>
-            </div>
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Your message here..."
+              className="textarea textarea-bordered w-full h-32"
+              required
+            ></textarea>
           </div>
           <div className="form-control mt-6">
             <button type="submit" className="btn btn-primary">
