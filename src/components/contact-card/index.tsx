@@ -29,42 +29,11 @@ const ContactCard: React.FC<ContactCardProps> = ({
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          recipientEmail: 'fabihatsnm.00@gmail.com',
-        }),
-      });
-
-      if (response.ok) {
-        alert('Email sent successfully!');
-        setFormData({
-          senderName: '',
-          senderEmail: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        throw new Error('Failed to send email');
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-      alert('Failed to send email. Please try again later.');
-    }
-  };
-
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
         <h2 className="card-title">Contact Me</h2>
-        <form onSubmit={handleSubmit}>
+        <form action="https://formspree.io/f/xanynzvk" method="POST">
           <div className="form-control">
             <label className="label">
               <span className="label-text flex items-center">
@@ -74,7 +43,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
             </label>
             <input
               type="text"
-              name="senderName"
+              name="name"
               value={formData.senderName}
               onChange={handleInputChange}
               placeholder="Your Name"
@@ -91,7 +60,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
             </label>
             <input
               type="email"
-              name="senderEmail"
+              name="email"
               value={formData.senderEmail}
               onChange={handleInputChange}
               placeholder="your.email@example.com"
