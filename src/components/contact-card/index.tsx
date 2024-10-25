@@ -43,7 +43,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
             </label>
             <input
               type="text"
-              name="name"
+              name="senderName"
               value={formData.senderName}
               onChange={handleInputChange}
               placeholder="Your Name"
@@ -60,7 +60,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
             </label>
             <input
               type="email"
-              name="email"
+              name="senderEmail"
               value={formData.senderEmail}
               onChange={handleInputChange}
               placeholder="your.email@example.com"
