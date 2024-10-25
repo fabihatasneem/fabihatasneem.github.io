@@ -179,7 +179,7 @@ const CONFIG = {
   ],
   educations: [
     {
-      institution: 'Bangladesh University of Engineering and Technology',
+      institution: 'Bangladesh University of Engineering and Technology (BUET)',
       degree: 'B.Sc in Computer Science and Engineering (CSE)',
       from: '2019',
       to: '2024',
