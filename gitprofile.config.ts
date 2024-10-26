@@ -225,8 +225,7 @@ const CONFIG = {
     {
       title:
         'Risk Morphological Study of Assessment of Hip Fracture by Using Machine Learning',
-      conferenceName:
-        'Submitted to 23rd IEEE International Conference on Machine Learning and Applications',
+      conferenceName: 'Undergraduate Thesis Work',
       journalName: '',
       authors:
         'Sanjana Binte Siraj, Fabiha Tasneem, Dr. Tanvir R. Faisal, Dr. Mahmuda Naznin',
