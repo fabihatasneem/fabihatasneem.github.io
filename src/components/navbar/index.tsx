@@ -39,16 +39,24 @@ const Navbar = () => {
               Education
             </a>
           </li>
-
+          <li>
+            <a
+              onClick={scrollToSection('publication')}
+              className="btn btn-ghost normal-case"
+            >
+              Publications
+            </a>
+          </li>
           <li>
             <details
               open={openDropdown === 'achievements'}
               className="dropdown"
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownToggle('achievements');
+              }}
             >
-              <summary
-                className="btn btn-ghost normal-case m-1"
-                onClick={() => handleDropdownToggle('achievements')}
-              >
+              <summary className="btn btn-ghost normal-case">
                 Achievements
               </summary>
               <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -60,19 +68,19 @@ const Navbar = () => {
                 <li>
                   <a onClick={scrollToSection('award')}>Awards</a>
                 </li>
-                <li>
-                  <a onClick={scrollToSection('publication')}>Publications</a>
-                </li>
               </ul>
             </details>
           </li>
-
           <li>
-            <details open={openDropdown === 'activities'} className="dropdown">
-              <summary
-                className="btn btn-ghost normal-case m-1"
-                onClick={() => handleDropdownToggle('activities')}
-              >
+            <details
+              open={openDropdown === 'activities'}
+              className="dropdown"
+              onClick={(e) => {
+                e.preventDefault();
+                handleDropdownToggle('activities');
+              }}
+            >
+              <summary className="btn btn-ghost normal-case">
                 Activities
               </summary>
               <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
