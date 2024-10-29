@@ -1,21 +1,27 @@
+import React, { useState } from 'react';
+
 const Navbar = () => {
-  const scrollToSection = (elementId: string) => (e: React.MouseEvent) => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const handleDropdownToggle = (dropdown) => {
+    setOpenDropdown((prev) => (prev === dropdown ? null : dropdown));
+  };
+
+  const scrollToSection = (elementId) => (e) => {
     e.preventDefault();
     const element = document.getElementById(elementId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setOpenDropdown(null); // Close dropdown after clicking an item
   };
 
   return (
     <div className="navbar bg-base-100 px-4">
-      {/* Logo or Brand area */}
-      <div className="navbar-start">{/* Add your logo here if needed */}</div>
+      <div className="navbar-start"></div>
 
-      {/* Center aligned menu items */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal gap-2">
-          {/* Main sections */}
           <li>
             <a
               onClick={scrollToSection('work')}
@@ -33,10 +39,15 @@ const Navbar = () => {
             </a>
           </li>
 
-          {/* Achievements Dropdown */}
           <li>
-            <details className="dropdown">
-              <summary className="btn btn-ghost normal-case m-1">
+            <details
+              open={openDropdown === 'achievements'}
+              className="dropdown"
+            >
+              <summary
+                className="btn btn-ghost normal-case m-1"
+                onClick={() => handleDropdownToggle('achievements')}
+              >
                 Achievements
               </summary>
               <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -55,10 +66,12 @@ const Navbar = () => {
             </details>
           </li>
 
-          {/* Activities Dropdown */}
           <li>
-            <details className="dropdown">
-              <summary className="btn btn-ghost normal-case m-1">
+            <details open={openDropdown === 'activities'} className="dropdown">
+              <summary
+                className="btn btn-ghost normal-case m-1"
+                onClick={() => handleDropdownToggle('activities')}
+              >
                 Activities
               </summary>
               <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
@@ -85,7 +98,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Mobile menu - aligned to end */}
       <div className="navbar-end lg:hidden">
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
