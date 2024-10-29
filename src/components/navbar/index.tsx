@@ -8,13 +8,87 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-base-100">
-      <div className="flex-1"></div>
+    <div className="navbar bg-base-100 px-4">
+      {/* Logo or Brand area */}
+      <div className="navbar-start">{/* Add your logo here if needed */}</div>
 
-      {/* Mobile Menu */}
-      <div className="flex-none lg:hidden">
+      {/* Center aligned menu items */}
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal gap-2">
+          {/* Main sections */}
+          <li>
+            <a
+              onClick={scrollToSection('work')}
+              className="btn btn-ghost normal-case"
+            >
+              Work
+            </a>
+          </li>
+          <li>
+            <a
+              onClick={scrollToSection('education')}
+              className="btn btn-ghost normal-case"
+            >
+              Education
+            </a>
+          </li>
+
+          {/* Achievements Dropdown */}
+          <li>
+            <details className="dropdown">
+              <summary className="btn btn-ghost normal-case m-1">
+                Achievements
+              </summary>
+              <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                <li>
+                  <a onClick={scrollToSection('certification')}>
+                    Certifications
+                  </a>
+                </li>
+                <li>
+                  <a onClick={scrollToSection('award')}>Awards</a>
+                </li>
+                <li>
+                  <a onClick={scrollToSection('publication')}>Publications</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          {/* Activities Dropdown */}
+          <li>
+            <details className="dropdown">
+              <summary className="btn btn-ghost normal-case m-1">
+                Activities
+              </summary>
+              <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                <li>
+                  <a onClick={scrollToSection('extraCurricular')}>
+                    Extra-Curricular
+                  </a>
+                </li>
+                <li>
+                  <a onClick={scrollToSection('project')}>Projects</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <a
+              onClick={scrollToSection('contact')}
+              className="btn btn-ghost normal-case"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Mobile menu - aligned to end */}
+      <div className="navbar-end lg:hidden">
         <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -32,9 +106,8 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {/* Mobile menu items */}
             <li>
               <a onClick={scrollToSection('work')}>Work</a>
             </li>
@@ -63,85 +136,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
-
-      {/* Desktop Menu */}
-      <div className="flex-none hidden lg:block">
-        <ul className="menu menu-horizontal px-1">
-          {/* Main sections */}
-          <li>
-            <a
-              onClick={scrollToSection('work')}
-              className="btn btn-ghost normal-case"
-            >
-              Work
-            </a>
-          </li>
-          <li>
-            <a
-              onClick={scrollToSection('education')}
-              className="btn btn-ghost normal-case"
-            >
-              Education
-            </a>
-          </li>
-
-          {/* Achievements Dropdown */}
-          <li>
-            <div className="dropdown dropdown-hover">
-              <label tabIndex={0} className="btn btn-ghost normal-case">
-                Achievements
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a onClick={scrollToSection('certification')}>
-                    Certifications
-                  </a>
-                </li>
-                <li>
-                  <a onClick={scrollToSection('award')}>Awards</a>
-                </li>
-                <li>
-                  <a onClick={scrollToSection('publication')}>Publications</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          {/* Activities Dropdown */}
-          <li>
-            <div className="dropdown dropdown-hover">
-              <label tabIndex={0} className="btn btn-ghost normal-case">
-                Activities
-              </label>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a onClick={scrollToSection('extraCurricular')}>
-                    Extra-Curricular
-                  </a>
-                </li>
-                <li>
-                  <a onClick={scrollToSection('project')}>Projects</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <li>
-            <a
-              onClick={scrollToSection('contact')}
-              className="btn btn-ghost normal-case"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );
