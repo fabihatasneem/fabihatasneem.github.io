@@ -19,9 +19,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 px-4 w-full max-w-screen-xl mx-auto">
-      <div className="navbar-start"></div>
-
-      <div className="navbar-center hidden lg:flex w-full justify-center">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal gap-x-4 items-center">
           <li>
             <a
@@ -50,9 +48,22 @@ const Navbar = () => {
           <li className="relative">
             <button
               onClick={() => handleDropdownToggle('achievements')}
-              className="btn btn-ghost normal-case"
+              className="btn btn-ghost normal-case flex gap-1 items-center"
             >
               Achievements
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </button>
             {openDropdown === 'achievements' && (
               <ul className="absolute top-full left-1/2 transform -translate-x-1/2 p-2 shadow menu z-[1] bg-base-100 rounded-box w-52">
@@ -70,9 +81,22 @@ const Navbar = () => {
           <li className="relative">
             <button
               onClick={() => handleDropdownToggle('activities')}
-              className="btn btn-ghost normal-case"
+              className="btn btn-ghost normal-case flex gap-1 items-center"
             >
               Activities
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
             </button>
             {openDropdown === 'activities' && (
               <ul className="absolute top-full left-1/2 transform -translate-x-1/2 p-2 shadow menu z-[1] bg-base-100 rounded-box w-52">
