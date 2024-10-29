@@ -87,7 +87,9 @@ const PublicationCard = ({
             <div className="w-full">
               <div className="px-4">
                 <div className="text-center w-full">
-                  <h6 className="font-medium opacity-60 mb-2 text-xl">{item.title}</h6>
+                  <h6 className="font-medium opacity-60 mb-2 text-xl">
+                    {item.title}
+                  </h6>
                   {item.conferenceName && (
                     <p className="text-base-content opacity-50 text-sm font-bold">
                       {item.conferenceName}
@@ -119,7 +121,7 @@ const PublicationCard = ({
 
   return (
     <Fragment>
-      <div className="col-span-1 lg:col-span-2">
+      <div id="publication" className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-1 gap-6">
           <div className="col-span-1">
             <div className="card compact bg-base-100 shadow bg-opacity-40">

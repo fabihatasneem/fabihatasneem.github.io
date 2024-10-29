@@ -42,28 +42,6 @@ const ThemeChanger = ({
   return (
     <div className="card overflow-visible shadow-lg compact bg-base-100">
       <div className="flex items-center justify-between px-6 py-4">
-        <div className="flex items-center space-x-4">
-          <div>
-            <h5 className="card-title">
-              {loading ? (
-                skeleton({
-                  widthCls: 'w-20',
-                  heightCls: 'h-8',
-                  className: 'mb-1',
-                })
-              ) : (
-                <span className="text-base-content opacity-70">Theme</span>
-              )}
-            </h5>
-            <span className="text-base-content text-opacity-40 capitalize text-sm">
-              {loading
-                ? skeleton({ widthCls: 'w-16', heightCls: 'h-5' })
-                : theme === themeConfig.defaultTheme
-                  ? 'Default'
-                  : theme}
-            </span>
-          </div>
-        </div>
         <div className="flex-0">
           {loading ? (
             skeleton({
@@ -72,7 +50,7 @@ const ThemeChanger = ({
               className: 'mr-6',
             })
           ) : (
-            <div title="Change Theme" className="dropdown dropdown-end">
+            <div title="Change Theme" className="dropdown dropdown-start">
               <div
                 tabIndex={0}
                 className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"

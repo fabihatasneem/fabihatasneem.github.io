@@ -92,7 +92,9 @@ const AwardCard = ({
             )}
             <div className="flex-1">
               <h2 className="font-medium opacity-60 mb-2">{item.title}</h2>
-              <p className="text-base-content text-opacity-60 text-sm">{item.description}</p>
+              <p className="text-base-content text-opacity-60 text-sm">
+                {item.description}
+              </p>
             </div>
           </div>
           {(item.imageUrl1 || item.imageUrl2) && (
@@ -134,7 +136,7 @@ const AwardCard = ({
 
   return (
     <Fragment>
-      <div className="col-span-1 lg:col-span-2">
+      <div id="award" className="col-span-1 lg:col-span-2">
         <div className="grid grid-cols-1 gap-6">
           <div className="col-span-1">
             <div className="card compact bg-base-100 shadow bg-opacity-40">
