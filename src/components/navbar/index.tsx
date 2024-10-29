@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 
 const Navbar = () => {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  const handleDropdownToggle = (dropdown) => {
+  const handleDropdownToggle = (dropdown: string) => {
     setOpenDropdown((prev) => (prev === dropdown ? null : dropdown));
   };
 
-  const scrollToSection = (elementId) => (e) => {
-    e.preventDefault();
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setOpenDropdown(null); // Close dropdown after clicking an item
-  };
+  const scrollToSection =
+    (elementId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      const element = document.getElementById(elementId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+      setOpenDropdown(null);
+    };
 
   return (
     <div className="navbar bg-base-100 px-4">
