@@ -65,7 +65,9 @@ const ExtraCurricularCard = ({
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
             ) : (
-              <span className="text-base-content opacity-70">Extra Curricular Activities</span>
+              <span className="text-base-content opacity-70">
+                Extra Curricular Activities
+              </span>
             )}
           </h5>
         </div>

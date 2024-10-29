@@ -58,7 +58,7 @@ const CONFIG = {
     },
   },
   seo: {
-    title: 'Portfolio of Fabiha Tasneem',
+    title: 'Fabiha Tasneem',
     description: '',
     imageURL: '',
   },

@@ -25,15 +25,15 @@ export default defineConfig({
             workbox: {
               navigateFallback: undefined,
             },
-            includeAssets: ['logo.png'],
+            includeAssets: ['favicon-16x16.png'],
             manifest: {
               name: 'Portfolio',
               short_name: 'Portfolio',
               description: 'Personal Portfolio',
               icons: [
                 {
-                  src: 'logo.png',
-                  sizes: '64x64 32x32 24x24 16x16 192x192 512x512',
+                  src: 'favicon.ico',
+                  sizes: '32x32 16x16',
                   type: 'image/png',
                 },
               ],
