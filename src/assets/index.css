@@ -90,3 +90,9 @@ svg {
     opacity: 1;
   }
 }
+
+.dropdown-content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+

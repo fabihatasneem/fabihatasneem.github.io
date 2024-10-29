@@ -18,11 +18,11 @@ const Navbar = () => {
     };
 
   return (
-    <div className="navbar bg-base-100 px-4">
+    <div className="navbar bg-base-100 px-4 w-full max-w-screen-xl mx-auto">
       <div className="navbar-start"></div>
 
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal gap-2">
+      <div className="navbar-center hidden lg:flex w-full justify-center">
+        <ul className="menu menu-horizontal gap-x-4 items-center">
           <li>
             <a
               onClick={scrollToSection('work')}
@@ -47,19 +47,15 @@ const Navbar = () => {
               Publications
             </a>
           </li>
-          <li>
-            <details
-              open={openDropdown === 'achievements'}
-              className="dropdown"
-              onClick={(e) => {
-                e.preventDefault();
-                handleDropdownToggle('achievements');
-              }}
+          <li className="relative">
+            <button
+              onClick={() => handleDropdownToggle('achievements')}
+              className="btn btn-ghost normal-case"
             >
-              <summary className="btn btn-ghost normal-case">
-                Achievements
-              </summary>
-              <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+              Achievements
+            </button>
+            {openDropdown === 'achievements' && (
+              <ul className="absolute top-full left-1/2 transform -translate-x-1/2 p-2 shadow menu z-[1] bg-base-100 rounded-box w-52">
                 <li>
                   <a onClick={scrollToSection('certification')}>
                     Certifications
@@ -69,21 +65,17 @@ const Navbar = () => {
                   <a onClick={scrollToSection('award')}>Awards</a>
                 </li>
               </ul>
-            </details>
+            )}
           </li>
-          <li>
-            <details
-              open={openDropdown === 'activities'}
-              className="dropdown"
-              onClick={(e) => {
-                e.preventDefault();
-                handleDropdownToggle('activities');
-              }}
+          <li className="relative">
+            <button
+              onClick={() => handleDropdownToggle('activities')}
+              className="btn btn-ghost normal-case"
             >
-              <summary className="btn btn-ghost normal-case">
-                Activities
-              </summary>
-              <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+              Activities
+            </button>
+            {openDropdown === 'activities' && (
+              <ul className="absolute top-full left-1/2 transform -translate-x-1/2 p-2 shadow menu z-[1] bg-base-100 rounded-box w-52">
                 <li>
                   <a onClick={scrollToSection('extraCurricular')}>
                     Extra-Curricular
@@ -93,9 +85,8 @@ const Navbar = () => {
                   <a onClick={scrollToSection('project')}>Projects</a>
                 </li>
               </ul>
-            </details>
+            )}
           </li>
-
           <li>
             <a
               onClick={scrollToSection('contact')}
