@@ -270,6 +270,15 @@ interface Award {
   description: string;
 }
 
+interface Skill {
+  languages?: Array<string>;
+  frameworks?: Array<string>;
+  databases?: Array<string>;
+  tools?: Array<string>;
+  cloud?: Array<string>;
+  ml?: Array<string>;
+}
+
 interface GoogleAnalytics {
   /**
    * GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
@@ -411,7 +420,7 @@ interface Config {
   /**
    * Skill list
    */
-  skills?: Array<string>;
+  skills?: Skills;
 
   /**
    * Experience list
