@@ -3,6 +3,7 @@ import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
 import { LOCAL_STORAGE_KEY_NAME } from '../../constants';
 import { skeleton } from '../../utils';
 import { MouseEvent } from 'react';
+import Navbar from '../navbar';
 
 /**
  * Renders a theme changer component.
@@ -92,6 +93,9 @@ const ThemeChanger = ({
               </div>
             </div>
           )}
+        </div>
+        <div className="flex-1 flex justify-end">
+          <Navbar />
         </div>
       </div>
     </div>
