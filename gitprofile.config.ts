@@ -303,7 +303,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'retro',
+    defaultTheme: 'cupcake',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -317,7 +317,7 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: ['retro', 'luxury', 'cupcake'],
+    themes: ['cupcake', 'night'],
   },
 
   // Optional Footer. Supports plain text or HTML.

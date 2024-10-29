@@ -21,7 +21,9 @@ const ContactCard: React.FC<ContactCardProps> = ({
     subject: sanitizedContact.subject || '',
     message: sanitizedContact.message || '',
   });
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'sending' | 'success' | 'error'
+  >('idle');
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -132,12 +134,12 @@ const ContactCard: React.FC<ContactCardProps> = ({
             ></textarea>
           </div>
           <div className="form-control mt-6">
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className="btn btn-primary"
               disabled={submitStatus === 'sending'}
             >
-              <RiMailSendLine className="mr-2" /> 
+              <RiMailSendLine className="mr-2" />
               {submitStatus === 'sending' ? 'Sending...' : 'Send'}
             </button>
           </div>
