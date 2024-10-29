@@ -19,8 +19,8 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100 px-4 w-full max-w-screen-xl mx-auto">
-      <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal gap-x-4 items-center">
+      <div className="navbar-end hidden lg:flex w-full justify-end">
+        <ul className="menu menu-horizontal gap-x-4 items-center flex-nowrap">
           <li>
             <a
               onClick={scrollToSection('work')}
