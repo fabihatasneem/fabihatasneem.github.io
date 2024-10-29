@@ -159,6 +159,15 @@ export interface SanitizedThemeConfig {
   customTheme: SanitizedCustomTheme;
 }
 
+export interface SanitizedSkills {
+  languages?: Array<string>;
+  frameworks?: Array<string>;
+  databases?: Array<string>;
+  tools?: Array<string>;
+  cloud?: Array<string>;
+  ml?: Array<string>;
+}
+
 export interface SanitizedConfig {
   github: SanitizedGithub;
   projects: SanitizedProjects;
@@ -166,7 +175,7 @@ export interface SanitizedConfig {
   social: SanitizedSocial;
   contact: SanitizedContact;
   resume: SanitizedResume;
-  skills: Array<string>;
+  skills: SanitizedSkills;
   experiences: Array<SanitizedExperience>;
   extraCurricularActivities: Array<SanitizedExtraCurricularActivity>;
   educations: Array<SanitizedEducation>;

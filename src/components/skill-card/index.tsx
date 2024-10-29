@@ -1,11 +1,20 @@
 import { skeleton } from '../../utils';
 
+type SkillCategories = {
+  languages?: string[];
+  frameworks?: string[];
+  databases?: string[];
+  tools?: string[];
+  cloud?: string[];
+  ml?: string[];
+};
+
 const SkillCard = ({
   loading,
   skills,
 }: {
   loading: boolean;
-  skills: string[];
+  skills: SkillCategories;
 }) => {
   const renderSkeleton = () => {
     const array = [];
@@ -20,6 +29,15 @@ const SkillCard = ({
     return array;
   };
 
+  const categoryTitles = {
+    languages: 'Languages',
+    frameworks: 'Frameworks & Libraries',
+    databases: 'Databases & ORMs',
+    tools: 'Tools & APIs',
+    cloud: 'Cloud & Services',
+    ml: 'Machine Learning',
+  };
+
   return (
     <div className="card shadow-lg compact bg-base-100">
       <div className="card-body">
@@ -32,11 +50,20 @@ const SkillCard = ({
             )}
           </h5>
         </div>
-        <div className="p-3 flow-root">
-          <div className="-m-1 flex flex-wrap justify-center">
-            {loading
-              ? renderSkeleton()
-              : skills.map((skill, index) => (
+        {loading ? (
+          <div className="p-3 flow-root">
+            <div className="-m-1 flex flex-wrap justify-center">
+              {renderSkeleton()}
+            </div>
+          </div>
+        ) : (
+          Object.entries(skills).map(([category, skillList]) => (
+            <div key={category} className="p-3 flow-root">
+              <h6 className="text-sm font-semibold mb-2">
+                {categoryTitles[category as keyof SkillCategories]}
+              </h6>
+              <div className="-m-1 flex flex-wrap">
+                {skillList.map((skill, index) => (
                   <div
                     key={index}
                     className="m-1 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 badge-primary bg-opacity-90 rounded-full"
@@ -44,8 +71,10 @@ const SkillCard = ({
                     {skill}
                   </div>
                 ))}
-          </div>
-        </div>
+              </div>
+            </div>
+          ))
+        )}
       </div>
     </div>
   );

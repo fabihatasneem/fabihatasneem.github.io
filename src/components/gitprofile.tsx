@@ -235,7 +235,9 @@ const GitProfile = ({ config }: { config: Config }) => {
                         educations={sanitizedConfig.educations}
                       />
                     )}
-                    {sanitizedConfig.skills.length !== 0 && (
+                    {Object.values(sanitizedConfig.skills).some(
+                      (arr) => arr?.length > 0,
+                    ) && (
                       <SkillCard
                         loading={loading}
                         skills={sanitizedConfig.skills}
