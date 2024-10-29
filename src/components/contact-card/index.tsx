@@ -62,7 +62,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
   };
 
   return (
-    <div className="card shadow-lg compact bg-base-100">
+    <div id="contact" className="card shadow-lg compact bg-base-100">
       <div className="card-body">
         <h2 className="card-title">Contact Me</h2>
         <form onSubmit={handleSubmit}>
