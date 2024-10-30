@@ -7,7 +7,6 @@ import {
 import { CgDribbble } from 'react-icons/cg';
 import {
   FaBehanceSquare,
-  FaBuilding,
   FaDev,
   FaFacebook,
   FaGlobe,
@@ -20,7 +19,6 @@ import {
   FaYoutube,
 } from 'react-icons/fa';
 import { FaSquareThreads } from 'react-icons/fa6';
-import { MdLocationOn } from 'react-icons/md';
 import { RiMailFill, RiPhoneFill } from 'react-icons/ri';
 import { SiResearchgate, SiX, SiUdemy } from 'react-icons/si';
 import { Profile } from '../../interfaces/profile';
@@ -37,13 +35,13 @@ type Props = {
   github: SanitizedGithub;
 };
 
-const isCompanyMention = (company: string): boolean => {
-  return company.startsWith('@') && !company.includes(' ');
-};
+// const isCompanyMention = (company: string): boolean => {
+//   return company.startsWith('@') && !company.includes(' ');
+// };
 
-const companyLink = (company: string): string => {
-  return `https://github.com/${company.substring(1)}`;
-};
+// const companyLink = (company: string): string => {
+//   return `https://github.com/${company.substring(1)}`;
+// };
 
 const getFormattedMastodonValue = (
   mastodonValue: string,
@@ -113,20 +111,6 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
             renderSkeleton()
           ) : (
             <Fragment>
-              {profile.location && (
-                <ListItem icon={<MdLocationOn />} label="Location" />
-              )}
-              {profile.company && (
-                <ListItem
-                  icon={<FaBuilding />}
-                  label="Work"
-                  link={
-                    isCompanyMention(profile.company.trim())
-                      ? companyLink(profile.company.trim())
-                      : undefined
-                  }
-                />
-              )}
               <ListItem
                 icon={<AiFillGithub />}
                 label="GitHub"
