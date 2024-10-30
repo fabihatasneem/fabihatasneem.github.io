@@ -178,13 +178,13 @@ const CONFIG = {
       to: '2024',
     },
     {
-      institution: 'Holy Cross College',
+      institution: 'Holy Cross College, Dhaka',
       degree: 'Higher Secondary Certificate (HSC)',
       from: '2016',
       to: '2018',
     },
     {
-      institution: 'Faizur Rahman Ideal Institute',
+      institution: 'Faizur Rahman Ideal Institute, Dhaka',
       degree: 'Secondary School Certificate (SSC)',
       from: '2006',
       to: '2015',

@@ -96,3 +96,14 @@ svg {
   transform: translateX(-50%);
 }
 
+.zigzag-left::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border-left: 10px solid transparent;
+  border-top: 10px solid border-base-300;
+  border-bottom: 10px solid transparent;
+}
