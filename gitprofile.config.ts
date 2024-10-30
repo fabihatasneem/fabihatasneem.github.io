@@ -80,7 +80,7 @@ const CONFIG = {
     stackoverflow: '', // example: '1/jeff-atwood'
     skype: '',
     telegram: '',
-    website: 'https://fabihatasneem.github.io',
+    website: '',
     phone: '',
     email: '',
   },
