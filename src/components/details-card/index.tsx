@@ -60,10 +60,10 @@ const getFormattedMastodonValue = (
 
 const ListItem: React.FC<{
   icon: React.ReactNode;
-  value: React.ReactNode;
+  label: string;
   link?: string;
   skeleton?: boolean;
-}> = ({ icon, value, link }) => {
+}> = ({ icon, label, link }) => {
   return (
     <div className="inline-block m-2">
       <a
@@ -71,28 +71,7 @@ const ListItem: React.FC<{
         target="_blank"
         rel="noreferrer"
         className="text-2xl hover:text-primary transition-colors duration-200"
-        title={typeof value === 'string' ? value : undefined}
-      >
-        {icon}
-      </a>
-    </div>
-  );
-};
-
-const OrganizationItem: React.FC<{
-  icon: React.ReactNode;
-  value: React.ReactNode | string;
-  link?: string;
-  skeleton?: boolean;
-}> = ({ icon, value, link }) => {
-  return (
-    <div className="inline-block m-2">
-      <a
-        href={link}
-        target="_blank"
-        rel="noreferrer"
-        className="text-2xl hover:text-primary transition-colors duration-200"
-        title={typeof value === 'string' ? value : undefined}
+        title={label}
       >
         {icon}
       </a>
@@ -118,7 +97,7 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
           key={index}
           skeleton={true}
           icon={skeleton({ widthCls: 'w-4', heightCls: 'h-4' })}
-          value={skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
+          label="Loading..."
         />,
       );
     }
@@ -135,12 +114,12 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
           ) : (
             <Fragment>
               {profile.location && (
-                <ListItem icon={<MdLocationOn />} value={profile.location} />
+                <ListItem icon={<MdLocationOn />} label="Location" />
               )}
               {profile.company && (
-                <OrganizationItem
+                <ListItem
                   icon={<FaBuilding />}
-                  value={profile.company}
+                  label="Work"
                   link={
                     isCompanyMention(profile.company.trim())
                       ? companyLink(profile.company.trim())
@@ -150,120 +129,118 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               )}
               <ListItem
                 icon={<AiFillGithub />}
-                value={github.username}
+                label="GitHub"
                 link={`https://github.com/${github.username}`}
               />
               {social?.researchGate && (
                 <ListItem
                   icon={<SiResearchgate />}
-                  value={social.researchGate}
+                  label="ResearchGate"
                   link={`https://www.researchgate.net/profile/${social.researchGate}`}
                 />
               )}
               {social?.twitter && (
                 <ListItem
                   icon={<SiX />}
-                  value={social.twitter}
+                  label="X"
                   link={`https://twitter.com/${social.twitter}`}
                 />
               )}
               {social?.mastodon && (
                 <ListItem
                   icon={<FaMastodon />}
-                  value={getFormattedMastodonValue(social.mastodon, false)}
+                  label="Mastodon"
                   link={getFormattedMastodonValue(social.mastodon, true)}
                 />
               )}
               {social?.linkedin && (
                 <ListItem
                   icon={<FaLinkedin />}
-                  value={social.linkedin}
+                  label="LinkedIn"
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
                 />
               )}
               {social?.dribbble && (
                 <ListItem
                   icon={<CgDribbble />}
-                  value={social.dribbble}
+                  label="Dribbble"
                   link={`https://dribbble.com/${social.dribbble}`}
                 />
               )}
               {social?.behance && (
                 <ListItem
                   icon={<FaBehanceSquare />}
-                  value={social.behance}
+                  label="Behance"
                   link={`https://www.behance.net/${social.behance}`}
                 />
               )}
               {social?.facebook && (
                 <ListItem
                   icon={<FaFacebook />}
-                  value={social.facebook}
+                  label="Facebook"
                   link={`https://www.facebook.com/${social.facebook}`}
                 />
               )}
               {social?.instagram && (
                 <ListItem
                   icon={<AiFillInstagram />}
-                  value={social.instagram}
+                  label="Instagram"
                   link={`https://www.instagram.com/${social.instagram}`}
                 />
               )}
               {social?.reddit && (
                 <ListItem
                   icon={<FaReddit />}
-                  value={social.reddit}
+                  label="Reddit"
                   link={`https://www.reddit.com/user/${social.reddit}`}
                 />
               )}
               {social?.threads && (
                 <ListItem
                   icon={<FaSquareThreads />}
-                  value={social.threads}
+                  label="Threads"
                   link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
                 />
               )}
               {social?.youtube && (
                 <ListItem
                   icon={<FaYoutube />}
-                  value={`@${social.youtube}`}
+                  label="YouTube"
                   link={`https://www.youtube.com/@${social.youtube}`}
                 />
               )}
               {social?.udemy && (
                 <ListItem
                   icon={<SiUdemy />}
-                  value={social.udemy}
+                  label="Udemy"
                   link={`https://www.udemy.com/user/${social.udemy}`}
                 />
               )}
               {social?.medium && (
                 <ListItem
                   icon={<AiFillMediumSquare />}
-                  value={social.medium}
+                  label="Medium"
                   link={`https://medium.com/@${social.medium}`}
                 />
               )}
               {social?.dev && (
                 <ListItem
                   icon={<FaDev />}
-                  value={social.dev}
+                  label="Dev"
                   link={`https://dev.to/${social.dev}`}
                 />
               )}
               {social?.stackoverflow && (
                 <ListItem
                   icon={<FaStackOverflow />}
-                  value={social.stackoverflow.split('/').slice(-1)}
+                  label="Stack Overflow"
                   link={`https://stackoverflow.com/users/${social.stackoverflow}`}
                 />
               )}
               {social?.website && (
                 <ListItem
                   icon={<FaGlobe />}
-                  value={social.website
-                    .replace('https://', '')
-                    .replace('http://', '')}
+                  label="Website"
                   link={
                     !social.website.startsWith('http')
                       ? `http://${social.website}`
@@ -274,28 +251,28 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
               {social?.skype && (
                 <ListItem
                   icon={<FaSkype />}
-                  value={social.skype}
+                  label="Skype"
                   link={`skype:${social.skype}?chat`}
                 />
               )}
               {social?.telegram && (
                 <ListItem
                   icon={<FaTelegram />}
-                  value={social.telegram}
+                  label="Telegram"
                   link={`https://t.me/${social.telegram}`}
                 />
               )}
               {social?.phone && (
                 <ListItem
                   icon={<RiPhoneFill />}
-                  value={social.phone}
+                  label="Phone"
                   link={`tel:${social.phone}`}
                 />
               )}
               {social?.email && (
                 <ListItem
                   icon={<RiMailFill />}
-                  value={social.email}
+                  label="Email"
                   link={`mailto:${social.email}`}
                 />
               )}
