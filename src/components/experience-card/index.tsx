@@ -15,8 +15,16 @@ const ListItem = ({
 }) => (
   <li className="mb-5 ml-4">
     <div
-      className="absolute w-2 h-2 bg-base-300 rounded-full border border-base-300 mt-1.5"
-      style={{ left: '-4.5px' }}
+      className="absolute w-3 h-3 bg-base-300 rounded-full border-2 border-base-100 mt-1.5 z-10"
+      style={{ left: '-6px' }}
+    ></div>
+    <div
+      className="absolute w-3 h-full bg-base-300"
+      style={{
+        left: '-4px',
+        clipPath:
+          'polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 85%, 0 70%, 50% 55%, 0 40%, 50% 25%, 0 10%)',
+      }}
     ></div>
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{position}</h3>
