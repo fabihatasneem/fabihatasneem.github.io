@@ -93,10 +93,10 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
 }): JSX.Element => {
   return (
     <div className="card shadow-lg compact bg-base-100">
-      <div className="grid place-items-center py-8">
+      <div className="grid place-items-center py-4">
         {loading || !profile ? (
           <div className="avatar opacity-90">
-            <div className="mb-8 rounded-full w-48 h-48">
+            <div className="mb-4 rounded-full w-48 h-48">
               {skeleton({
                 widthCls: 'w-full',
                 heightCls: 'h-full',
@@ -107,7 +107,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
         ) : (
           <div className="avatar opacity-90">
             <div
-              className={`mb-8 rounded-full w-48 h-48 ${
+              className={`mb-4 rounded-full w-48 h-48 ${
                 avatarRing
                   ? 'ring ring-primary ring-offset-base-100 ring-offset-2'
                   : ''
@@ -127,7 +127,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             </div>
           </div>
         )}
-        <div className="text-center mx-auto px-8">
+        <div className="text-center mx-auto px-4">
           <h5 className="font-bold text-2xl">
             {loading || !profile ? (
               skeleton({ widthCls: 'w-48', heightCls: 'h-8' })
@@ -145,14 +145,14 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
         </div>
         {resumeFileUrl &&
           (loading ? (
-            <div className="mt-6">
+            <div className="mt-3">
               {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
             </div>
           ) : (
             <a
               href={resumeFileUrl}
               target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-6 opacity-50"
+              className="btn btn-outline btn-sm text-xs mt-3 opacity-50"
               download
               rel="noreferrer"
             >
@@ -160,7 +160,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             </a>
           ))}
         <div className="divider my-0"></div>
-        <div className="card-body pt-0">
+        <div className="card-body">
           <div className="text-base-content text-opacity-60 flex flex-wrap justify-center">
             <Fragment>
               <ListItem
