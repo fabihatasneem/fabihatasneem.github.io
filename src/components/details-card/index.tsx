@@ -63,7 +63,7 @@ const ListItem: React.FC<{
   value: React.ReactNode;
   link?: string;
   skeleton?: boolean;
-}> = ({ icon, value, link, skeleton = false }) => {
+}> = ({ icon, value, link }) => {
   return (
     <div className="inline-block m-2">
       <a
