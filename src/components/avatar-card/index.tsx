@@ -159,162 +159,157 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               Download Resume
             </a>
           ))}
-        <div className="divider my-0"></div>
-        <div className="card-body">
-          <div className="text-base-content text-opacity-60 flex flex-wrap justify-center">
-            <Fragment>
-              <ListItem
-                icon={<AiFillGithub />}
-                label="GitHub"
-                link={`https://github.com/${github.username}`}
-              />
-              {social?.researchGate && (
-                <ListItem
-                  icon={<SiResearchgate />}
-                  label="ResearchGate"
-                  link={`https://www.researchgate.net/profile/${social.researchGate}`}
-                />
-              )}
-              {social?.twitter && (
-                <ListItem
-                  icon={<SiX />}
-                  label="X"
-                  link={`https://twitter.com/${social.twitter}`}
-                />
-              )}
-              {social?.mastodon && (
-                <ListItem
-                  icon={<FaMastodon />}
-                  label="Mastodon"
-                  link={getFormattedMastodonValue(social.mastodon, true)}
-                />
-              )}
-              {social?.linkedin && (
-                <ListItem
-                  icon={<FaLinkedin />}
-                  label="LinkedIn"
-                  link={`https://www.linkedin.com/in/${social.linkedin}`}
-                />
-              )}
-              {social?.dribbble && (
-                <ListItem
-                  icon={<CgDribbble />}
-                  label="Dribbble"
-                  link={`https://dribbble.com/${social.dribbble}`}
-                />
-              )}
-              {social?.behance && (
-                <ListItem
-                  icon={<FaBehanceSquare />}
-                  label="Behance"
-                  link={`https://www.behance.net/${social.behance}`}
-                />
-              )}
-              {social?.facebook && (
-                <ListItem
-                  icon={<FaFacebook />}
-                  label="Facebook"
-                  link={`https://www.facebook.com/${social.facebook}`}
-                />
-              )}
-              {social?.instagram && (
-                <ListItem
-                  icon={<AiFillInstagram />}
-                  label="Instagram"
-                  link={`https://www.instagram.com/${social.instagram}`}
-                />
-              )}
-              {social?.reddit && (
-                <ListItem
-                  icon={<FaReddit />}
-                  label="Reddit"
-                  link={`https://www.reddit.com/user/${social.reddit}`}
-                />
-              )}
-              {social?.threads && (
-                <ListItem
-                  icon={<FaSquareThreads />}
-                  label="Threads"
-                  link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
-                />
-              )}
-              {social?.youtube && (
-                <ListItem
-                  icon={<FaYoutube />}
-                  label="YouTube"
-                  link={`https://www.youtube.com/@${social.youtube}`}
-                />
-              )}
-              {social?.udemy && (
-                <ListItem
-                  icon={<SiUdemy />}
-                  label="Udemy"
-                  link={`https://www.udemy.com/user/${social.udemy}`}
-                />
-              )}
-              {social?.medium && (
-                <ListItem
-                  icon={<AiFillMediumSquare />}
-                  label="Medium"
-                  link={`https://medium.com/@${social.medium}`}
-                />
-              )}
-              {social?.dev && (
-                <ListItem
-                  icon={<FaDev />}
-                  label="Dev"
-                  link={`https://dev.to/${social.dev}`}
-                />
-              )}
-              {social?.stackoverflow && (
-                <ListItem
-                  icon={<FaStackOverflow />}
-                  label="Stack Overflow"
-                  link={`https://stackoverflow.com/users/${social.stackoverflow}`}
-                />
-              )}
-              {social?.website && (
-                <ListItem
-                  icon={<FaGlobe />}
-                  label="Website"
-                  link={
-                    !social.website.startsWith('http')
-                      ? `http://${social.website}`
-                      : social.website
-                  }
-                />
-              )}
-              {social?.skype && (
-                <ListItem
-                  icon={<FaSkype />}
-                  label="Skype"
-                  link={`skype:${social.skype}?chat`}
-                />
-              )}
-              {social?.telegram && (
-                <ListItem
-                  icon={<FaTelegram />}
-                  label="Telegram"
-                  link={`https://t.me/${social.telegram}`}
-                />
-              )}
-              {social?.phone && (
-                <ListItem
-                  icon={<RiPhoneFill />}
-                  label="Phone"
-                  link={`tel:${social.phone}`}
-                />
-              )}
-              {social?.email && (
-                <ListItem
-                  icon={<RiMailFill />}
-                  label="Email"
-                  link={`mailto:${social.email}`}
-                />
-              )}
-            </Fragment>
-          </div>
-        </div>
+        <Fragment>
+          <ListItem
+            icon={<AiFillGithub />}
+            label="GitHub"
+            link={`https://github.com/${github.username}`}
+          />
+          {social?.researchGate && (
+            <ListItem
+              icon={<SiResearchgate />}
+              label="ResearchGate"
+              link={`https://www.researchgate.net/profile/${social.researchGate}`}
+            />
+          )}
+          {social?.twitter && (
+            <ListItem
+              icon={<SiX />}
+              label="X"
+              link={`https://twitter.com/${social.twitter}`}
+            />
+          )}
+          {social?.mastodon && (
+            <ListItem
+              icon={<FaMastodon />}
+              label="Mastodon"
+              link={getFormattedMastodonValue(social.mastodon, true)}
+            />
+          )}
+          {social?.linkedin && (
+            <ListItem
+              icon={<FaLinkedin />}
+              label="LinkedIn"
+              link={`https://www.linkedin.com/in/${social.linkedin}`}
+            />
+          )}
+          {social?.dribbble && (
+            <ListItem
+              icon={<CgDribbble />}
+              label="Dribbble"
+              link={`https://dribbble.com/${social.dribbble}`}
+            />
+          )}
+          {social?.behance && (
+            <ListItem
+              icon={<FaBehanceSquare />}
+              label="Behance"
+              link={`https://www.behance.net/${social.behance}`}
+            />
+          )}
+          {social?.facebook && (
+            <ListItem
+              icon={<FaFacebook />}
+              label="Facebook"
+              link={`https://www.facebook.com/${social.facebook}`}
+            />
+          )}
+          {social?.instagram && (
+            <ListItem
+              icon={<AiFillInstagram />}
+              label="Instagram"
+              link={`https://www.instagram.com/${social.instagram}`}
+            />
+          )}
+          {social?.reddit && (
+            <ListItem
+              icon={<FaReddit />}
+              label="Reddit"
+              link={`https://www.reddit.com/user/${social.reddit}`}
+            />
+          )}
+          {social?.threads && (
+            <ListItem
+              icon={<FaSquareThreads />}
+              label="Threads"
+              link={`https://www.threads.net/@${social.threads.replace('@', '')}`}
+            />
+          )}
+          {social?.youtube && (
+            <ListItem
+              icon={<FaYoutube />}
+              label="YouTube"
+              link={`https://www.youtube.com/@${social.youtube}`}
+            />
+          )}
+          {social?.udemy && (
+            <ListItem
+              icon={<SiUdemy />}
+              label="Udemy"
+              link={`https://www.udemy.com/user/${social.udemy}`}
+            />
+          )}
+          {social?.medium && (
+            <ListItem
+              icon={<AiFillMediumSquare />}
+              label="Medium"
+              link={`https://medium.com/@${social.medium}`}
+            />
+          )}
+          {social?.dev && (
+            <ListItem
+              icon={<FaDev />}
+              label="Dev"
+              link={`https://dev.to/${social.dev}`}
+            />
+          )}
+          {social?.stackoverflow && (
+            <ListItem
+              icon={<FaStackOverflow />}
+              label="Stack Overflow"
+              link={`https://stackoverflow.com/users/${social.stackoverflow}`}
+            />
+          )}
+          {social?.website && (
+            <ListItem
+              icon={<FaGlobe />}
+              label="Website"
+              link={
+                !social.website.startsWith('http')
+                  ? `http://${social.website}`
+                  : social.website
+              }
+            />
+          )}
+          {social?.skype && (
+            <ListItem
+              icon={<FaSkype />}
+              label="Skype"
+              link={`skype:${social.skype}?chat`}
+            />
+          )}
+          {social?.telegram && (
+            <ListItem
+              icon={<FaTelegram />}
+              label="Telegram"
+              link={`https://t.me/${social.telegram}`}
+            />
+          )}
+          {social?.phone && (
+            <ListItem
+              icon={<RiPhoneFill />}
+              label="Phone"
+              link={`tel:${social.phone}`}
+            />
+          )}
+          {social?.email && (
+            <ListItem
+              icon={<RiMailFill />}
+              label="Email"
+              link={`mailto:${social.email}`}
+            />
+          )}
+        </Fragment>
       </div>
     </div>
   );
