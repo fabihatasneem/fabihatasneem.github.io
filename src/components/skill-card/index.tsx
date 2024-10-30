@@ -62,7 +62,7 @@ const SkillCard = ({
               <h6 className="text-sm font-semibold mb-2">
                 {categoryTitles[category as keyof SkillCategories]}
               </h6>
-              <div className="-m-1 flex flex-wrap">
+              <div className="-m-1 flex flex-wrap justify-center">
                 {skillList.map((skill, index) => (
                   <div
                     key={index}
