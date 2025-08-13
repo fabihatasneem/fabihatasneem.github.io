@@ -121,7 +121,7 @@ const PublicationCard = ({
 
   return (
     <Fragment>
-      <div id="publication" className="col-span-1 lg:col-span-2">
+      <div id="publication" className="col-span-1 lg:col-span-12">
         <div className="grid grid-cols-1 gap-6">
           <div className="col-span-1">
             <div className="card compact bg-base-100 shadow bg-opacity-40">
