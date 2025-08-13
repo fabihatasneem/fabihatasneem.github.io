@@ -1,6 +1,10 @@
-import { useCallback, useEffect, useState } from 'react';
 import axios, { AxiosError } from 'axios';
 import { formatDistance } from 'date-fns';
+import { useCallback, useEffect, useState } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+import '../assets/index.css';
+import { BG_COLOR } from '../constants';
+import { DEFAULT_THEMES } from '../constants/default-themes';
 import {
   CustomError,
   GENERIC_ERROR,
@@ -8,30 +12,26 @@ import {
   INVALID_GITHUB_USERNAME_ERROR,
   setTooManyRequestError,
 } from '../constants/errors';
-import { HelmetProvider } from 'react-helmet-async';
-import '../assets/index.css';
-import { getInitialTheme, getSanitizedConfig, setupHotjar } from '../utils';
-import { SanitizedConfig } from '../interfaces/sanitized-config';
-import ErrorPage from './error-page';
-import HeadTagEditor from './head-tag-editor';
-import { DEFAULT_THEMES } from '../constants/default-themes';
-import ThemeChanger from './theme-changer';
-import { BG_COLOR } from '../constants';
-import AvatarCard from './avatar-card';
-import { Profile } from '../interfaces/profile';
-import ContactCard from './contact-card';
-import SkillCard from './skill-card';
-import ExperienceCard from './experience-card';
-import ExtraCurricularCard from './extracurricular-card';
-import EducationCard from './education-card';
-import CertificationCard from './certification-card';
 import { GithubProject } from '../interfaces/github-project';
-import GithubProjectCard from './github-project-card';
-import ExternalProjectCard from './external-project-card';
-import BlogCard from './blog-card';
+import { Profile } from '../interfaces/profile';
+import { SanitizedConfig } from '../interfaces/sanitized-config';
+import { getInitialTheme, getSanitizedConfig, setupHotjar } from '../utils';
+import AvatarCard from './avatar-card';
 import AwardCard from './award-card';
+import BlogCard from './blog-card';
+import CertificationCard from './certification-card';
+import ContactCard from './contact-card';
+import EducationCard from './education-card';
+import ErrorPage from './error-page';
+import ExperienceCard from './experience-card';
+import ExternalProjectCard from './external-project-card';
+import ExtraCurricularCard from './extracurricular-card';
 import Footer from './footer';
+import GithubProjectCard from './github-project-card';
+import HeadTagEditor from './head-tag-editor';
 import PublicationCard from './publication-card';
+import SkillCard from './skill-card';
+import ThemeChanger from './theme-changer';
 
 /**
  * Renders the GitProfile component.
@@ -285,12 +285,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         awards={sanitizedConfig.awards}
                       />
                     )}
-                    {sanitizedConfig.publications.length !== 0 && (
-                      <PublicationCard
-                        loading={loading}
-                        publications={sanitizedConfig.publications}
-                      />
-                    )}
                     {sanitizedConfig.blog.display && (
                       <BlogCard
                         loading={loading}
@@ -301,6 +295,14 @@ const GitProfile = ({ config }: { config: Config }) => {
                   </div>
                 </div>
               </div>
+              {sanitizedConfig.publications.length !== 0 && (
+                <div className="mt-6">
+                  <PublicationCard
+                    loading={loading}
+                    publications={sanitizedConfig.publications}
+                  />
+                </div>
+              )}
             </div>
             {sanitizedConfig.footer && (
               <footer
