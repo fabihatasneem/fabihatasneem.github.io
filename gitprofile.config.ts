@@ -17,7 +17,7 @@ const CONFIG = {
       mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'updated', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        limit: 4, // How many projects to display.
         exclude: {
           forks: true, // Forked projects will not be displayed if set to true.
           projects: [], // These projects will not be displayed. example: ['fabihatasneem/my-project1', 'fabihatasneem/my-project2']
@@ -28,7 +28,7 @@ const CONFIG = {
         projects: [
           'fabihatasneem/Jigsaw-Puzzle-Solver-Using-ML',
           // 'fabihatasneem/Hall-Management-System',
-          'fabihatasneem/Smart-Garage',
+          // 'fabihatasneem/Smart-Garage',
           'anupbhowmik/BrightMate-Library-Database-Project',
           'fabihatasneem/Bubble-Shooter',
         ],
