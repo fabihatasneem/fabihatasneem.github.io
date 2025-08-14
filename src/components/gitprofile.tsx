@@ -230,14 +230,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         educations={sanitizedConfig.educations}
                       />
                     )}
-                    {Object.values(sanitizedConfig.skills).some(
-                      (arr) => arr?.length > 0,
-                    ) && (
-                      <SkillCard
-                        loading={loading}
-                        skills={sanitizedConfig.skills}
-                      />
-                    )}
                     {sanitizedConfig.extraCurricularActivities.length !== 0 && (
                       <ExtraCurricularCard
                         loading={loading}
@@ -252,9 +244,18 @@ const GitProfile = ({ config }: { config: Config }) => {
                         certifications={sanitizedConfig.certifications}
                       />
                     )}
+                    {Object.values(sanitizedConfig.skills).some(
+                      (arr) => arr?.length > 0,
+                    ) && (
+                      <SkillCard
+                        loading={loading}
+                        skills={sanitizedConfig.skills}
+                      />
+                    )}
                     <ContactCard contact={sanitizedConfig.contact} />
                   </div>
                 </div>
+
                 <div className="lg:col-span-2 col-span-1">
                   <div className="grid grid-cols-1 gap-6">
                     {sanitizedConfig.projects.external.projects.length !==
@@ -296,7 +297,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </div>
               {sanitizedConfig.publications.length !== 0 && (
-                <div className="mt-6">
+                <div className="mt-6 -mx-4 lg:-mx-10">
                   <PublicationCard
                     loading={loading}
                     publications={sanitizedConfig.publications}
