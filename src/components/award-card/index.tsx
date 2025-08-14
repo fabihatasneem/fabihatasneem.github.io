@@ -1,7 +1,7 @@
-import { Fragment } from 'react';
-import LazyImage from '../lazy-image';
-import { skeleton } from '../../utils';
+import { Fragment, useState } from 'react';
 import { SanitizedAward } from '../../interfaces/sanitized-config';
+import { skeleton } from '../../utils';
+import LazyImage from '../lazy-image';
 
 const AwardCard = ({
   awards,
@@ -12,152 +12,192 @@ const AwardCard = ({
   header: string;
   loading: boolean;
 }) => {
+  const [selectedAward, setSelectedAward] = useState<number | null>(null);
+
   const renderSkeleton = () => {
     const array = [];
     for (let index = 0; index < awards.length; index++) {
       array.push(
-        <div className="card shadow-lg compact bg-base-100" key={index}>
-          <div className="p-8 h-full w-full">
-            <div className="flex items-center flex-col">
-              <div className="w-full">
-                <div className="flex items-start px-4">
-                  <div className="w-full">
-                    <h2>
-                      {skeleton({
-                        widthCls: 'w-32',
-                        heightCls: 'h-8',
-                        className: 'mb-2 mx-auto',
-                      })}
-                    </h2>
-                    <div className="avatar w-full h-full">
-                      <div className="w-24 h-24 mask mask-squircle mx-auto">
-                        {skeleton({
-                          widthCls: 'w-full',
-                          heightCls: 'h-full',
-                          shape: '',
-                        })}
-                      </div>
-                    </div>
-                    <div className="mt-2">
-                      {skeleton({
-                        widthCls: 'w-full',
-                        heightCls: 'h-4',
-                        className: 'mx-auto',
-                      })}
-                    </div>
-                    <div className="mt-2 flex items-center flex-wrap justify-center">
-                      {skeleton({
-                        widthCls: 'w-full',
-                        heightCls: 'h-4',
-                        className: 'mx-auto',
-                      })}
-                    </div>
-                  </div>
-                </div>
+        <div
+          className="card bg-gradient-to-br from-base-200 to-base-300 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          key={index}
+        >
+          <div className="p-6">
+            <div className="flex items-center space-x-4">
+              <div className="w-16 h-16 rounded-full bg-base-400 animate-pulse"></div>
+              <div className="flex-1 space-y-2">
+                <div className="h-4 bg-base-400 rounded animate-pulse"></div>
+                <div className="h-3 bg-base-400 rounded animate-pulse w-3/4"></div>
               </div>
             </div>
           </div>
         </div>,
       );
     }
-
     return array;
   };
 
   const renderAwards = () => {
     return awards.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer w-full"
+      <div
         key={index}
-        href={item.link}
-        target="_blank"
-        rel="noreferrer"
+        className="card bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer border border-base-300 hover:border-primary/30"
+        onClick={() => setSelectedAward(selectedAward === index ? null : index)}
       >
-        <div className="p-8 h-full w-full">
-          <div className="flex items-center">
+        <div className="p-6">
+          {/* Header with Logo and Title */}
+          <div className="flex items-center space-x-4 mb-4">
             {item.logoUrl && (
-              <div className="mr-6">
-                <div className="w-24 h-24">
-                  <LazyImage
-                    src={item.logoUrl}
-                    alt={'thumbnail'}
-                    placeholder={skeleton({
-                      widthCls: 'w-full',
-                      heightCls: 'h-full',
-                      shape: '',
-                    })}
-                  />
-                </div>
+              <div className="w-16 h-16 rounded-full overflow-hidden bg-base-300 flex items-center justify-center">
+                <LazyImage
+                  src={item.logoUrl}
+                  alt="Award logo"
+                  placeholder={skeleton({
+                    widthCls: 'w-full',
+                    heightCls: 'h-full',
+                    shape: '',
+                  })}
+                  className="w-full h-full object-cover"
+                />
               </div>
             )}
             <div className="flex-1">
-              <h2 className="font-medium opacity-60 mb-2">{item.title}</h2>
-              <p className="text-base-content text-opacity-60 text-sm">
-                {item.description}
-              </p>
+              <h3 className="font-bold text-lg text-base-content mb-1">
+                {item.title}
+              </h3>
+              <div className="flex items-center space-x-2 text-sm text-base-content/60">
+                <span className="badge badge-primary badge-sm">
+                  {item.year}
+                </span>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-primary hover:text-primary-focus transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                )}
+              </div>
             </div>
           </div>
+
+          {/* Description - Always visible */}
+          <p className="text-base-content/80 text-sm leading-relaxed mb-4 line-clamp-3">
+            {item.description}
+          </p>
+
+          {/* Expandable Images Section */}
           {(item.imageUrl1 || item.imageUrl2) && (
-            <div className="flex flex-wrap justify-start mt-4 -mx-2">
-              {item.imageUrl1 && (
-                <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0">
-                  <LazyImage
-                    src={item.imageUrl1}
-                    alt={'Award image 1'}
-                    placeholder={skeleton({
-                      widthCls: 'w-full',
-                      heightCls: 'h-48',
-                      shape: 'rounded-lg',
-                    })}
-                    className="w-full h-auto object-cover rounded-lg"
+            <div
+              className={`transition-all duration-300 overflow-hidden ${
+                selectedAward === index
+                  ? 'max-h-96 opacity-100'
+                  : 'max-h-0 opacity-0'
+              }`}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {item.imageUrl1 && (
+                  <div className="relative group">
+                    <LazyImage
+                      src={item.imageUrl1}
+                      alt="Award image 1"
+                      placeholder={skeleton({
+                        widthCls: 'w-full',
+                        heightCls: 'h-32',
+                        shape: 'rounded-lg',
+                      })}
+                      className="w-full h-32 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                  </div>
+                )}
+                {item.imageUrl2 && (
+                  <div className="relative group">
+                    <LazyImage
+                      src={item.imageUrl2}
+                      alt="Award image 2"
+                      placeholder={skeleton({
+                        widthCls: 'w-full',
+                        heightCls: 'h-32',
+                        shape: 'rounded-lg',
+                      })}
+                      className="w-full h-32 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Expand/Collapse Indicator */}
+          {(item.imageUrl1 || item.imageUrl2) && (
+            <div className="flex justify-center mt-3">
+              <div
+                className={`w-6 h-6 rounded-full bg-base-300 flex items-center justify-center transition-transform duration-300 ${
+                  selectedAward === index ? 'rotate-180' : ''
+                }`}
+              >
+                <svg
+                  className="w-3 h-3 text-base-content/60"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
                   />
-                </div>
-              )}
-              {item.imageUrl2 && (
-                <div className="w-full sm:w-1/2 px-2">
-                  <LazyImage
-                    src={item.imageUrl2}
-                    alt={'Award image 2'}
-                    placeholder={skeleton({
-                      widthCls: 'w-full',
-                      heightCls: 'h-48',
-                      shape: 'rounded-lg',
-                    })}
-                    className="w-full h-auto object-cover rounded-lg"
-                  />
-                </div>
-              )}
+                </svg>
+              </div>
             </div>
           )}
         </div>
-      </a>
+      </div>
     ));
   };
 
   return (
     <Fragment>
       <div id="award" className="col-span-1 lg:col-span-2">
-        <div className="grid grid-cols-1 gap-6">
-          <div className="col-span-1">
-            <div className="card compact bg-base-100 shadow bg-opacity-40">
-              <div className="card-body">
-                <div className="mx-3 flex items-center justify-between mb-2">
-                  <h5 className="card-title">
-                    {loading ? (
-                      skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
-                    ) : (
-                      <span className="text-base-content opacity-70">
-                        {header}
-                      </span>
-                    )}
-                  </h5>
-                </div>
-                <div className="col-span-1">
-                  <div className="grid grid-cols-1 gap-6">
-                    {loading ? renderSkeleton() : renderAwards()}
-                  </div>
-                </div>
-              </div>
+        <div className="card compact bg-base-100 shadow-lg">
+          <div className="card-body">
+            {/* Header */}
+            <div className="mx-3 mb-6">
+              <h5 className="card-title text-2xl">
+                {loading ? (
+                  skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
+                ) : (
+                  <span className="text-base-content opacity-80 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    {header}
+                  </span>
+                )}
+              </h5>
+              <p className="text-base-content/60 text-sm mt-2">
+                Recognition and achievements in my professional journey
+              </p>
+            </div>
+
+            {/* Awards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {loading ? renderSkeleton() : renderAwards()}
             </div>
           </div>
         </div>
