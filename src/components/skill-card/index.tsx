@@ -37,6 +37,7 @@ const SkillCard = ({
     tools: 'Tools & APIs',
     cloud: 'Cloud & Services',
     ml: 'Machine Learning',
+    security: 'Security',
   };
 
   return (
