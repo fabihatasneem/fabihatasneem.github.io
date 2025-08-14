@@ -137,8 +137,12 @@ const CONFIG = {
       from: 'June 2024',
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
-      description:
-        '• Scaled unified communication platform to 200K concurrent users using WebRTC and Kafka\n• Developed secure real-time chat system with WebSockets (STOMP over SockJS) and Spring Boot\n• Built reusable React/Redux components with Material-UI, improving development efficiency\n• Enhanced system observability by 80% through OpenTelemetry and Jaeger integration',
+      description: [
+        'Scaled unified communication platform to 200K concurrent users using WebRTC and Kafka',
+        'Developed secure real-time chat system with WebSockets (STOMP over SockJS) and Spring Boot',
+        'Built reusable React/Redux components with Material-UI, improving development efficiency',
+        'Enhanced system observability by 80% through OpenTelemetry and Jaeger integration',
+      ],
     },
     {
       company: 'MySoft Ltd.',
@@ -146,8 +150,11 @@ const CONFIG = {
       from: 'June 2022',
       to: 'July 2022',
       companyLink: 'https://www.mysoftltd.com/',
-      description:
-        '• Performed data analysis, cleaning, and preprocessing on health-related big data using Python\n• Successfully optimized CSV data processing and storage in PostgreSQL database\n• Created data visualizations to support healthcare analytics and reporting',
+      description: [
+        'Performed data analysis, cleaning, and preprocessing on health-related big data using Python',
+        'Successfully optimized CSV data processing and storage in PostgreSQL database',
+        'Created data visualizations to support healthcare analytics and reporting',
+      ],
     },
     {
       company: 'OpenRefactory, Inc.',
@@ -155,8 +162,11 @@ const CONFIG = {
       from: 'November 2023',
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
-      description:
-        '• Trained in software triaging methodologies and open-source bug fixing techniques\n• Contributed to internal bug triage portal development using industry best practices\n• Gained hands-on experience with software quality assurance and debugging tools',
+      description: [
+        'Trained in software triaging methodologies and open-source bug fixing techniques',
+        'Contributed to internal bug triage portal development using industry best practices',
+        'Gained hands-on experience with software quality assurance and debugging tools',
+      ],
     },
     {
       company: 'BYDO Engineering Ltd',
@@ -164,8 +174,11 @@ const CONFIG = {
       from: 'September 2020',
       to: 'September 2021',
       companyLink: 'https://bydoacademy.com/',
-      description:
-        '• Developed backend services using Java, Hibernate, and MySQL for multiple platforms\n• Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms\n• Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website',
+      description: [
+        'Developed backend services using Java, Hibernate, and MySQL for multiple platforms',
+        'Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms',
+        'Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website',
+      ],
     },
   ],
   certifications: [
