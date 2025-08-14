@@ -291,7 +291,7 @@ const CONFIG = {
       year: 2022,
       description:
         'Our team BUET Bleh developed a sophisticated digital home assistant app during the intense 24-hour challenge of the BUET CSE Fest 2022 Inter-University Hackathon. Our hard work and innovation paid off, as we proudly secured the First Runner-Up position in the API & Cloud Category.',
-      link: 'https://www.facebook.com/photo/?fbid=170385585546837&set=pcb.170386192213443',
+      link: '',
       logoUrl:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/csefest22.jpg',
       imageUrl1:
