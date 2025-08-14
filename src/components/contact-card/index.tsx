@@ -72,7 +72,10 @@ const ContactCard: React.FC<ContactCardProps> = ({
   };
 
   return (
-    <div id="contact" className="card shadow-lg compact bg-base-100">
+    <div
+      id="contact"
+      className="card shadow-lg compact bg-base-100 max-w-2xl mx-auto"
+    >
       <div className="card-body">
         {/* Friendly Header */}
         <div className="text-center mb-6">
