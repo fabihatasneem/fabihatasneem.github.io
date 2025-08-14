@@ -7,16 +7,18 @@ const ListItem = ({
   position,
   company,
   companyLink,
+  description,
   isEven,
 }: {
   time: React.ReactNode;
   position?: React.ReactNode;
   company?: React.ReactNode;
   companyLink?: string;
+  description?: string;
   isEven: boolean;
 }) => (
   <li
-    className={`mb-2 ${isEven ? 'ml-auto pl-4' : 'mr-auto pr-4'} w-[45%] relative`}
+    className={`mb-4 ${isEven ? 'ml-auto pl-4' : 'mr-auto pr-4'} w-[45%] relative`}
   >
     <div
       className="absolute w-3 h-3 bg-base-300 rounded-full z-10"
@@ -34,11 +36,16 @@ const ListItem = ({
     />
     <div className="my-0.5 text-xs">{time}</div>
     <h3 className="font-semibold">{position}</h3>
-    <div className="mb-4 font-normal">
+    <div className="mb-2 font-normal">
       <a href={companyLink} target="_blank" rel="noreferrer">
         {company}
       </a>
     </div>
+    {description && (
+      <div className="text-sm text-base-content opacity-70 leading-relaxed">
+        {description}
+      </div>
+    )}
   </li>
 );
 
@@ -106,6 +113,7 @@ const ExperienceCard = ({
                           ? experience.companyLink
                           : undefined
                       }
+                      description={experience.description}
                     />
                   ))}
                 </Fragment>

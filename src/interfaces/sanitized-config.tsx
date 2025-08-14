@@ -82,6 +82,7 @@ export interface SanitizedExperience {
   from: string;
   to: string;
   companyLink?: string;
+  description?: string;
 }
 
 export interface SanitizedExtraCurricularActivity {

@@ -137,6 +137,8 @@ const CONFIG = {
       from: 'June 2024',
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
+      description:
+        'Contributed to the development of Convay, a scaling capacity of the unified communication platform to 200K concurrent users via WebRTC and Kafka, enhancing stability and user experience under high load. Built secure real-time chat and reaction using WebSockets (STOMP over SockJS) with Spring Boot and JWT authentication improving communication reliability. Engineered reusable UI components with React, Redux, and Material-UI, streamlining frontend development and enhancing code maintainability. Improved observability coverage by 80% through full integration of OpenTelemetry and Jaeger, enabling faster detection and resolution of system issues.',
     },
     {
       company: 'MySoft Ltd.',
@@ -144,6 +146,8 @@ const CONFIG = {
       from: 'June 2022',
       to: 'July 2022',
       companyLink: 'https://www.mysoftltd.com/',
+      description:
+        'Working with health-related big data, I did data analysis, data cleaning, data preprocessing, and data visualization using Python. I successfully addressed the challenges of efficiently reading and storing large and noisy CSV data into a Postgres database.',
     },
     {
       company: 'OpenRefactory, Inc.',
@@ -151,6 +155,8 @@ const CONFIG = {
       from: 'November 2023',
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
+      description:
+        'Trained in software triaging and open-source bug fixing; contributed to enhancing an internal bug triage portal using industry best practices.',
     },
     {
       company: 'BYDO',
@@ -158,6 +164,8 @@ const CONFIG = {
       from: 'September 2020',
       to: 'September 2021',
       companyLink: 'https://bydoacademy.com/',
+      description:
+        'Developed backend services using Java, Hibernate, and MySQL and built responsive web interfaces with JavaScript and JSP for an online education platform called BYDO Academy, an online healthcare provider platform called Uposorgo, and the official website of the Institute of Engineers, Bangladesh.',
     },
   ],
   certifications: [
