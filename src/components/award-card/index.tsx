@@ -45,7 +45,6 @@ const AwardCard = ({
         onClick={() => setSelectedAward(selectedAward === index ? null : index)}
       >
         <div className="p-6">
-          {/* Header with Logo and Title */}
           <div className="flex items-center space-x-4 mb-4">
             {item.logoUrl && (
               <div className="w-16 h-16 rounded-full overflow-hidden bg-base-300 flex items-center justify-center">
@@ -96,12 +95,10 @@ const AwardCard = ({
             </div>
           </div>
 
-          {/* Description - Always visible, no truncation */}
           <p className="text-base-content/80 text-sm leading-relaxed mb-4">
             {item.description}
           </p>
 
-          {/* Images Section - Always visible with larger height */}
           {(item.imageUrl1 || item.imageUrl2) && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {item.imageUrl1 && (
@@ -114,7 +111,7 @@ const AwardCard = ({
                       heightCls: 'h-48',
                       shape: 'rounded-lg',
                     })}
-                    className="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md"
+                    className="w-full h-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                 </div>
@@ -129,7 +126,7 @@ const AwardCard = ({
                       heightCls: 'h-48',
                       shape: 'rounded-lg',
                     })}
-                    className="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md"
+                    className="w-full h-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
                 </div>
