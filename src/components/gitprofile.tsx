@@ -279,11 +279,11 @@ const GitProfile = ({ config }: { config: Config }) => {
                         googleAnalyticsId={sanitizedConfig.googleAnalytics.id}
                       />
                     )}
-                    {sanitizedConfig.awards.length !== 0 && (
-                      <AwardCard
-                        header="Awards"
+
+                    {sanitizedConfig.publications.length !== 0 && (
+                      <PublicationCard
                         loading={loading}
-                        awards={sanitizedConfig.awards}
+                        publications={sanitizedConfig.publications}
                       />
                     )}
                     {sanitizedConfig.blog.display && (
@@ -296,11 +296,12 @@ const GitProfile = ({ config }: { config: Config }) => {
                   </div>
                 </div>
               </div>
-              {sanitizedConfig.publications.length !== 0 && (
+              {sanitizedConfig.awards.length !== 0 && (
                 <div className="mt-6 -mx-4 lg:-mx-10">
-                  <PublicationCard
+                  <AwardCard
+                    header="Awards"
                     loading={loading}
-                    publications={sanitizedConfig.publications}
+                    awards={sanitizedConfig.awards}
                   />
                 </div>
               )}
