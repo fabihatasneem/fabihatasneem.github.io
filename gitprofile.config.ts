@@ -138,16 +138,16 @@ const CONFIG = {
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
       description:
-        'Contributed to the development of Convay, a scaling capacity of the unified communication platform to 200K concurrent users via WebRTC and Kafka, enhancing stability and user experience under high load. Built secure real-time chat and reaction using WebSockets (STOMP over SockJS) with Spring Boot and JWT authentication improving communication reliability. Engineered reusable UI components with React, Redux, and Material-UI, streamlining frontend development and enhancing code maintainability. Improved observability coverage by 80% through full integration of OpenTelemetry and Jaeger, enabling faster detection and resolution of system issues.',
+        '• Scaled unified communication platform to 200K concurrent users using WebRTC and Kafka\n• Developed secure real-time chat system with WebSockets (STOMP over SockJS) and Spring Boot\n• Built reusable React/Redux components with Material-UI, improving development efficiency\n• Enhanced system observability by 80% through OpenTelemetry and Jaeger integration',
     },
     {
       company: 'MySoft Ltd.',
-      position: 'Intern',
+      position: 'Academic Intern',
       from: 'June 2022',
       to: 'July 2022',
       companyLink: 'https://www.mysoftltd.com/',
       description:
-        'Working with health-related big data, I did data analysis, data cleaning, data preprocessing, and data visualization using Python. I successfully addressed the challenges of efficiently reading and storing large and noisy CSV data into a Postgres database.',
+        '• Performed data analysis, cleaning, and preprocessing on health-related big data using Python\n• Successfully optimized CSV data processing and storage in PostgreSQL database\n• Created data visualizations to support healthcare analytics and reporting',
     },
     {
       company: 'OpenRefactory, Inc.',
@@ -156,16 +156,16 @@ const CONFIG = {
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
       description:
-        'Trained in software triaging and open-source bug fixing; contributed to enhancing an internal bug triage portal using industry best practices.',
+        '• Trained in software triaging methodologies and open-source bug fixing techniques\n• Contributed to internal bug triage portal development using industry best practices\n• Gained hands-on experience with software quality assurance and debugging tools',
     },
     {
-      company: 'BYDO',
+      company: 'BYDO Engineering Ltd',
       position: 'Trainee Software Developer',
       from: 'September 2020',
       to: 'September 2021',
       companyLink: 'https://bydoacademy.com/',
       description:
-        'Developed backend services using Java, Hibernate, and MySQL and built responsive web interfaces with JavaScript and JSP for an online education platform called BYDO Academy, an online healthcare provider platform called Uposorgo, and the official website of the Institute of Engineers, Bangladesh.',
+        '• Developed backend services using Java, Hibernate, and MySQL for multiple platforms\n• Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms\n• Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website',
     },
   ],
   certifications: [
