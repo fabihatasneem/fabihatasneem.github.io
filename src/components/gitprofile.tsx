@@ -246,7 +246,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         skills={sanitizedConfig.skills}
                       />
                     )}
-                    <ContactCard contact={sanitizedConfig.contact} />
                   </div>
                 </div>
 
@@ -297,7 +296,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </div>
               {sanitizedConfig.awards.length !== 0 && (
-                <div className="mt-6 -mx-4 lg:-mx-10">
+                <div className="mt-6 -mx-4 lg:-mx-10 px-4 lg:px-10">
                   <AwardCard
                     header="Awards"
                     loading={loading}
@@ -305,6 +304,10 @@ const GitProfile = ({ config }: { config: Config }) => {
                   />
                 </div>
               )}
+
+              <div className="mt-6 -mx-4 lg:-mx-10 px-4 lg:px-10">
+                <ContactCard contact={sanitizedConfig.contact} />
+              </div>
             </div>
             {sanitizedConfig.footer && (
               <footer
