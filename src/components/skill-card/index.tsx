@@ -7,6 +7,7 @@ type SkillCategories = {
   tools?: string[];
   cloud?: string[];
   ml?: string[];
+  security?: string[];
 };
 
 const SkillCard = ({
