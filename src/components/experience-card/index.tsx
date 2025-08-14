@@ -1,53 +1,5 @@
-import React, { Fragment } from 'react';
 import { SanitizedExperience } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
-
-const ListItem = ({
-  time,
-  position,
-  company,
-  companyLink,
-  description,
-  isEven,
-}: {
-  time: React.ReactNode;
-  position?: React.ReactNode;
-  company?: React.ReactNode;
-  companyLink?: string;
-  description?: string;
-  isEven: boolean;
-}) => (
-  <li
-    className={`mb-4 ${isEven ? 'ml-auto pl-4' : 'mr-auto pr-4'} w-[45%] relative`}
-  >
-    <div
-      className="absolute w-3 h-3 bg-base-300 rounded-full z-10"
-      style={{
-        top: '10px',
-        [isEven ? 'left' : 'right']: '-6.5px',
-      }}
-    />
-    <div
-      className="absolute w-[15px] h-0.5 bg-base-300"
-      style={{
-        top: '14px',
-        [isEven ? 'left' : 'right']: '-15px',
-      }}
-    />
-    <div className="my-0.5 text-xs">{time}</div>
-    <h3 className="font-semibold">{position}</h3>
-    <div className="mb-2 font-normal">
-      <a href={companyLink} target="_blank" rel="noreferrer">
-        {company}
-      </a>
-    </div>
-    {description && (
-      <div className="text-sm text-base-content opacity-70 leading-relaxed">
-        {description}
-      </div>
-    )}
-  </li>
-);
 
 const ExperienceCard = ({
   experiences,
@@ -58,22 +10,18 @@ const ExperienceCard = ({
 }) => {
   const renderSkeleton = () => {
     const array = [];
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 4; index++) {
       array.push(
-        <ListItem
-          key={index}
-          isEven={index % 2 === 0}
-          time={skeleton({
-            widthCls: 'w-5/12',
-            heightCls: 'h-4',
-          })}
-          position={skeleton({
-            widthCls: 'w-6/12',
-            heightCls: 'h-4',
-            className: 'my-1.5',
-          })}
-          company={skeleton({ widthCls: 'w-6/12', heightCls: 'h-3' })}
-        />,
+        <div key={index} className="card bg-base-200 animate-pulse">
+          <div className="card-body p-4">
+            <div className="flex justify-between items-start mb-2">
+              {skeleton({ widthCls: 'w-32', heightCls: 'h-4' })}
+              {skeleton({ widthCls: 'w-24', heightCls: 'h-3' })}
+            </div>
+            {skeleton({ widthCls: 'w-40', heightCls: 'h-5' })}
+            {skeleton({ widthCls: 'w-full', heightCls: 'h-16' })}
+          </div>
+        </div>,
       );
     }
     return array;
@@ -82,7 +30,7 @@ const ExperienceCard = ({
   return (
     <div id="work" className="card shadow-lg compact bg-base-100">
       <div className="card-body">
-        <div className="mx-3">
+        <div className="mx-3 mb-6">
           <h5 className="card-title">
             {loading ? (
               skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
@@ -93,34 +41,52 @@ const ExperienceCard = ({
             )}
           </h5>
         </div>
-        <div className="text-base-content text-opacity-60">
-          <div className="relative my-2 mx-4">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-base-300" />
-            <ol className="relative flex flex-col -space-y-3">
-              {loading ? (
-                renderSkeleton()
-              ) : (
-                <Fragment>
-                  {experiences.map((experience, index) => (
-                    <ListItem
-                      key={index}
-                      isEven={index % 2 === 0}
-                      time={`${experience.from} - ${experience.to}`}
-                      position={experience.position}
-                      company={experience.company}
-                      companyLink={
-                        experience.companyLink
-                          ? experience.companyLink
-                          : undefined
-                      }
-                      description={experience.description}
-                    />
-                  ))}
-                </Fragment>
-              )}
-            </ol>
+
+        {loading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {renderSkeleton()}
           </div>
-        </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {experiences.map((experience, index) => (
+              <div
+                key={index}
+                className="card bg-base-200 hover:bg-base-300 transition-colors duration-200"
+              >
+                <div className="card-body p-5">
+                  {/* Date Range */}
+                  <div className="text-sm text-base-content opacity-60 mb-3">
+                    {experience.from} - {experience.to}
+                  </div>
+
+                  {/* Position */}
+                  <h3 className="text-lg font-semibold text-base-content mb-2">
+                    {experience.position}
+                  </h3>
+
+                  {/* Company */}
+                  <div className="mb-4">
+                    <a
+                      href={experience.companyLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary hover:text-primary-focus font-medium transition-colors duration-200"
+                    >
+                      {experience.company}
+                    </a>
+                  </div>
+
+                  {/* Description */}
+                  {experience.description && (
+                    <div className="text-sm text-base-content opacity-80 leading-relaxed">
+                      {experience.description}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
