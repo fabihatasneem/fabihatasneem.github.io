@@ -52,7 +52,7 @@ const CONFIG = {
             'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users. This was our term project in Level 4, Term 1 for Course CSE408 - Software Development.',
           imageUrl:
             'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
-          link: 'https://github.com/CPM-Creative-Production-Management',
+          link: 'https://github.com/CommuniCreate',
         },
       ],
     },
