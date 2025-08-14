@@ -96,79 +96,48 @@ const AwardCard = ({
             </div>
           </div>
 
-          {/* Description - Always visible */}
-          <p className="text-base-content/80 text-sm leading-relaxed mb-4 line-clamp-3">
+          {/* Description - Always visible, no truncation */}
+          <p className="text-base-content/80 text-sm leading-relaxed mb-4">
             {item.description}
           </p>
 
-          {/* Expandable Images Section */}
+          {/* Images Section - Always visible with larger height */}
           {(item.imageUrl1 || item.imageUrl2) && (
-            <div
-              className={`transition-all duration-300 overflow-hidden ${
-                selectedAward === index
-                  ? 'max-h-96 opacity-100'
-                  : 'max-h-0 opacity-0'
-              }`}
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                {item.imageUrl1 && (
-                  <div className="relative group">
-                    <LazyImage
-                      src={item.imageUrl1}
-                      alt="Award image 1"
-                      placeholder={skeleton({
-                        widthCls: 'w-full',
-                        heightCls: 'h-32',
-                        shape: 'rounded-lg',
-                      })}
-                      className="w-full h-32 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                  </div>
-                )}
-                {item.imageUrl2 && (
-                  <div className="relative group">
-                    <LazyImage
-                      src={item.imageUrl2}
-                      alt="Award image 2"
-                      placeholder={skeleton({
-                        widthCls: 'w-full',
-                        heightCls: 'h-32',
-                        shape: 'rounded-lg',
-                      })}
-                      className="w-full h-32 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
-                  </div>
-                )}
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {item.imageUrl1 && (
+                <div className="relative group">
+                  <LazyImage
+                    src={item.imageUrl1}
+                    alt="Award image 1"
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-48',
+                      shape: 'rounded-lg',
+                    })}
+                    className="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                </div>
+              )}
+              {item.imageUrl2 && (
+                <div className="relative group">
+                  <LazyImage
+                    src={item.imageUrl2}
+                    alt="Award image 2"
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-48',
+                      shape: 'rounded-lg',
+                    })}
+                    className="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105 shadow-md"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg"></div>
+                </div>
+              )}
             </div>
           )}
 
-          {/* Expand/Collapse Indicator */}
-          {(item.imageUrl1 || item.imageUrl2) && (
-            <div className="flex justify-center mt-3">
-              <div
-                className={`w-6 h-6 rounded-full bg-base-300 flex items-center justify-center transition-transform duration-300 ${
-                  selectedAward === index ? 'rotate-180' : ''
-                }`}
-              >
-                <svg
-                  className="w-3 h-3 text-base-content/60"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-            </div>
-          )}
+          {/* Remove expand/collapse since images are always visible */}
         </div>
       </div>
     ));
