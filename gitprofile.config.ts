@@ -297,19 +297,6 @@ const CONFIG = {
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/basis2.jpg',
     },
     {
-      title: 'Top 10 Finalist : Therap JavaFest 2022',
-      year: 2022,
-      description:
-        'The Great Ink Society is a platform for all the storytellers out there. It will consist of stories in written versions or voiceovers. The purpose of this platform is to build a community with a bunch of people who will be sharing their imaginary world with one another. Here, they will be able to write a short story, a poem, or even a book that consists of multiple chapters. They will also be able to upload podcasts. A podcast is an episodic series of spoken words in digital audio files that a user can download or stream directly from any app and listen to. In this platform, a user will be able to upload their podcasts, standalone, and series in mp3 format and the listeners will be able to stream them directly from the web app. As a part of the community, others will be able to comment on these stories, like them and can even follow their preferred authors.',
-      link: 'https://www.facebook.com/photo/?fbid=170385585546837&set=pcb.170386192213443',
-      logoUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/javafest.png',
-      imageUrl1:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/therap.png',
-      imageUrl2:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/therap2.jpg',
-    },
-    {
       title: 'First Runner Up : BUET CSE Fest 2022 Hackathon',
       year: 2022,
       description:
@@ -321,6 +308,19 @@ const CONFIG = {
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/hackathon.jpg',
       imageUrl2:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/hackathon2.jpg',
+    },
+    {
+      title: 'Top 10 Finalist : Therap JavaFest 2022',
+      year: 2022,
+      description:
+        'The Great Ink Society is a platform for all the storytellers out there. It will consist of stories in written versions or voiceovers. The purpose of this platform is to build a community with a bunch of people who will be sharing their imaginary world with one another. Here, they will be able to write a short story, a poem, or even a book that consists of multiple chapters. They will also be able to upload podcasts. A podcast is an episodic series of spoken words in digital audio files that a user can download or stream directly from any app and listen to. In this platform, a user will be able to upload their podcasts, standalone, and series in mp3 format and the listeners will be able to stream them directly from the web app. As a part of the community, others will be able to comment on these stories, like them and can even follow their preferred authors.',
+      link: 'https://www.facebook.com/photo/?fbid=170385585546837&set=pcb.170386192213443',
+      logoUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/javafest.png',
+      imageUrl1:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/therap.png',
+      imageUrl2:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/therap2.jpg',
     },
   ],
   // Display articles from your medium or dev account. (Optional)

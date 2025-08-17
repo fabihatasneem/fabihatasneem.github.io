@@ -18,16 +18,17 @@ const AwardCard = ({
     const array = [];
     for (let index = 0; index < awards.length; index++) {
       array.push(
-        <div
-          className="card bg-gradient-to-br from-base-200 to-base-300 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
-          key={index}
-        >
-          <div className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-16 h-16 rounded-full bg-base-400 animate-pulse"></div>
-              <div className="flex-1 space-y-2">
-                <div className="h-4 bg-base-400 rounded animate-pulse"></div>
-                <div className="h-3 bg-base-400 rounded animate-pulse w-3/4"></div>
+        <div key={index} className="contents">
+          <div
+            className="card bg-gradient-to-br from-base-200 to-base-300 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+          >
+            <div className="p-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-16 h-16 rounded-full bg-base-400 animate-pulse"></div>
+                <div className="flex-1 space-y-2">
+                  <div className="h-4 bg-base-400 rounded animate-pulse"></div>
+                  <div className="h-3 bg-base-400 rounded animate-pulse w-3/4"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -61,9 +62,9 @@ const AwardCard = ({
             </div>
 
             {/* Awards Grid */}
-            <div className="flex flex-wrap -mx-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
               {loading ? renderSkeleton() : awards.map((item, index) => (
-                <div key={index} className="w-full md:w-1/2 px-3 mb-6">
+                <div key={index} className="contents">
                   <div
                     className="card h-auto bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer border border-base-300 hover:border-primary/30"
                     onClick={() => setSelectedAward(selectedAward === index ? null : index)}
