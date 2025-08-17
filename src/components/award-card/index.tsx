@@ -18,7 +18,7 @@ const AwardCard = ({
     const array = [];
     for (let index = 0; index < awards.length; index++) {
       array.push(
-        <div key={index} className="contents">
+        <div key={index} className="break-inside-avoid mb-6">
           <div
             className="card bg-gradient-to-br from-base-200 to-base-300 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
           >
@@ -62,9 +62,9 @@ const AwardCard = ({
             </div>
 
             {/* Awards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
+            <div className="columns-1 md:columns-2 gap-6 space-y-6">
               {loading ? renderSkeleton() : awards.map((item, index) => (
-                <div key={index} className="contents">
+                <div key={index} className="break-inside-avoid mb-6">
                   <div
                     className="card h-auto bg-gradient-to-br from-base-100 to-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer border border-base-300 hover:border-primary/30"
                     onClick={() => setSelectedAward(selectedAward === index ? null : index)}
