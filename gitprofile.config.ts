@@ -235,11 +235,13 @@ const CONFIG = {
       company: 'IEEE Computer Society BUET Student Branch Chapter',
       position: 'Chairperson',
       year: '2023',
+      logoUrl: 'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/ieee-cs-logo.jpg',
     },
     {
       company: 'IEEEXtreme 15.0',
       position: 'Ambassador',
       year: '2021',
+      logoUrl: 'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/ieeextreme.png',
     },
   ],
   publications: [

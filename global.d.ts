@@ -236,6 +236,7 @@ interface ExtraCurricularActivity {
   year: string;
   position?: string;
   companyLink?: string;
+  logoUrl?: string;
 }
 
 interface Certification {

@@ -90,6 +90,7 @@ export interface SanitizedExtraCurricularActivity {
   position?: string;
   year: string;
   companyLink?: string;
+  logoUrl?: string;
 }
 
 export interface SanitizedCertification {
