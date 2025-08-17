@@ -133,7 +133,7 @@ const CONFIG = {
   experiences: [
     {
       company: 'Synesis IT PLC',
-      position: 'Software Engineer',
+      position: 'Software Engineer I',
       from: 'June 2024',
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
