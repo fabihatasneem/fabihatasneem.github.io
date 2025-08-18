@@ -43,7 +43,7 @@ const CONFIG = {
           description:
             'A centralized system for connecting Creative Content Agency and Clients. Features of this project include Personalized Dashboard, Task Management, Review System, Employee Management, Project Management, Payment System, and Admin Site for managing users. This was our term project in Level 4, Term 1 for Course CSE408 - Software Development.',
           imageUrl:
-            'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
+            'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/communicreate.png',
           link: 'https://github.com/CommuniCreate',
         },
         {
@@ -217,7 +217,7 @@ const CONFIG = {
       from: '2019',
       to: '2024',
       logoUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/buet.png',
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/BUET_LOGO.svg',
     },
     {
       institution: 'Holy Cross College, Dhaka',
