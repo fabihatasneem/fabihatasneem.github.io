@@ -162,7 +162,7 @@ const AwardCard = ({
             </div>
 
             {/* Awards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="columns-1 md:columns-2 gap-6 space-y-6">
               {loading ? renderSkeleton() : renderAwards()}
             </div>
           </div>
