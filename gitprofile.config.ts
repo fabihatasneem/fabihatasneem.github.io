@@ -133,7 +133,7 @@ const CONFIG = {
   experiences: [
     {
       company: 'Synesis IT PLC',
-      position: 'Software Engineer I',
+      position: 'Software Engineer',
       from: 'June 2024',
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
@@ -216,18 +216,24 @@ const CONFIG = {
       degree: 'B.Sc in Computer Science and Engineering (CSE)',
       from: '2019',
       to: '2024',
+      logoUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/buet.png',
     },
     {
       institution: 'Holy Cross College, Dhaka',
       degree: 'Higher Secondary Certificate (HSC)',
       from: '2016',
       to: '2018',
+      logoUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/holy_cross.png',
     },
     {
       institution: 'Faizur Rahman Ideal Institute, Dhaka',
       degree: 'Secondary School Certificate (SSC)',
       from: '2006',
       to: '2015',
+      logoUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/faizur.png',
     },
   ],
   extraCurricularActivities: [
@@ -235,13 +241,11 @@ const CONFIG = {
       company: 'IEEE Computer Society BUET Student Branch Chapter',
       position: 'Chairperson',
       year: '2023',
-      logoUrl: 'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/ieee_cs_logo.jpg',
     },
     {
       company: 'IEEEXtreme 15.0',
       position: 'Ambassador',
       year: '2021',
-      logoUrl: 'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/refs/heads/main/public/ieeextreme_logo.jpg',
     },
   ],
   publications: [
@@ -297,19 +301,6 @@ const CONFIG = {
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/basis2.jpg',
     },
     {
-      title: 'First Runner Up : BUET CSE Fest 2022 Hackathon',
-      year: 2022,
-      description:
-        'Our team BUET Bleh developed a sophisticated digital home assistant app during the intense 24-hour challenge of the BUET CSE Fest 2022 Inter-University Hackathon. Our hard work and innovation paid off, as we proudly secured the First Runner-Up position in the API & Cloud Category.',
-      link: 'https://www.facebook.com/share/p/1BTXsYqcM8/',
-      logoUrl:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/csefest22.jpg',
-      imageUrl1:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/hackathon.jpg',
-      imageUrl2:
-        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/hackathon2.jpg',
-    },
-    {
       title: 'Top 10 Finalist : Therap JavaFest 2022',
       year: 2022,
       description:
@@ -321,6 +312,19 @@ const CONFIG = {
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/therap.png',
       imageUrl2:
         'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/therap2.jpg',
+    },
+    {
+      title: 'First Runner Up : BUET CSE Fest 2022 Hackathon',
+      year: 2022,
+      description:
+        'Our team BUET Bleh developed a sophisticated digital home assistant app during the intense 24-hour challenge of the BUET CSE Fest 2022 Inter-University Hackathon. Our hard work and innovation paid off, as we proudly secured the First Runner-Up position in the API & Cloud Category.',
+      link: 'https://www.facebook.com/share/p/1BTXsYqcM8/',
+      logoUrl:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/csefest22.jpg',
+      imageUrl1:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/hackathon.jpg',
+      imageUrl2:
+        'https://raw.githubusercontent.com/fabihatasneem/fabihatasneem.github.io/main/public/hackathon2.jpg',
     },
   ],
   // Display articles from your medium or dev account. (Optional)

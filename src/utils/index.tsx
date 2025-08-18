@@ -108,18 +108,20 @@ export const getSanitizedConfig = (
             experience.to,
         ) || [],
       extraCurricularActivities:
-        config?.extraCurricularActivities?.filter(
-          (extraCurricularActivity) =>
-            extraCurricularActivity.company ||
-            extraCurricularActivity.position ||
-            extraCurricularActivity.year,
-        ).map((activity) => ({
-          company: activity.company,
-          position: activity.position,
-          year: activity.year,
-          companyLink: activity.companyLink,
-          logoUrl: activity.logoUrl,
-        })) || [],
+        config?.extraCurricularActivities
+          ?.filter(
+            (extraCurricularActivity) =>
+              extraCurricularActivity.company ||
+              extraCurricularActivity.position ||
+              extraCurricularActivity.year,
+          )
+          .map((activity) => ({
+            company: activity.company,
+            position: activity.position,
+            year: activity.year,
+            companyLink: activity.companyLink,
+            logoUrl: activity.logoUrl,
+          })) || [],
       certifications:
         config?.certifications?.filter(
           (certification) =>
