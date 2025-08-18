@@ -207,7 +207,6 @@ const CONFIG = {
       name: "The Duke of Edinburgh's Award (Bronze Medal)",
       body: "Certified by The Duke of Edinburgh's Award Foundation Bangladesh associated by The Regional Secretariat in Australia & The International Secretariat in the UK",
       year: 'March 2020',
-      link: '',
     },
   ],
   educations: [
