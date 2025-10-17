@@ -32,6 +32,7 @@ import HeadTagEditor from './head-tag-editor';
 import PublicationCard from './publication-card';
 import SkillCard from './skill-card';
 import ThemeChanger from './theme-changer';
+import Navbar from './navbar';
 
 /**
  * Renders the GitProfile component.
@@ -199,7 +200,7 @@ const GitProfile = ({ config }: { config: Config }) => {
             <div className={`p-4 lg:p-10 min-h-full ${BG_COLOR}`}>
               {!sanitizedConfig.themeConfig.disableSwitch && (
                 <div className="mb-6">
-                  <ThemeChanger
+                  <Navbar
                     theme={theme}
                     setTheme={setTheme}
                     loading={loading}

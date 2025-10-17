@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
+import ThemeChanger from '../theme-changer';
+import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
 
-const Navbar = () => {
+interface NavbarProps {
+  theme: string;
+  setTheme: (theme: string) => void;
+  loading: boolean;
+  themeConfig: SanitizedThemeConfig;
+}
+
+const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const handleDropdownToggle = (dropdown: string) => {
@@ -119,58 +128,74 @@ const Navbar = () => {
               Contact
             </a>
           </li>
+          <li>
+            <ThemeChanger
+              theme={theme}
+              setTheme={setTheme}
+              loading={loading}
+              themeConfig={themeConfig}
+            />
+          </li>
         </ul>
       </div>
 
       <div className="navbar-end lg:hidden">
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <div className="flex items-center gap-2">
+          <ThemeChanger
+            theme={theme}
+            setTheme={setTheme}
+            loading={loading}
+            themeConfig={themeConfig}
+          />
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <a onClick={scrollToSection('work')}>Work</a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('education')}>Education</a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('extraCurricular')}>
-                Extra-Curricular
-              </a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('certification')}>Certifications</a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('project')}>Projects</a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('award')}>Awards</a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('publication')}>Publications</a>
-            </li>
-            <li>
-              <a onClick={scrollToSection('contact')}>Contact</a>
-            </li>
-          </ul>
+              <li>
+                <a onClick={scrollToSection('work')}>Work</a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('education')}>Education</a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('extraCurricular')}>
+                  Extra-Curricular
+                </a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('certification')}>Certifications</a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('project')}>Projects</a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('award')}>Awards</a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('publication')}>Publications</a>
+              </li>
+              <li>
+                <a onClick={scrollToSection('contact')}>Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
