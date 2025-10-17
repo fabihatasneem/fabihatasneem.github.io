@@ -27,8 +27,8 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
     };
 
   return (
-    <div className="navbar bg-base-100 px-4 w-full max-w-screen-xl mx-auto">
-      <div className="navbar-end hidden lg:flex w-full justify-end">
+    <div className="navbar bg-base-100 w-full -mx-4 lg:-mx-10 px-4 lg:px-10">
+      <div className="navbar-end hidden lg:flex w-full justify-end max-w-screen-xl mx-auto">
         <ul className="menu menu-horizontal gap-x-4 items-center flex-nowrap">
           <li>
             <a
