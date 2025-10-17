@@ -115,6 +115,9 @@ export interface SanitizedPublication {
   authors?: string;
   link?: string;
   description?: string;
+  location?: string;
+  date?: string;
+  indexTerms?: string;
 }
 
 export interface SanitizedGoogleAnalytics {

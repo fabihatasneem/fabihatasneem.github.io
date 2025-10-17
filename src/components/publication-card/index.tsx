@@ -100,10 +100,45 @@ const PublicationCard = ({
                       {item.journalName}
                     </p>
                   )}
+                  
+                  {(item.location || item.date) && (
+                    <div className="flex flex-wrap justify-center gap-2 mt-1 mb-2">
+                      {item.location && (
+                        <span className="badge badge-outline badge-sm">
+                          📍 {item.location}
+                        </span>
+                      )}
+                      {item.date && (
+                        <span className="badge badge-outline badge-sm">
+                          📅 {item.date}
+                        </span>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Authors */}
                   {item.authors && (
                     <p className="text-base-content opacity-50 text-sm font-bold">
                       Authors: {item.authors}
                     </p>
+                  )}
+
+                  {item.indexTerms && (
+                    <div className="mt-2">
+                      <p className="text-base-content opacity-60 text-xs font-semibold mb-1">
+                        Index Terms:
+                      </p>
+                      <div className="flex flex-wrap justify-center gap-1">
+                        {item.indexTerms.split(', ').map((term, idx) => (
+                          <span 
+                            key={idx}
+                            className="badge badge-primary badge-xs"
+                          >
+                            {term.trim()}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
                   {item.description && (
                     <p className="mt-2 text-base-content text-opacity-60 text-sm text-justify">
