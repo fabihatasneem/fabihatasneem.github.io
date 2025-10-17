@@ -84,7 +84,15 @@ const ExperienceCard = ({
                     {/* Description */}
                     {experience.description && (
                       <div className="text-sm text-base-content opacity-80 leading-relaxed">
-                        {experience.description}
+                        {Array.isArray(experience.description) ? (
+                          <ul className="list-disc list-inside space-y-1">
+                            {experience.description.map((item, itemIndex) => (
+                              <li key={itemIndex}>{item}</li>
+                            ))}
+                          </ul>
+                        ) : (
+                          experience.description
+                        )}
                       </div>
                     )}
                   </div>
