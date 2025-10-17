@@ -31,7 +31,6 @@ import GithubProjectCard from './github-project-card';
 import HeadTagEditor from './head-tag-editor';
 import PublicationCard from './publication-card';
 import SkillCard from './skill-card';
-import ThemeChanger from './theme-changer';
 import Navbar from './navbar';
 
 /**
