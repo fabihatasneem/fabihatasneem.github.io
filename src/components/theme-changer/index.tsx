@@ -39,6 +39,16 @@ const ThemeChanger = ({
     setTheme(selectedTheme);
   };
 
+  // Custom theme display names
+  const getThemeDisplayName = (themeName: string) => {
+    const themeDisplayMap: { [key: string]: string } = {
+      'sunset': 'Dark',
+      'bumblebee': 'Light'
+    };
+    
+    return themeDisplayMap[themeName] || themeName;
+  };
+
   if (loading) {
     return skeleton({
       widthCls: 'w-10',
@@ -72,7 +82,10 @@ const ThemeChanger = ({
                 className={`${theme === item ? 'active' : ''}`}
               >
                 <span className="opacity-60 capitalize">
-                  {item === themeConfig.defaultTheme ? 'Default' : item}
+                  {item === themeConfig.defaultTheme 
+                    ? 'Default' 
+                    : getThemeDisplayName(item)
+                  }
                 </span>
               </a>
             </li>
