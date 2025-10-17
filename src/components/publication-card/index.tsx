@@ -75,13 +75,7 @@ const PublicationCard = ({
 
   const renderPublications = () => {
     return publications.map((item, index) => (
-      <a
-        className="card shadow-lg compact bg-base-100 cursor-pointer"
-        key={index}
-        href={item.link}
-        target="_blank"
-        rel="noreferrer"
-      >
+      <div key={index} className="card shadow-lg compact bg-base-100">
         <div className="p-8 h-full w-full">
           <div className="flex items-center flex-col">
             <div className="w-full">
@@ -101,6 +95,7 @@ const PublicationCard = ({
                     </p>
                   )}
                   
+                  {/* Location and Date - moved outside of link */}
                   {(item.location || item.date) && (
                     <div className="flex flex-wrap justify-center gap-2 mt-1 mb-2">
                       {item.location && (
@@ -116,13 +111,11 @@ const PublicationCard = ({
                     </div>
                   )}
 
-                  {/* Authors */}
                   {item.authors && (
                     <p className="text-base-content opacity-50 text-sm font-bold">
                       Authors: {item.authors}
                     </p>
                   )}
-
                   {item.indexTerms && (
                     <div className="mt-2">
                       <p className="text-base-content opacity-60 text-xs font-semibold mb-1">
@@ -150,7 +143,17 @@ const PublicationCard = ({
             </div>
           </div>
         </div>
-      </a>
+        
+        {item.link && (
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noreferrer"
+            className="absolute inset-0 z-10"
+            aria-label={`View publication: ${item.title}`}
+          />
+        )}
+      </div>
     ));
   };
 
