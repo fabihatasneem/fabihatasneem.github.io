@@ -141,7 +141,7 @@ const CONFIG = {
         'Contributed to a real-time unified communication platform for large-scale government and enterprise use.',
         'Built reusable UI components and secure real-time messaging features using React, Redux, MUI, WebSockets, and JWT, improving development speed and communication reliability.',
         'Scaled the platform to support 10K+ concurrent users and enable 20K+ participants in a single meeting through optimized WebRTC signaling, Kafka-based pipelines, and distributed storage with Apache Cassandra.',
-        'ncreased observability coverage by 80% with OpenTelemetry and Jaeger, reducing detection and resolution time for critical issues.',
+        'Increased observability coverage by 80% with OpenTelemetry and Jaeger, reducing detection and resolution time for critical issues.',
       ],
     },
     {
