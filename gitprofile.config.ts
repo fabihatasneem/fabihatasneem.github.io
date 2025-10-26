@@ -138,10 +138,10 @@ const CONFIG = {
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
       description: [
-        'Scaled unified communication platform to 200K concurrent users using WebRTC and Kafka',
-        'Developed secure real-time chat system with WebSockets (STOMP over SockJS) and Spring Boot',
-        'Built reusable React/Redux components with Material-UI, improving development efficiency',
-        'Enhanced system observability by 80% through OpenTelemetry and Jaeger integration',
+        'Contributed to a real-time unified communication platform for large-scale government and enterprise use.',
+        'Built reusable UI components and secure real-time messaging features using React, Redux, MUI, WebSockets, and JWT, improving development speed and communication reliability.',
+        'Scaled the platform to support 10K+ concurrent users and enable 20K+ participants in a single meeting through optimized WebRTC signaling, Kafka-based pipelines, and distributed storage with Apache Cassandra.',
+        'ncreased observability coverage by 80% with OpenTelemetry and Jaeger, reducing detection and resolution time for critical issues.',
       ],
     },
     {
@@ -151,9 +151,9 @@ const CONFIG = {
       to: 'July 2022',
       companyLink: 'https://www.mysoftltd.com/',
       description: [
-        'Performed data analysis, cleaning, and preprocessing on health-related big data using Python',
-        'Successfully optimized CSV data processing and storage in PostgreSQL database',
-        'Created data visualizations to support healthcare analytics and reporting',
+        'Performed data analysis, cleaning, and preprocessing on health-related big data using Python.',
+        'Successfully optimized CSV data processing and storage in PostgreSQL database.',
+        'Created data visualizations to support healthcare analytics and reporting.',
       ],
     },
     {
@@ -163,9 +163,9 @@ const CONFIG = {
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
       description: [
-        'Trained in software triaging methodologies and open-source bug fixing techniques',
-        'Contributed to internal bug triage portal development using industry best practices',
-        'Gained hands-on experience with software quality assurance and debugging tools',
+        'Trained in software triaging methodologies and open-source bug fixing techniques.',
+        'Contributed to internal bug triage portal development using industry best practices.',
+        'Gained hands-on experience with software quality assurance and debugging tools.',
       ],
     },
     {
@@ -175,9 +175,9 @@ const CONFIG = {
       to: 'September 2021',
       companyLink: 'https://bydoacademy.com/',
       description: [
-        'Developed backend services using Java, Hibernate, and MySQL for multiple platforms',
-        'Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms',
-        'Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website',
+        'Developed backend services using Java, Hibernate, and MySQL for multiple platforms.',
+        'Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms.',
+        'Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website.',
       ],
     },
   ],
