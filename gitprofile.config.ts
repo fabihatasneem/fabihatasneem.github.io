@@ -267,17 +267,20 @@ const CONFIG = {
     {
       title:
         'Transfer Learning in Bone Morphology Study for Better Hip Fracture Assessment',
-      conferenceName: 'Accepted for presentation at IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
+      conferenceName:
+        'Presented at IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
       journalName: '',
       authors:
-        'Sanjana Siraj and Fabiha Tasneem (Bangladesh University of Engineering and Technology, Bangladesh); Tanvir R. Faisal (University of Louisiana at Lafayette, USA); Mahmuda Naznin (Bangladesh University of Engineering and Technology (BUET), Bangladesh)',
+        'Sanjana Siraj and Fabiha Tasneem ; Tanvir R. Faisal ; Mahmuda Naznin',
       link: '',
-      location: 'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
+      location:
+        'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
       date: '22-24 October 2025',
-      indexTerms: 'machine learning, deep neural networks, fracture risk assessment, bone morphology, vision transformer',
+      indexTerms:
+        'machine learning, deep neural networks, fracture risk assessment, bone morphology, vision transformer',
       description:
         'Abstract: Hip fracture is a significant concern for the aging population, especially people with osteoarthritis or osteoporosis. This study introduces an innovative approach to predict hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Our methodology involves processing a comprehensive dataset of patients’ femoral bone information, utilizing regression techniques to determine stress and strain values, and employing these values to generate image datasets. A key challenge in this type of study is the small size of the training data which leads to poor accuracy. In order to combat this, a vision transformer model, MedViT that is more proficient in capturing long-range dependencies, has been used to predict femur fracture risk for high and low classes. The proposed framework shows superior results in terms of prediction accuracy. Our findings highlight the potential of applying advanced machine learning frameworks to enhance healthcare outcomes, particularly for individuals with a high risk of hip fractures.'
-      },
+    },
   ],
   awards: [
     {
