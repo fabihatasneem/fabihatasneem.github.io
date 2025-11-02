@@ -43,9 +43,9 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
             // Remove glow after animation completes
             setTimeout(() => {
               cardElement?.classList.remove('section-glow');
-            }, 1500);
+            }, 800);
           }
-        }, 300);
+        }, 200);
       }
       setOpenDropdown(null);
     };
