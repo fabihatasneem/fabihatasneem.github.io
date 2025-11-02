@@ -107,14 +107,14 @@ svg {
   border-bottom: 10px solid transparent;
 }
 
-.navbar-glow {
-  animation: navbarGlow 1.5s ease-in-out;
+.section-glow {
+  animation: sectionGlow 1.5s ease-in-out;
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 
               0 0 40px rgba(59, 130, 246, 0.3),
-              0 0 60px rgba(59, 130, 246, 0.2);
+              0 0 60px rgba(59, 130, 246, 0.2) !important;
 }
 
-@keyframes navbarGlow {
+@keyframes sectionGlow {
   0% {
     box-shadow: 0 0 5px rgba(59, 130, 246, 0.3),
                 0 0 10px rgba(59, 130, 246, 0.2),
@@ -132,7 +132,7 @@ svg {
   }
 }
 
-@-webkit-keyframes navbarGlow {
+@-webkit-keyframes sectionGlow {
   0% {
     box-shadow: 0 0 5px rgba(59, 130, 246, 0.3),
                 0 0 10px rgba(59, 130, 246, 0.2),

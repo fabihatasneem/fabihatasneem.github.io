@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
 import ThemeChanger from '../theme-changer';
 
@@ -11,7 +11,6 @@ interface NavbarProps {
 
 const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [isGlowing, setIsGlowing] = useState(false);
 
   const handleDropdownToggle = (dropdown: string) => {
     setOpenDropdown((prev) => (prev === dropdown ? null : dropdown));
@@ -23,24 +22,36 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
       const element = document.getElementById(elementId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+
+        // Wait a bit for scroll to start, then find and glow the card
+        setTimeout(() => {
+          // Find the card element to glow (either the element itself or a card inside it)
+          let cardElement: HTMLElement | null = element;
+
+          // If the element with id is a wrapper div, find the card inside
+          if (!element.classList.contains('card')) {
+            const card = element.querySelector('.card');
+            if (card) {
+              cardElement = card as HTMLElement;
+            }
+          }
+
+          // Add glow class to the card
+          if (cardElement) {
+            cardElement.classList.add('section-glow');
+
+            // Remove glow after animation completes
+            setTimeout(() => {
+              cardElement?.classList.remove('section-glow');
+            }, 1500);
+          }
+        }, 300);
       }
       setOpenDropdown(null);
-      setIsGlowing(true);
     };
 
-  useEffect(() => {
-    if (isGlowing) {
-      const timer = setTimeout(() => {
-        setIsGlowing(false);
-      }, 1500);
-      return () => clearTimeout(timer);
-    }
-  }, [isGlowing]);
-
   return (
-    <div
-      className={`card overflow-visible shadow-lg compact bg-base-100 ${isGlowing ? 'navbar-glow' : ''}`}
-    >
+    <div className="card overflow-visible shadow-lg compact bg-base-100">
       <div className="navbar w-full px-4 lg:px-6">
         <div className="navbar-end hidden lg:flex w-full justify-end max-w-screen-xl mx-auto">
           <ul className="menu menu-horizontal gap-x-4 items-center flex-nowrap">
