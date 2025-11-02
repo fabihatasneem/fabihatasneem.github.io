@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import ThemeChanger from '../theme-changer';
+import React, { useEffect, useState } from 'react';
 import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
+import ThemeChanger from '../theme-changer';
 
 interface NavbarProps {
   theme: string;
@@ -11,6 +11,7 @@ interface NavbarProps {
 
 const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isGlowing, setIsGlowing] = useState(false);
 
   const handleDropdownToggle = (dropdown: string) => {
     setOpenDropdown((prev) => (prev === dropdown ? null : dropdown));
@@ -24,10 +25,22 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
       setOpenDropdown(null);
+      setIsGlowing(true);
     };
 
+  useEffect(() => {
+    if (isGlowing) {
+      const timer = setTimeout(() => {
+        setIsGlowing(false);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [isGlowing]);
+
   return (
-    <div className="card overflow-visible shadow-lg compact bg-base-100">
+    <div
+      className={`card overflow-visible shadow-lg compact bg-base-100 ${isGlowing ? 'navbar-glow' : ''}`}
+    >
       <div className="navbar w-full px-4 lg:px-6">
         <div className="navbar-end hidden lg:flex w-full justify-end max-w-screen-xl mx-auto">
           <ul className="menu menu-horizontal gap-x-4 items-center flex-nowrap">
@@ -181,7 +194,9 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
                   </a>
                 </li>
                 <li>
-                  <a onClick={scrollToSection('certification')}>Certifications</a>
+                  <a onClick={scrollToSection('certification')}>
+                    Certifications
+                  </a>
                 </li>
                 <li>
                   <a onClick={scrollToSection('project')}>Projects</a>
