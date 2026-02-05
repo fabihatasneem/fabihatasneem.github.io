@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ThemeChanger from '../theme-changer';
 import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
+import ThemeChanger from '../theme-changer';
 
 interface NavbarProps {
   theme: string;
@@ -22,6 +22,30 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
       const element = document.getElementById(elementId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
+
+        // Wait a bit for scroll to start, then find and glow the card
+        setTimeout(() => {
+          // Find the card element to glow (either the element itself or a card inside it)
+          let cardElement: HTMLElement | null = element;
+
+          // If the element with id is a wrapper div, find the card inside
+          if (!element.classList.contains('card')) {
+            const card = element.querySelector('.card');
+            if (card) {
+              cardElement = card as HTMLElement;
+            }
+          }
+
+          // Add glow class to the card
+          if (cardElement) {
+            cardElement.classList.add('section-glow');
+
+            // Remove glow after animation completes
+            setTimeout(() => {
+              cardElement?.classList.remove('section-glow');
+            }, 800);
+          }
+        }, 200);
       }
       setOpenDropdown(null);
     };
@@ -181,7 +205,9 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
                   </a>
                 </li>
                 <li>
-                  <a onClick={scrollToSection('certification')}>Certifications</a>
+                  <a onClick={scrollToSection('certification')}>
+                    Certifications
+                  </a>
                 </li>
                 <li>
                   <a onClick={scrollToSection('project')}>Projects</a>

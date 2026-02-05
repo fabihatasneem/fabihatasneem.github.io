@@ -94,7 +94,7 @@ const PublicationCard = ({
                       {item.journalName}
                     </p>
                   )}
-                  
+
                   {/* Location and Date - moved outside of link */}
                   {(item.location || item.date) && (
                     <div className="flex flex-wrap justify-center gap-2 mt-1 mb-2">

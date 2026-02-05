@@ -138,10 +138,10 @@ const CONFIG = {
       to: 'Present',
       companyLink: 'https://synesisit.com.bd/',
       description: [
-        'Scaled unified communication platform to 200K concurrent users using WebRTC and Kafka',
-        'Developed secure real-time chat system with WebSockets (STOMP over SockJS) and Spring Boot',
-        'Built reusable React/Redux components with Material-UI, improving development efficiency',
-        'Enhanced system observability by 80% through OpenTelemetry and Jaeger integration',
+        'Contributed to a real-time unified communication platform for large-scale government and enterprise use.',
+        'Built reusable UI components and secure real-time messaging features using React, Redux, MUI, WebSockets, and JWT, improving development speed and communication reliability.',
+        'Scaled the platform to support 10K+ concurrent users and enable 20K+ participants in a single meeting through optimized WebRTC signaling, Kafka-based pipelines, and distributed storage with Apache Cassandra.',
+        'Increased observability coverage by 80% with OpenTelemetry and Jaeger, reducing detection and resolution time for critical issues.',
       ],
     },
     {
@@ -151,9 +151,9 @@ const CONFIG = {
       to: 'July 2022',
       companyLink: 'https://www.mysoftltd.com/',
       description: [
-        'Performed data analysis, cleaning, and preprocessing on health-related big data using Python',
-        'Successfully optimized CSV data processing and storage in PostgreSQL database',
-        'Created data visualizations to support healthcare analytics and reporting',
+        'Performed data analysis, cleaning, and preprocessing on health-related big data using Python.',
+        'Successfully optimized CSV data processing and storage in PostgreSQL database.',
+        'Created data visualizations to support healthcare analytics and reporting.',
       ],
     },
     {
@@ -163,9 +163,9 @@ const CONFIG = {
       to: 'December 2023',
       companyLink: 'https://www.openrefactory.com/',
       description: [
-        'Trained in software triaging methodologies and open-source bug fixing techniques',
-        'Contributed to internal bug triage portal development using industry best practices',
-        'Gained hands-on experience with software quality assurance and debugging tools',
+        'Trained in software triaging methodologies and open-source bug fixing techniques.',
+        'Contributed to internal bug triage portal development using industry best practices.',
+        'Gained hands-on experience with software quality assurance and debugging tools.',
       ],
     },
     {
@@ -175,9 +175,9 @@ const CONFIG = {
       to: 'September 2021',
       companyLink: 'https://bydoacademy.com/',
       description: [
-        'Developed backend services using Java, Hibernate, and MySQL for multiple platforms',
-        'Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms',
-        'Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website',
+        'Developed backend services using Java, Hibernate, and MySQL for multiple platforms.',
+        'Built responsive web interfaces with JavaScript and JSP for educational and healthcare platforms.',
+        'Contributed to BYDO Academy, Uposorho healthcare platform, and Institute of Engineers website.',
       ],
     },
   ],
@@ -274,10 +274,11 @@ const CONFIG = {
       link: 'https://ieeexplore.ieee.org/document/11267735',
       location: 'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
       date: '22-24 October 2025',
-      indexTerms: 'machine learning, deep neural networks, fracture risk assessment, bone morphology, vision transformer',
+      indexTerms:
+        'machine learning, deep neural networks, fracture risk assessment, bone morphology, vision transformer',
       description:
         'Abstract: Hip fracture is a significant concern for the aging population, especially people with osteoarthritis or osteoporosis. This study introduces an innovative approach to predict hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Our methodology involves processing a comprehensive dataset of patients’ femoral bone information, utilizing regression techniques to determine stress and strain values, and employing these values to generate image datasets. A key challenge in this type of study is the small size of the training data which leads to poor accuracy. In order to combat this, a vision transformer model, MedViT that is more proficient in capturing long-range dependencies, has been used to predict femur fracture risk for high and low classes. The proposed framework shows superior results in terms of prediction accuracy. Our findings highlight the potential of applying advanced machine learning frameworks to enhance healthcare outcomes, particularly for individuals with a high risk of hip fractures.'
-      },
+    },
   ],
   awards: [
     {
