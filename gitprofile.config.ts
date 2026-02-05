@@ -261,6 +261,7 @@ const CONFIG = {
       authors:
         "Md Ehtesham-Ul-Haque, Jacob D' Rozario, Rudaiba Adnin, Farhan Tanvir Utshaw, Fabiha Tasneem, Israt Jahan Shefa, A.B.M. Alim Al Islam",
       link: 'https://doi.org/10.1016/j.cogsys.2023.101168',
+      indexTerms: 'Affective Computing, Conversational AI, Emotional AI, Chatbot Development, Natural Language Processing (NLP), Human Computer Interaction (HCI)',
       description:
         'Abstract: Emotion modeling has always been intriguing to researchers, where detecting emotion is highly focused and generating emotion is much less focused to date. Therefore, in this paper, we aim to exploring emotion generation, particularly for general-purpose conversations. Based on the Cognitive Appraisal Theory and focusing on audio and textual inputs, we propose a novel method to calculate informative variables to evaluate a particular emotion-generating event and six primary emotions. Incorporating such a method of artificial emotion generation, we implement an emotional chatbot, namely EmoBot. Accordingly, EmoBot analyzes continuous audio and textual inputs, calculates the informative variables to evaluate the current situation, generates appropriate emotions, and responds accordingly. An objective evaluation indicates that EmoBot could generate more accurate emotional and semantic responses than a traditional chatbot that does not consider emotion. Additionally, a subjective evaluation of EmoBot demonstrates the appreciation of users for EmoBot over a traditional chatbot that does not consider emotion.',
     },
@@ -270,12 +271,12 @@ const CONFIG = {
       conferenceName: 'IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
       journalName: '',
       authors:
-        'Sanjana Siraj and Fabiha Tasneem (Bangladesh University of Engineering and Technology, Bangladesh); Tanvir R. Faisal (University of Louisiana at Lafayette, USA); Mahmuda Naznin (Bangladesh University of Engineering and Technology (BUET), Bangladesh)',
+        'Sanjana Siraj and Fabiha Tasneem; Tanvir R. Faisal; Mahmuda Naznin',
       link: 'https://ieeexplore.ieee.org/document/11267735',
       location: 'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
       date: '22-24 October 2025',
       indexTerms:
-        'machine learning, deep neural networks, fracture risk assessment, bone morphology, vision transformer',
+        'Machine Learning, Deep Neural Networks, Fracture Risk Assessment, Bone Morphology, Vision Transformer',
       description:
         'Abstract: Hip fracture is a significant concern for the aging population, especially people with osteoarthritis or osteoporosis. This study introduces an innovative approach to predict hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Our methodology involves processing a comprehensive dataset of patients’ femoral bone information, utilizing regression techniques to determine stress and strain values, and employing these values to generate image datasets. A key challenge in this type of study is the small size of the training data which leads to poor accuracy. In order to combat this, a vision transformer model, MedViT that is more proficient in capturing long-range dependencies, has been used to predict femur fracture risk for high and low classes. The proposed framework shows superior results in terms of prediction accuracy. Our findings highlight the potential of applying advanced machine learning frameworks to enhance healthcare outcomes, particularly for individuals with a high risk of hip fractures.'
     },
