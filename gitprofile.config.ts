@@ -267,11 +267,11 @@ const CONFIG = {
     {
       title:
         'Transfer Learning in Bone Morphology Study for Better Hip Fracture Assessment',
-      conferenceName: 'Accepted for presentation at IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
+      conferenceName: 'IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
       journalName: '',
       authors:
         'Sanjana Siraj and Fabiha Tasneem (Bangladesh University of Engineering and Technology, Bangladesh); Tanvir R. Faisal (University of Louisiana at Lafayette, USA); Mahmuda Naznin (Bangladesh University of Engineering and Technology (BUET), Bangladesh)',
-      link: '',
+      link: 'https://ieeexplore.ieee.org/document/11267735',
       location: 'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
       date: '22-24 October 2025',
       indexTerms: 'machine learning, deep neural networks, fracture risk assessment, bone morphology, vision transformer',
