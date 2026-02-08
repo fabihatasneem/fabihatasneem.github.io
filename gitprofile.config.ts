@@ -143,78 +143,57 @@ const CONFIG = {
         'Full-stack work: React/TypeScript frontend, Spring Boot/Kafka/WebSockets backend, Cassandra persistence, Docker and k6 for production readiness.',
       ],
       detailedDescription: {
-        subtitle: 'Big Meeting at Scale — Real-Time Communication Platform',
+        subtitle: 'Big Meeting — real-time at webinar scale',
         domain:
-          'Webinar-scale video conferencing & real-time messaging (government & enterprise)',
+          'Webinar-scale video conferencing and messaging for government and enterprise',
         overview:
-          "Synesis IT's unified communication platform supports large-scale meetings and webinars for government and enterprise users. I worked extensively on the Big Meeting system — a webinar-scale mode — contributing across frontend, backend, real-time messaging, persistence, and deployment to improve scalability, reliability, and user experience.",
+          "I work on the Big Meeting product: a webinar-style mode that has to handle huge rooms (50K+ participants), keep chat and reactions in sync across replicas, and stay responsive. My work spans the React/TypeScript client, Spring Boot backend, Kafka and WebSockets for real-time flows, and moving state into Cassandra so we can scale horizontally.",
         problem: [
-          'Managing thousands of participants with consistent host/guest state',
-          'Keeping chat history and reactions synchronized across backend replicas',
-          'Avoiding blocking and bottlenecks in real-time, event-driven systems',
-          'Making the system production-ready for high concurrency and failure scenarios',
+          'Scaling to thousands of participants without host/guest state or chat going out of sync.',
+          'Keeping real-time pipelines non-blocking and production-ready under load.',
         ],
         contributions: [
           {
-            title: '1. Frontend (Big Meeting UI)',
-            tech: 'React, JavaScript, TypeScript, CSS, REST APIs, Mixpanel',
+            title: 'Backend & real-time',
+            tech: 'Spring Boot, Kafka, STOMP, XMPP, JWT',
             items: [
-              'Built and enhanced the Big Meeting client using React, JavaScript, and TypeScript (Jitsi-Meet–based).',
-              'Implemented participant management features (role display, removal, allowed lists).',
-              'Developed real-time chat functionality including replies, reactions, unread counts, file sharing, and UI animations.',
-              'Added session persistence and auto-login, ensuring seamless reconnections.',
-              'Integrated Mixpanel analytics for key user actions (raised hand, chat send, return to meeting).',
-              'Improved usability with meeting header refinements and Jibri-related UX enhancements.',
+              'Participant management flow (invite, accept/decline, removal) and their transition between webinar panel and main meeting panel, with consistent participant state.',
+              'Chat history, reactions, and ordering correct across instances; WebSockets (STOMP) and XMPP for cross-instance coordination.',
+              'Kafka producers/consumers for event-driven workflows; async processing so Kafka-triggered APIs don’t block consumer threads.',
+              'Secured HTTP REST and WebSocket APIs using a JWT interceptor for authentication and authorization.',
             ],
           },
           {
-            title: '2. Backend & Real-Time Messaging',
-            tech: 'Java, Spring Boot, Kafka, WebSocket (STOMP), XMPP, JWT',
+            title: 'Frontend (Main Meeting & Big Meeting UIs)',
+            tech: 'React, TypeScript, REST, Mixpanel',
             items: [
-              'Designed and implemented core Big Meeting backend workflows using Spring Boot.',
-              'Built request-to-talk lifecycle (invite, accept/decline, removal) with consistent host/guest state.',
-              'Implemented participant transitions between webinar panel and main meeting panel.',
-              'Ensured correct chat history delivery, reactions, and message ordering.',
-              'Managed real-time communication using WebSockets (STOMP) and XMPP for cross-instance coordination.',
-              'Added and tuned Kafka producers/consumers for event-driven workflows.',
-              'Introduced asynchronous processing for Kafka-triggered APIs to avoid blocking consumer threads.',
+              'Showcase Big Meeting participant management, role display, removal, separate lists according to their roles.',
+              'Real-time chat: replies, reactions, unread counts, file sharing, plus session persistence and auto-login so reconnects feel seamless.',
+              'Meeting header and Jibri-related UX; Mixpanel for key actions (raised hand, chat, return to meeting).',
             ],
           },
           {
-            title: '3. Persistence & Scalability',
+            title: 'Persistence & scale',
             tech: 'Cassandra, Spring Data Cassandra',
             items: [
-              'Migrated chat and meeting state from in-memory storage to Apache Cassandra.',
-              'Refactored database schemas for consistency, performance, and fault tolerance.',
-              'Ensured consistent room and participant state across multiple backend replicas.',
-              'Implemented recent-participant tracking and batch LEAVE handling for large user exits.',
+              'Moved chat and meeting state from in-memory to Cassandra; refactored schemas for consistency and fault tolerance.',
+              'Room and participant state consistent across replicas; recent-participant tracking and batch joining and leaving for large scale.',
             ],
           },
           {
-            title: '4. DevOps, Testing & Production Readiness',
+            title: 'DevOps & load testing',
             tech: 'Docker, Docker Compose, k6, Maven',
             items: [
-              'Dockerized backend services with per-service Dockerfiles.',
-              'Created and maintained Docker Compose setups, including a scaled variant with multiple backend replicas.',
-              'Improved configuration management across dev, staging, and production profiles.',
-              'Added k6-based load tests targeting WebSocket/STOMP flows to validate behavior under load.',
+              'Per-service Dockerfiles and Docker Compose (including a multi-replica setup); clearer config across dev, staging, and prod.',
+              'k6 load tests for WebSocket/STOMP flows to validate behavior under load.',
             ],
           },
         ],
         impact: [
-          'Enabled webinar-scale meetings (20K+ participants) with stable chat and participant management.',
-          'Improved scalability and throughput by avoiding blocking Kafka consumers and using async processing.',
-          'Reduced user-facing bugs in host/guest flows and message delivery.',
-          'Increased system maintainability through refactors and shared services.',
-          'Strengthened production readiness with better deployment configs and load testing.',
+          'Big Meeting runs at 50K+ participants with stable chat and participant management.',
+          'Better scalability and fewer bugs in host/guest and message delivery after async Kafka usage and Cassandra migration.',
         ],
-        technologies: `Frontend: React, JavaScript, TypeScript, CSS
-Backend: Java, Spring Boot, REST APIs
-Real-Time & Messaging: WebSockets (STOMP), Kafka, XMPP
-Database: Apache Cassandra
-Security: JWT
-DevOps & Testing: Docker, Docker Compose, k6
-Analytics: Mixpanel`,
+        technologies: `React, TypeScript, Spring Boot, Kafka, WebSockets (STOMP), XMPP, Cassandra, JWT, Docker, k6, Mixpanel`,
       },
     },
     {
