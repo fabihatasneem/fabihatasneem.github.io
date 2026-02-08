@@ -51,14 +51,14 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
     };
 
   return (
-    <div className="card overflow-visible shadow-lg compact bg-base-100">
-      <div className="navbar w-full px-4 lg:px-6">
-        <div className="navbar-end hidden lg:flex w-full justify-end max-w-screen-xl mx-auto">
-          <ul className="menu menu-horizontal gap-x-4 items-center flex-nowrap">
+    <nav className="navbar bg-base-100 border border-base-300/80 rounded-box min-h-0 h-12 px-3 lg:px-4 gap-1 shadow-sm">
+      <div className="navbar-start shrink-0 min-w-0" />
+      <div className="navbar-center hidden lg:flex flex-1 justify-center min-w-0">
+          <ul className="menu menu-horizontal menu-sm gap-0.5 lg:gap-1 items-center flex-nowrap">
             <li>
               <a
                 onClick={scrollToSection('work')}
-                className="btn btn-ghost normal-case"
+                className="btn btn-ghost btn-sm normal-case text-sm"
               >
                 Work
               </a>
@@ -66,7 +66,7 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
             <li>
               <a
                 onClick={scrollToSection('education')}
-                className="btn btn-ghost normal-case"
+                className="btn btn-ghost btn-sm normal-case text-sm"
               >
                 Education
               </a>
@@ -74,7 +74,7 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
             <li>
               <a
                 onClick={scrollToSection('publication')}
-                className="btn btn-ghost normal-case"
+                className="btn btn-ghost btn-sm normal-case text-sm"
               >
                 Publications
               </a>
@@ -82,7 +82,7 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
             <li className="relative">
               <button
                 onClick={() => handleDropdownToggle('achievements')}
-                className="btn btn-ghost normal-case flex gap-1 items-center"
+                className="btn btn-ghost btn-sm normal-case text-sm flex gap-0.5 items-center"
               >
                 Achievements
                 <svg
@@ -115,7 +115,7 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
             <li className="relative">
               <button
                 onClick={() => handleDropdownToggle('activities')}
-                className="btn btn-ghost normal-case flex gap-1 items-center"
+                className="btn btn-ghost btn-sm normal-case text-sm flex gap-0.5 items-center"
               >
                 Activities
                 <svg
@@ -148,32 +148,31 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
             <li>
               <a
                 onClick={scrollToSection('contact')}
-                className="btn btn-ghost normal-case"
+                className="btn btn-ghost btn-sm normal-case text-sm"
               >
                 Contact
               </a>
             </li>
-            <li>
-              <ThemeChanger
-                theme={theme}
-                setTheme={setTheme}
-                loading={loading}
-                themeConfig={themeConfig}
-              />
-            </li>
           </ul>
-        </div>
+      </div>
+      <div className="navbar-end shrink-0 hidden lg:flex order-last">
+        <ThemeChanger
+          theme={theme}
+          setTheme={setTheme}
+          loading={loading}
+          themeConfig={themeConfig}
+        />
+      </div>
 
-        <div className="navbar-end lg:hidden">
-          <div className="flex items-center gap-2">
-            <ThemeChanger
-              theme={theme}
-              setTheme={setTheme}
-              loading={loading}
-              themeConfig={themeConfig}
-            />
-            <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost lg:hidden">
+        <div className="navbar-end lg:hidden flex gap-1 order-last">
+          <ThemeChanger
+            theme={theme}
+            setTheme={setTheme}
+            loading={loading}
+            themeConfig={themeConfig}
+          />
+          <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-sm lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -223,10 +222,8 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
                 </li>
               </ul>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+    </nav>
   );
 };
 

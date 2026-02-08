@@ -147,7 +147,7 @@ const CONFIG = {
         domain:
           'Webinar-scale video conferencing and messaging for government and enterprise',
         overview:
-          "I work on the Big Meeting product: a webinar-style mode that has to handle huge rooms (50K+ participants), keep chat and reactions in sync across replicas, and stay responsive. My work spans the React/TypeScript client, Spring Boot backend, Kafka and WebSockets for real-time flows, and moving state into Cassandra so we can scale horizontally.",
+          "I currently work on the Big Meeting product: a webinar-style mode that has to handle huge rooms (50K+ participants), keep chat and reactions in sync across replicas, and stay responsive. My work spans the React/TypeScript client, Spring Boot backend, Kafka and WebSockets for real-time flows, and moving state into Cassandra so we can scale horizontally.",
         problem: [
           'Scaling to thousands of participants without host/guest state or chat going out of sync.',
           'Keeping real-time pipelines non-blocking and production-ready under load.',

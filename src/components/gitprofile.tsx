@@ -215,7 +215,7 @@ const GitProfile = ({ config }: { config: Config }) => {
             />
             <div className={`p-4 lg:p-10 min-h-full ${BG_COLOR}`}>
               {!sanitizedConfig.themeConfig.disableSwitch && (
-                <div className="mb-6">
+                <div className="mb-4 -mx-1">
                   <Navbar
                     theme={theme}
                     setTheme={setTheme}
