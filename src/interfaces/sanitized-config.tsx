@@ -76,13 +76,32 @@ export interface SanitizedResume {
   fileUrl?: string;
 }
 
+export interface SanitizedDetailedExperienceContribution {
+  title: string;
+  tech?: string;
+  items: string[];
+}
+
+export interface SanitizedDetailedExperienceDescription {
+  subtitle?: string;
+  domain?: string;
+  overview?: string;
+  problem?: string[];
+  contributions?: SanitizedDetailedExperienceContribution[];
+  impact?: string[];
+  technologies?: string;
+}
+
 export interface SanitizedExperience {
   company?: string;
   position?: string;
   from: string;
   to: string;
   companyLink?: string;
-  description?: string;
+  description?: string | string[];
+  detailedDescription?: SanitizedDetailedExperienceDescription;
+  summary?: string[];
+  detailSlug?: string;
 }
 
 export interface SanitizedExtraCurricularActivity {

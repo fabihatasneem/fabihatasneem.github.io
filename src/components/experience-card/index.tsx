@@ -1,5 +1,79 @@
-import { SanitizedExperience } from '../../interfaces/sanitized-config';
+import {
+  SanitizedExperience,
+  SanitizedDetailedExperienceDescription,
+} from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
+
+export const DetailedExperienceBlock = ({
+  detail,
+}: {
+  detail: SanitizedDetailedExperienceDescription;
+}) => (
+  <div className="mt-4 space-y-5 text-sm text-base-content opacity-90 leading-relaxed border-t border-base-300 pt-4">
+    {detail.subtitle && (
+      <p className="font-semibold text-base-content text-base">{detail.subtitle}</p>
+    )}
+    {detail.domain && (
+      <p className="text-base-content opacity-75 italic">{detail.domain}</p>
+    )}
+    {detail.overview && (
+      <div>
+        <h4 className="font-semibold text-base-content mb-1.5">Overview</h4>
+        <p>{detail.overview}</p>
+      </div>
+    )}
+    {detail.problem && detail.problem.length > 0 && (
+      <div>
+        <h4 className="font-semibold text-base-content mb-1.5">Problem</h4>
+        <ul className="list-disc list-inside space-y-1">
+          {detail.problem.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+    {detail.contributions && detail.contributions.length > 0 && (
+      <div>
+        <h4 className="font-semibold text-base-content mb-2">My Contributions</h4>
+        <div className="space-y-4">
+          {detail.contributions.map((contrib, i) => (
+            <div key={i}>
+              <h5 className="font-medium text-base-content mb-1">{contrib.title}</h5>
+              {contrib.tech && (
+                <p className="text-base-content opacity-75 text-xs mb-1.5">
+                  <span className="font-medium">Tech:</span> {contrib.tech}
+                </p>
+              )}
+              <ul className="list-disc list-inside space-y-1">
+                {contrib.items.map((item, j) => (
+                  <li key={j}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+    {detail.impact && detail.impact.length > 0 && (
+      <div>
+        <h4 className="font-semibold text-base-content mb-1.5">Impact</h4>
+        <ul className="list-disc list-inside space-y-1">
+          {detail.impact.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+    {detail.technologies && (
+      <div>
+        <h4 className="font-semibold text-base-content mb-1.5">Key Technologies</h4>
+        <p className="whitespace-pre-line text-base-content opacity-85">
+          {detail.technologies}
+        </p>
+      </div>
+    )}
+  </div>
+);
 
 const ExperienceCard = ({
   experiences,
@@ -49,11 +123,11 @@ const ExperienceCard = ({
             {experiences.map((experience, index) => (
               <div key={index} className="relative">
                 {/* Timeline dot and line */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 relative">
-                    <div className="w-3 h-3 bg-primary rounded-full mt-2"></div>
+                <div className="flex items-stretch space-x-4">
+                  <div className="flex flex-col items-center flex-shrink-0 pt-2">
+                    <div className="w-3 h-3 bg-primary rounded-full shrink-0"></div>
                     {index < experiences.length - 1 && (
-                      <div className="absolute left-1.5 top-5 w-0.5 h-16 bg-base-300"></div>
+                      <div className="w-0.5 flex-1 min-h-4 bg-base-300 mt-1 self-center" />
                     )}
                   </div>
 
@@ -81,20 +155,58 @@ const ExperienceCard = ({
                       </a>
                     </div>
 
-                    {/* Description */}
-                    {experience.description && (
+                    {/* Summary + See more (when detail is on separate view) */}
+                    {experience.detailedDescription &&
+                    experience.detailSlug ? (
                       <div className="text-sm text-base-content opacity-80 leading-relaxed">
-                        {Array.isArray(experience.description) ? (
-                          <ul className="list-disc list-inside space-y-1">
-                            {experience.description.map((item, itemIndex) => (
+                        {experience.summary &&
+                        experience.summary.length > 0 ? (
+                          <ul className="list-disc list-inside space-y-1 mb-3">
+                            {experience.summary.map((item, itemIndex) => (
                               <li key={itemIndex}>{item}</li>
                             ))}
                           </ul>
                         ) : (
-                          experience.description
+                          experience.detailedDescription.overview && (
+                            <p className="mb-3">
+                              {experience.detailedDescription.overview}
+                            </p>
+                          )
                         )}
+                        <a
+                          href={`#experience-${experience.detailSlug}`}
+                          className="link link-primary font-medium"
+                        >
+                          See more →
+                        </a>
                       </div>
-                    )}
+                    ) : null}
+
+                    {/* Inline detailed description (if no detailSlug – legacy) */}
+                    {experience.detailedDescription &&
+                      !experience.detailSlug && (
+                        <DetailedExperienceBlock
+                          detail={experience.detailedDescription}
+                        />
+                      )}
+
+                    {/* Short description (when no detailed description) */}
+                    {!experience.detailedDescription &&
+                      experience.description && (
+                        <div className="text-sm text-base-content opacity-80 leading-relaxed">
+                          {Array.isArray(experience.description) ? (
+                            <ul className="list-disc list-inside space-y-1">
+                              {experience.description.map(
+                                (item, itemIndex) => (
+                                  <li key={itemIndex}>{item}</li>
+                                ),
+                              )}
+                            </ul>
+                          ) : (
+                            experience.description
+                          )}
+                        </div>
+                      )}
                   </div>
                 </div>
               </div>

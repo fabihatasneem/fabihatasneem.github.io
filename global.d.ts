@@ -222,13 +222,39 @@ interface Resume {
   fileUrl?: string;
 }
 
+/**
+ * Structured detailed description for a work experience (e.g. current role).
+ * Rendered as a large, multi-section block.
+ */
+interface DetailedExperienceContribution {
+  title: string;
+  tech?: string;
+  items: string[];
+}
+
+interface DetailedExperienceDescription {
+  subtitle?: string;
+  domain?: string;
+  overview?: string;
+  problem?: string[];
+  contributions?: DetailedExperienceContribution[];
+  impact?: string[];
+  technologies?: string;
+}
+
 interface Experience {
   company?: string;
   position?: string;
   from: string;
   to: string;
   companyLink?: string;
-  description?: string;
+  description?: string | string[];
+  /** When set, full detail is on a separate view; use summary for the card and detailSlug for the link (#experience-{detailSlug}) */
+  detailedDescription?: DetailedExperienceDescription;
+  /** Short summary lines shown on the main page when detailedDescription is used (optional) */
+  summary?: string[];
+  /** Slug for the detail view URL hash, e.g. 'synesis' → #experience-synesis */
+  detailSlug?: string;
 }
 
 interface ExtraCurricularActivity {

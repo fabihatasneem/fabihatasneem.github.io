@@ -24,6 +24,7 @@ import ContactCard from './contact-card';
 import EducationCard from './education-card';
 import ErrorPage from './error-page';
 import ExperienceCard from './experience-card';
+import ExperienceDetailPage from './experience-detail-page';
 import ExternalProjectCard from './external-project-card';
 import ExtraCurricularCard from './extracurricular-card';
 import Footer from './footer';
@@ -48,6 +49,22 @@ const GitProfile = ({ config }: { config: Config }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [profile, setProfile] = useState<Profile | null>(null);
   const [githubProjects, setGithubProjects] = useState<GithubProject[]>([]);
+
+  const [experienceDetailSlug, setExperienceDetailSlug] = useState<string | null>(() => {
+    const hash = window.location.hash.slice(1);
+    const m = hash.match(/^experience-(.+)$/);
+    return m ? m[1] : null;
+  });
+
+  useEffect(() => {
+    const onHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      const m = hash.match(/^experience-(.+)$/);
+      setExperienceDetailSlug(m ? m[1] : null);
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   const getGithubProjects = useCallback(
     async (publicRepoCount: number): Promise<GithubProject[]> => {
@@ -207,6 +224,24 @@ const GitProfile = ({ config }: { config: Config }) => {
                   />
                 </div>
               )}
+              {(() => {
+                const detailExperience =
+                  experienceDetailSlug &&
+                  sanitizedConfig.experiences.find(
+                    (e) =>
+                      e.detailSlug === experienceDetailSlug &&
+                      e.detailedDescription,
+                  );
+                return detailExperience ? (
+                  <ExperienceDetailPage
+                    experience={detailExperience}
+                    onBack={() => {
+                      window.location.hash = '#work';
+                      setExperienceDetailSlug(null);
+                    }}
+                  />
+                ) : (
+              <>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 rounded-box">
                 <div className="col-span-1">
                   <div className="grid grid-cols-1 gap-6">
@@ -246,6 +281,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                         skills={sanitizedConfig.skills}
                       />
                     )}
+                    <ContactCard contact={sanitizedConfig.contact} />
                   </div>
                 </div>
 
@@ -305,11 +341,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               )}
 
-              <div className="mt-6 -mx-4 lg:-mx-10 px-4 lg:px-10">
-                <ContactCard contact={sanitizedConfig.contact} />
-              </div>
-            </div>
-            {sanitizedConfig.footer && (
+              {sanitizedConfig.footer && (
               <footer
                 className={`p-4 footer ${BG_COLOR} text-base-content footer-center`}
               >
@@ -318,6 +350,10 @@ const GitProfile = ({ config }: { config: Config }) => {
                 </div>
               </footer>
             )}
+              </>
+                );
+              })()}
+            </div>
           </>
         )}
       </div>

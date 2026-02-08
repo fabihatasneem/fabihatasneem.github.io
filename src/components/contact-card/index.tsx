@@ -19,7 +19,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ }) => {
   return (
     <div
       id="contact"
-      className="card shadow-lg compact bg-base-100 max-w-md mx-auto"
+      className="card shadow-lg compact bg-base-100"
     >
       <div className="card-body text-center">
         {/* Simple Header */}
