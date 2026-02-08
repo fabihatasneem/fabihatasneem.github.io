@@ -4,6 +4,25 @@ import {
 } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
+const TechBadges = ({ techString }: { techString: string }) => {
+  const names = techString
+    .split(/[\n,]+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {names.map((name, idx) => (
+        <span
+          key={idx}
+          className="badge badge-sm badge-primary/20 text-primary border border-primary/30"
+        >
+          {name}
+        </span>
+      ))}
+    </div>
+  );
+};
+
 export const DetailedExperienceBlock = ({
   detail,
 }: {
@@ -11,20 +30,20 @@ export const DetailedExperienceBlock = ({
 }) => (
   <div className="mt-4 space-y-5 text-sm text-base-content opacity-90 leading-relaxed border-t border-base-300 pt-4">
     {detail.subtitle && (
-      <p className="font-semibold text-base-content text-base">{detail.subtitle}</p>
+      <p className="font-semibold text-primary text-base">{detail.subtitle}</p>
     )}
     {detail.domain && (
       <p className="text-base-content opacity-75 italic">{detail.domain}</p>
     )}
     {detail.overview && (
       <div>
-        <h4 className="font-semibold text-base-content mb-1.5">Overview</h4>
+        <h4 className="font-semibold text-primary mb-1.5">Overview</h4>
         <p>{detail.overview}</p>
       </div>
     )}
     {detail.problem && detail.problem.length > 0 && (
       <div>
-        <h4 className="font-semibold text-base-content mb-1.5">Problem</h4>
+        <h4 className="font-semibold text-primary mb-1.5">Problem</h4>
         <ul className="list-disc list-inside space-y-1">
           {detail.problem.map((item, i) => (
             <li key={i}>{item}</li>
@@ -34,15 +53,17 @@ export const DetailedExperienceBlock = ({
     )}
     {detail.contributions && detail.contributions.length > 0 && (
       <div>
-        <h4 className="font-semibold text-base-content mb-2">My Contributions</h4>
+        <h4 className="font-semibold text-primary mb-2">My Contributions</h4>
         <div className="space-y-4">
           {detail.contributions.map((contrib, i) => (
             <div key={i}>
-              <h5 className="font-medium text-base-content mb-1">{contrib.title}</h5>
+              <h5 className="font-semibold text-primary mb-1.5">
+                {contrib.title}
+              </h5>
               {contrib.tech && (
-                <p className="text-base-content opacity-75 text-xs mb-1.5">
-                  <span className="font-medium">Tech:</span> {contrib.tech}
-                </p>
+                <div className="mb-2">
+                  <TechBadges techString={contrib.tech} />
+                </div>
               )}
               <ul className="list-disc list-inside space-y-1">
                 {contrib.items.map((item, j) => (
@@ -56,7 +77,7 @@ export const DetailedExperienceBlock = ({
     )}
     {detail.impact && detail.impact.length > 0 && (
       <div>
-        <h4 className="font-semibold text-base-content mb-1.5">Impact</h4>
+        <h4 className="font-semibold text-primary mb-1.5">Impact</h4>
         <ul className="list-disc list-inside space-y-1">
           {detail.impact.map((item, i) => (
             <li key={i}>{item}</li>
@@ -66,10 +87,8 @@ export const DetailedExperienceBlock = ({
     )}
     {detail.technologies && (
       <div>
-        <h4 className="font-semibold text-base-content mb-1.5">Key Technologies</h4>
-        <p className="whitespace-pre-line text-base-content opacity-85">
-          {detail.technologies}
-        </p>
+        <h4 className="font-semibold text-primary mb-1.5">Key Technologies</h4>
+        <TechBadges techString={detail.technologies} />
       </div>
     )}
   </div>

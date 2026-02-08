@@ -416,7 +416,7 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: ['sunset', 'bumblebee'],
+    themes: ['sunset', 'cupcake'],
   },
 
   // Optional Footer. Supports plain text or HTML.
