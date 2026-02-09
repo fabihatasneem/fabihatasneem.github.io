@@ -137,10 +137,29 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               </span>
             )}
           </h5>
-          <div className="mt-3 text-base-content text-opacity-60 font-mono">
-            {loading || !profile
-              ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
-              : profile.bio}
+          <div className="mt-3 text-base-content text-opacity-70 space-y-2">
+            {loading ? (
+              <>
+                {skeleton({ widthCls: 'w-full', heightCls: 'h-4' })}
+                {skeleton({
+                  widthCls: 'w-3/4',
+                  heightCls: 'h-4',
+                  className: 'mx-auto',
+                })}
+              </>
+            ) : (
+              <>
+                <p className="text-base leading-relaxed">
+                  👋 Hello you! Welcome to my portfolio! I'm Fabiha, a software
+                  engineer with a passion for building complex and scalable
+                  systems to be used in real life scenarios. When I'm not
+                  working, I love traveling and exploring new places, reading
+                  books, watching series, cooking, and writing. This portfolio
+                  reflects both my technical work and the curiosity that drives
+                  me beyond code.
+                </p>
+              </>
+            )}
           </div>
         </div>
         {resumeFileUrl &&
