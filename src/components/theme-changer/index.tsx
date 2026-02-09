@@ -42,8 +42,8 @@ const ThemeChanger = ({
   // Custom theme display names
   const getThemeDisplayName = (themeName: string) => {
     const themeDisplayMap: { [key: string]: string } = {
-      sunset: 'Dark',
-      cupcake: 'Light',
+      dark: 'Dark',
+      light: 'Light',
     };
 
     return themeDisplayMap[themeName] || themeName;

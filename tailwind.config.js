@@ -10,8 +10,20 @@ export default {
   daisyui: {
     logs: false,
     themes: [
-      ...CONFIG.themeConfig.themes,
-      { procyon: CONFIG.themeConfig.customTheme },
+      // Map themes array, replacing 'light' and 'dark' with custom themes if defined
+      ...CONFIG.themeConfig.themes.map((theme) => {
+        if (theme === 'dark' && CONFIG.themeConfig.customDarkTheme) {
+          return { dark: CONFIG.themeConfig.customDarkTheme };
+        }
+        if (theme === 'light' && CONFIG.themeConfig.customLightTheme) {
+          return { light: CONFIG.themeConfig.customLightTheme };
+        }
+        return theme;
+      }),
+      // Add custom procyon theme if customTheme is defined
+      ...(CONFIG.themeConfig.customTheme
+        ? [{ procyon: CONFIG.themeConfig.customTheme }]
+        : []),
     ],
   },
 };

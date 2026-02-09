@@ -151,9 +151,7 @@ const AwardCard = ({
                 {loading ? (
                   skeleton({ widthCls: 'w-40', heightCls: 'h-8' })
                 ) : (
-                  <span className="text-base-content opacity-80 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    {header}
-                  </span>
+                  <span className="text-base-content opacity-70">{header}</span>
                 )}
               </h5>
               <p className="text-base-content/60 text-sm mt-2">

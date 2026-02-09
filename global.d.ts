@@ -416,6 +416,16 @@ interface ThemeConfig {
    * Custom theme
    */
   customTheme?: CustomTheme;
+
+  /**
+   * Custom Dark theme colors (creates a custom 'dark' theme)
+   */
+  customDarkTheme?: CustomTheme;
+
+  /**
+   * Custom Light theme colors (creates a custom 'light' theme)
+   */
+  customLightTheme?: CustomTheme;
 }
 
 interface Config {

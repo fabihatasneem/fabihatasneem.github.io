@@ -147,7 +147,7 @@ const CONFIG = {
         domain:
           'Webinar-scale video conferencing and messaging for government and enterprise',
         overview:
-          "I currently work on the Big Meeting product: a webinar-style mode that has to handle huge rooms (50K+ participants), keep chat and reactions in sync across replicas, and stay responsive. My work spans the React/TypeScript client, Spring Boot backend, Kafka and WebSockets for real-time flows, and moving state into Cassandra so we can scale horizontally.",
+          'I currently work on the Big Meeting product: a webinar-style mode that has to handle huge rooms (50K+ participants), keep chat and reactions in sync across replicas, and stay responsive. My work spans the React/TypeScript client, Spring Boot backend, Kafka and WebSockets for real-time flows, and moving state into Cassandra so we can scale horizontally.',
         problem: [
           'Scaling to thousands of participants without host/guest state or chat going out of sync.',
           'Keeping real-time pipelines non-blocking and production-ready under load.',
@@ -313,24 +313,27 @@ const CONFIG = {
       authors:
         "Md Ehtesham-Ul-Haque, Jacob D' Rozario, Rudaiba Adnin, Farhan Tanvir Utshaw, Fabiha Tasneem, Israt Jahan Shefa, A.B.M. Alim Al Islam",
       link: 'https://doi.org/10.1016/j.cogsys.2023.101168',
-      indexTerms: 'Affective Computing, Conversational AI, Emotional AI, Chatbot Development, Natural Language Processing (NLP), Human Computer Interaction (HCI)',
+      indexTerms:
+        'Affective Computing, Conversational AI, Emotional AI, Chatbot Development, Natural Language Processing (NLP), Human Computer Interaction (HCI)',
       description:
         'Abstract: Emotion modeling has always been intriguing to researchers, where detecting emotion is highly focused and generating emotion is much less focused to date. Therefore, in this paper, we aim to exploring emotion generation, particularly for general-purpose conversations. Based on the Cognitive Appraisal Theory and focusing on audio and textual inputs, we propose a novel method to calculate informative variables to evaluate a particular emotion-generating event and six primary emotions. Incorporating such a method of artificial emotion generation, we implement an emotional chatbot, namely EmoBot. Accordingly, EmoBot analyzes continuous audio and textual inputs, calculates the informative variables to evaluate the current situation, generates appropriate emotions, and responds accordingly. An objective evaluation indicates that EmoBot could generate more accurate emotional and semantic responses than a traditional chatbot that does not consider emotion. Additionally, a subjective evaluation of EmoBot demonstrates the appreciation of users for EmoBot over a traditional chatbot that does not consider emotion.',
     },
     {
       title:
         'Transfer Learning in Bone Morphology Study for Better Hip Fracture Assessment',
-      conferenceName: 'IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
+      conferenceName:
+        'IEEE 16th Annual Ubiquitous Computing, Electronics & Mobile Communication Conference (UEMCON) 2025',
       journalName: '',
       authors:
         'Sanjana Siraj and Fabiha Tasneem; Tanvir R. Faisal; Mahmuda Naznin',
       link: 'https://ieeexplore.ieee.org/document/11267735',
-      location: 'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
+      location:
+        'Physical Conference (IBM Louis V. Gerstner, Jr. Center for Learning, New York, USA)',
       date: '22-24 October 2025',
       indexTerms:
         'Machine Learning, Deep Neural Networks, Fracture Risk Assessment, Bone Morphology, Vision Transformer',
       description:
-        'Abstract: Hip fracture is a significant concern for the aging population, especially people with osteoarthritis or osteoporosis. This study introduces an innovative approach to predict hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Our methodology involves processing a comprehensive dataset of patients’ femoral bone information, utilizing regression techniques to determine stress and strain values, and employing these values to generate image datasets. A key challenge in this type of study is the small size of the training data which leads to poor accuracy. In order to combat this, a vision transformer model, MedViT that is more proficient in capturing long-range dependencies, has been used to predict femur fracture risk for high and low classes. The proposed framework shows superior results in terms of prediction accuracy. Our findings highlight the potential of applying advanced machine learning frameworks to enhance healthcare outcomes, particularly for individuals with a high risk of hip fractures.'
+        'Abstract: Hip fracture is a significant concern for the aging population, especially people with osteoarthritis or osteoporosis. This study introduces an innovative approach to predict hip fracture risk by integrating advanced machine learning techniques with detailed medical imaging data, including stress and strain distribution. Our methodology involves processing a comprehensive dataset of patients’ femoral bone information, utilizing regression techniques to determine stress and strain values, and employing these values to generate image datasets. A key challenge in this type of study is the small size of the training data which leads to poor accuracy. In order to combat this, a vision transformer model, MedViT that is more proficient in capturing long-range dependencies, has been used to predict femur fracture risk for high and low classes. The proposed framework shows superior results in terms of prediction accuracy. Our findings highlight the potential of applying advanced machine learning frameworks to enhance healthcare outcomes, particularly for individuals with a high risk of hip fractures.',
     },
   ],
   awards: [
@@ -402,7 +405,7 @@ const CONFIG = {
     snippetVersion: 6,
   },
   themeConfig: {
-    defaultTheme: 'sunset',
+    defaultTheme: 'dark',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
@@ -416,7 +419,37 @@ const CONFIG = {
     displayAvatarRing: true,
 
     // Available themes. To remove any theme, exclude from here.
-    themes: ['sunset', 'cupcake'],
+    themes: ['dark', 'light'],
+
+    // Custom Dark theme colors - Dark Purple Palette
+    customDarkTheme: {
+      primary: '#4699e4',
+      secondary: '#2167b6',
+      accent: '#6fa8dc',
+      neutral: '#0f0a1a',
+      'base-100': '#0a0514',
+      'base-200': '#150a24',
+      'base-300': '#020005',
+      'base-content': '#ebdaff',
+      '--rounded-box': '1rem',
+      '--rounded-btn': '0.5rem',
+      '--rounded-badge': '1.9rem',
+    },
+
+    // Custom Light theme colors
+    customLightTheme: {
+      primary: '#48b3ff', // Primary brand color
+      secondary: '#58c6d1', // Secondary brand color
+      accent: '#2986cc', // Accent color
+      neutral: '#073763', // Neutral dark color
+      'base-100': '#ecf7f9', // Base background color
+      'base-200': '#c6ddf2', // Slightly darker shade
+      'base-300': '#bbe0f9', // Even darker shade
+      'base-content': '#0b5394', // Text color on base
+      '--rounded-box': '1rem', // Border radius for cards
+      '--rounded-btn': '0.5rem', // Border radius for buttons
+      '--rounded-badge': '1.9rem', // Border radius for badges
+    },
   },
 
   // Optional Footer. Supports plain text or HTML.
