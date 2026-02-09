@@ -42,10 +42,10 @@ const ThemeChanger = ({
   // Custom theme display names
   const getThemeDisplayName = (themeName: string) => {
     const themeDisplayMap: { [key: string]: string } = {
-      'sunset': 'Dark',
-      'bumblebee': 'Light'
+      sunset: 'Dark',
+      cupcake: 'Light',
     };
-    
+
     return themeDisplayMap[themeName] || themeName;
   };
 
@@ -58,16 +58,13 @@ const ThemeChanger = ({
   }
 
   return (
-    <div title="Change Theme" className="dropdown dropdown-end">
-      <div
-        tabIndex={0}
-        className="btn btn-ghost btn-circle"
-      >
+    <div title="Change Theme" className="dropdown dropdown-bottom dropdown-end">
+      <div tabIndex={0} className="btn btn-ghost btn-circle theme-changer-btn">
         <AiOutlineControl className="w-5 h-5" />
       </div>
       <div
         tabIndex={0}
-        className="mt-16 overflow-y-auto shadow-2xl top-px dropdown-content max-h-96 w-52 rounded-lg bg-base-200 text-base-content z-10"
+        className="mt-2 overflow-y-auto shadow-2xl dropdown-content max-h-96 w-52 rounded-lg bg-base-200 text-base-content z-10 theme-changer-dropdown"
       >
         <ul className="p-4 menu compact">
           {[
@@ -82,10 +79,7 @@ const ThemeChanger = ({
                 className={`${theme === item ? 'active' : ''}`}
               >
                 <span className="opacity-60 capitalize">
-                  {item === themeConfig.defaultTheme 
-                    ? 'Default' 
-                    : getThemeDisplayName(item)
-                  }
+                  {getThemeDisplayName(item)}
                 </span>
               </a>
             </li>

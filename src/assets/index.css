@@ -95,6 +95,13 @@ svg {
   transform: translateX(-50%);
 }
 
+/* Override centering for theme changer dropdown */
+.theme-changer-dropdown {
+  left: auto !important;
+  transform: none !important;
+  right: 0;
+}
+
 .zigzag-left::after {
   content: "";
   position: absolute;
@@ -112,6 +119,21 @@ svg {
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 
               0 0 40px rgba(59, 130, 246, 0.3),
               0 0 60px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Fix double shadow on theme changer button */
+.theme-changer-btn:focus,
+.theme-changer-btn:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.theme-changer-btn:hover:focus,
+.theme-changer-btn:hover:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 @keyframes sectionGlow {

@@ -153,17 +153,17 @@ const Navbar = ({ theme, setTheme, loading, themeConfig }: NavbarProps) => {
                 Contact
               </a>
             </li>
+            <li>
+              <ThemeChanger
+                theme={theme}
+                setTheme={setTheme}
+                loading={loading}
+                themeConfig={themeConfig}
+              />
+            </li>
           </ul>
       </div>
-      <div className="navbar-end shrink-0 hidden lg:flex order-last">
-        <ThemeChanger
-          theme={theme}
-          setTheme={setTheme}
-          loading={loading}
-          themeConfig={themeConfig}
-        />
-      </div>
-
+      <div className="navbar-end shrink-0 hidden lg:flex" />
         <div className="navbar-end lg:hidden flex gap-1 order-last">
           <ThemeChanger
             theme={theme}
