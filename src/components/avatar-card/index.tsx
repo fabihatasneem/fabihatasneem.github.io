@@ -188,7 +188,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                     download
                     rel="noreferrer"
                   >
-                    Download Resume
+                    Download My Resume
                   </a>
                 )}
                 {email && (
@@ -197,7 +197,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                     onClick={handleGmailRedirect}
                     className="btn btn-outline btn-sm text-xs opacity-50"
                   >
-                    Send me an email
+                    Send Me An Email
                   </button>
                 )}
               </>
@@ -348,7 +348,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
                 link={`tel:${social.phone}`}
               />
             )}
-            {social?.email && (
+            {social?.email && !email && (
               <ListItem
                 icon={<RiMailFill />}
                 label="Email"
