@@ -91,8 +91,17 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   github,
   social,
 }): JSX.Element => {
+  const email = social?.email ?? '';
+  const handleGmailRedirect = () => {
+    if (!email) return;
+    const subject = 'Hello from your portfolio';
+    const body = 'Hi,\n\nI came across your portfolio and wanted to reach out...';
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(gmailUrl, '_blank');
+  };
+
   return (
-    <div className="card shadow-lg compact bg-base-100">
+    <div id="contact" className="card shadow-lg compact bg-base-100">
       <div className="grid place-items-center py-4">
         {loading || !profile ? (
           <div className="avatar opacity-90">
@@ -162,22 +171,39 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             )}
           </div>
         </div>
-        {resumeFileUrl &&
-          (loading ? (
-            <div className="mt-3">
-              {skeleton({ widthCls: 'w-40', heightCls: 'h-8' })}
-            </div>
-          ) : (
-            <a
-              href={resumeFileUrl}
-              target="_blank"
-              className="btn btn-outline btn-sm text-xs mt-3 opacity-50"
-              download
-              rel="noreferrer"
-            >
-              Download Resume
-            </a>
-          ))}
+        {(resumeFileUrl || email) && (
+          <div className="flex flex-wrap justify-center gap-2 mt-3">
+            {loading ? (
+              <>
+                {skeleton({ widthCls: 'w-32', heightCls: 'h-8' })}
+                {skeleton({ widthCls: 'w-32', heightCls: 'h-8' })}
+              </>
+            ) : (
+              <>
+                {resumeFileUrl && (
+                  <a
+                    href={resumeFileUrl}
+                    target="_blank"
+                    className="btn btn-outline btn-sm text-xs opacity-50"
+                    download
+                    rel="noreferrer"
+                  >
+                    Download Resume
+                  </a>
+                )}
+                {email && (
+                  <button
+                    type="button"
+                    onClick={handleGmailRedirect}
+                    className="btn btn-outline btn-sm text-xs opacity-50"
+                  >
+                    Send me an email
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+        )}
         <div className="text-base-content text-opacity-60 flex flex-wrap justify-center">
           <Fragment>
             <ListItem

@@ -82,10 +82,10 @@ const CONFIG = {
     telegram: '',
     website: '',
     phone: '',
-    email: '',
+    email: 'fabihatsnm.00@gmail.com',
   },
   resume: {
-    fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '/Fabiha_Tasneem_Resume.pdf', // File in public/ folder. Empty fileUrl will hide the `Download Resume` button.
   },
   skills: {
     languages: [

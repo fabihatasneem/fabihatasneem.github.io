@@ -20,7 +20,6 @@ import AvatarCard from './avatar-card';
 import AwardCard from './award-card';
 import BlogCard from './blog-card';
 import CertificationCard from './certification-card';
-import ContactCard from './contact-card';
 import EducationCard from './education-card';
 import ErrorPage from './error-page';
 import ExperienceCard from './experience-card';
@@ -281,7 +280,6 @@ const GitProfile = ({ config }: { config: Config }) => {
                         skills={sanitizedConfig.skills}
                       />
                     )}
-                    <ContactCard contact={sanitizedConfig.contact} />
                   </div>
                 </div>
 
