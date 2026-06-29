@@ -132,10 +132,20 @@ const CONFIG = {
   },
   experiences: [
     {
+      company: 're:frame',
+      position: 'Member of Technical Staff (MTS)',
+      from: 'July 2026',
+      to: 'Present',
+      companyLink: 'https://reframe.so/',
+      description: [
+        'Working on re:frame architecture, building and scaling core platform components.',
+      ],
+    },
+    {
       company: 'Synesis IT PLC',
       position: 'Software Engineer',
       from: 'June 2024',
-      to: 'Present',
+      to: 'August 2026',
       companyLink: 'https://synesisit.com.bd/',
       detailSlug: 'synesis',
       summary: [
